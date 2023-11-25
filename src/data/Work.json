@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Canada Revenue Agency, CA",
+    "position": "IT Developer",
+    "duration": "2023",
+    "description": "Worked with tools like SonarQube to address and fix bugs and issues for the Java applications. Performed robustness testing of Mainframe apps. Suggested code changes and pushed the changes to development.",
+    "keyPoints": ["Java", "Mainframe"]
+  },
+  {
+    "id": 2,
+    "name": "Townscript, IN",
+    "position": "Success Executive",
+    "duration": "2019-2021",
+    "description": "Performed analysis of large datasets to provide strategies for the company's growth which helped the company generate revenue of 20 million CAD. Handled several website updates and product-related updates.",
+    "keyPoints": ["Business", "Analytics"]
+  },
+  {
+    "id": 3,
+    "name": "SkillSanta, IN",
+    "position": "Web Design Intern",
+    "duration": "2018",
+    "description": "Revamped and optimized responsive web application design of UI, UX with HTML, CSS and libraries such as MaterialUI. Assisted the design team in modernizing the company's website with ReactJS framework",
+    "keyPoints": ["ReactJS", "HTML", "CSS"]
+  }
+]

@@ -1,0 +1,39 @@
+[
+  {
+    "id": 1,
+    "category": "Web Technologies",
+    "skillItems": ["ReactJS", "NodeJS", "ExpressJS", "HTML", "CSS", "Spring Boot"]
+  },
+  {
+    "id": 2,
+    "category": "Programming Languages",
+    "skillItems": ["Java", "JavaScript", "Kotlin"]
+  },
+  {
+    "id": 3,
+    "category": "Databases",
+    "skillItems": [
+      "SQL",
+      "MongoDb",
+      "DynamoDB",
+      "Firebase",
+      "Neo4j",
+      "Cloud Storage"
+    ]
+  },
+  {
+    "id": 4,
+    "category": "Cloud services",
+    "skillItems": ["Amazon Web Services", "Google Cloud Platform"]
+  },
+  {
+    "id": 5,
+    "category": "Mainframe",
+    "skillItems": ["ISPF Mainframe","Compuware Topaz"]
+  },
+  {
+    "id": 6,
+    "category": "Others",
+    "skillItems": ["OOPS","Git", "JIRA", "SonarQube", "SonarLint", "Android Studio", "Figma","Adobe Photoshop", "MS Office 365"]
+  }
+]
