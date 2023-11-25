@@ -4,6 +4,7 @@ import styled from "styled-components";
 
 export default function FeaturedProjects(props) {
   let { title, description, imageLink, techs, git, demo } = props;
+
   const StyledDiv = styled.div`
     font-family: sono;
 
@@ -49,13 +50,13 @@ export default function FeaturedProjects(props) {
       color: var(--highlight-color);
     }
 
-    @media (max-width: 764px) {
+    @media (max-width: 784px) {
       display: none;
     }
   `;
   const StyledDiv2 = styled.div`
     font-family: sono;
-    @media (min-width: 764px) {
+    @media (min-width: 784px) {
       display: none;
     }
 
@@ -84,9 +85,9 @@ export default function FeaturedProjects(props) {
   `;
   const StyledPic = styled.div`
     position: relative;
-    max-width: 524px;
+    max-width: 650px;
 
-    @media (max-width: 768px) {
+    @media (max-width: 784px) {
       display: none;
     }
 
@@ -196,33 +197,31 @@ export default function FeaturedProjects(props) {
           <div className="col wrapper">
             <img
               className="banner-img"
-              style={{ objectFit: "cover", width: "500px", height: "280px" }}
+              style={{ objectFit: "cover", width: "clamp(300px, 100%,630px)", height: "280px" }}
               src={imageLink}
               alt="banner"
             ></img>
           </div>
         </StyledPic>
-        <div className="col">
-          <StyledDiv>
-            <h3 className="mb-4">{title}</h3>
-            <p>{description}</p>
-            {techs.map((techKey, techIndex) => {
-              return (
-                <h5 className="tech-skills" key={techIndex}>
-                  {techKey}
-                </h5>
-              );
-            })}
-            <div className="links">
-              <Link className="project-link" to={git}>
-                <i className="fa-brands fa-github"></i>
-              </Link>
-              <Link className="project-link" to={demo}>
-                <i className="fa-solid fa-arrow-up-right-from-square"></i>
-              </Link>
-            </div>
-          </StyledDiv>
-        </div>
+        <StyledDiv className="col" >
+          <h3 className="mb-4">{title}</h3>
+          <p>{description}</p>
+          {techs.map((techKey, techIndex) => {
+            return (
+              <h5 className="tech-skills" key={techIndex}>
+                {techKey}
+              </h5>
+            );
+          })}
+          <div className="links">
+            <Link className="project-link" to={git}>
+              <i className="fa-brands fa-github"></i>
+            </Link>
+            <Link className="project-link" to={demo}>
+              <i className="fa-solid fa-arrow-up-right-from-square"></i>
+            </Link>
+          </div>
+        </StyledDiv>
       </div>
       <StyledDiv2>
         <div className="card">
