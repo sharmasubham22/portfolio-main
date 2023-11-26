@@ -8,7 +8,7 @@ export default function Footer() {
         className={`w-100 d-flex flex-column justify-content-center`}
         style={{
           padding: "1.5rem",
-          fontFamily: "Sono",
+          fontFamily: "var(--general-font)",
           borderTop: "1px solid",
           borderColor: "var(--border-color)",
         }}

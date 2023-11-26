@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import FeaturedProjects from "../FeaturedProjects";
 import projectsData from '../../data/Projects.json'
 import styled from "styled-components";
 import OtherProjects from "../OtherProjects";
 import otherData from '../../data/Others.json'
 import { Link } from "react-router-dom";
+import { motion, useAnimation, useInView } from "framer-motion";
+import Reveal from "../Motion";
 
 export default function Projects() {
     const StyledProjects = styled.section`
@@ -18,7 +20,7 @@ export default function Projects() {
 
       p {
         color: var(--content-color);
-        font-family: sono;
+        font-family: var(--general-font);
       }
 
       .contact-section {
@@ -26,52 +28,89 @@ export default function Projects() {
       }
     `;
 
+        const controls = useAnimation();
+        const ref = useRef(null);
+        const ref2 = useRef(null);
+        const onScreen = useInView(ref, { once: true });
+        const onScreen2 = useInView(ref2, { once: true });
+
+        useEffect(() => {
+          if (onScreen) {
+            controls.start("visible");
+          }
+            if (onScreen2) {
+              controls.start("visible");
+            }
+          // eslint-disable-next-line
+        }, [onScreen],[onScreen2]);
+
+        const variants = {
+          visible: {
+            opacity: 1,
+            y: 0,
+            transition: { staggerChildren: 0.35, duration: 0.5 },
+          },
+          hidden: { opacity: 0, y: 75 },
+        };
   return (
     <div className="container" style={{ marginTop: "5%", marginBottom: "5%" }}>
       <StyledProjects>
         <h1>My Work</h1>
-        <h2
-          className="my-5"
-          style={{
-            fontFamily: "shapiro",
-            color: "var(--text-color)",
-            fontSize: "clamp(40px, 4vw, 8vw)",
-            textTransform: "uppercase",
-          }}
-        >
-          Projects
-        </h2>
-        {projectsData.map((element, index) => {
-          return (
-            <div key={index}>
-              <FeaturedProjects
-                title={element.title}
-                description={element.description}
-                techs={element.technologies}
-                imageLink={element.imgLink}
-                git={element.git}
-                demo={element.demo}
-              />
-            </div>
-          );
-        })}
+        <Reveal>
+          <h2
+            className="my-5"
+            style={{
+              fontFamily: "var(--heavy-font)",
+              color: "var(--text-color)",
+              fontSize: "clamp(40px, 4vw, 8vw)",
+              textTransform: "uppercase",
+            }}
+          >
+            Projects
+          </h2>
+        </Reveal>
+        <div ref={ref}>
+          <motion.div initial="hidden" animate={controls} variants={variants}>
+            {projectsData.map((element, index) => {
+              return (
+                <motion.div key={index} variants={variants}>
+                  <FeaturedProjects
+                    title={element.title}
+                    description={element.description}
+                    techs={element.technologies}
+                    imageLink={element.imgLink}
+                    git={element.git}
+                    demo={element.demo}
+                  />
+                </motion.div>
+              );
+            })}
+          </motion.div>
+        </div>
         <h3 className="section-head" style={{ marginTop: "10%" }}>
           Other Projects
         </h3>
-        <div className="row my-5 row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-          {otherData.map((element, index) => {
-            return (
-              <div className="col" key={index}>
-                <OtherProjects
-                  title={element.title}
-                  description={element.description}
-                  techs={element.technologies}
-                  git={element.git}
-                  demo={element.demo}
-                />
-              </div>
-            );
-          })}
+        <div ref={ref2}>
+          <motion.div
+            initial="hidden"
+            animate={controls}
+            variants={variants}
+            className="row my-5 row-cols-1 row-cols-md-2 row-cols-lg-3 g-4"
+          >
+            {otherData.map((element, index) => {
+              return (
+                <motion.div className="col" key={index} variants={variants}>
+                  <OtherProjects
+                    title={element.title}
+                    description={element.description}
+                    techs={element.technologies}
+                    git={element.git}
+                    demo={element.demo}
+                  />
+                </motion.div>
+              );
+            })}
+          </motion.div>
         </div>
         <div className="contact-section">
           <p> Did you like my profile?</p>

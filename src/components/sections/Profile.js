@@ -2,17 +2,18 @@ import React from "react";
 import pic from "../../images/pic2.jpg";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import Reveal from "../Motion";
 
 export default function Profile() {
   const StyledText = styled.section`
     p {
-      font-family: "Sono";
+      font-family: var(--general-font);
       font-size: clamp(17px, 2vw, 20px);
       color: var(--text-color);
     }
 
     .subtext {
-      font-family: "Sono";
+      font-family: var(--general-font);
       font-size: clamp(15px, 2vw, 18px);
       color: var(--content-color);
     }
@@ -48,7 +49,7 @@ export default function Profile() {
       display: inline-block;
       position: relative;
       color: var(--highlight-color);
-      font-family: sono;
+      font-family: var(--general-font);
       font-size: clamp(17px, 2vw, 20px);
     }
 
@@ -151,77 +152,82 @@ export default function Profile() {
 
 
   return (
-    <div className="container" style={{ marginTop: "15%", marginBottom: "5%" }}>
-      <h1 className="my-5 section-head">
-        <span style={{ color: "var(--highlight-color)" }}>01. </span>About me
-      </h1>
-      <div className="row ">
-        <div className="col">
-          <StyledText>
-            <p>
-              I’m a passionate Web Designer & Developer. Graduated in Masters of
-              Applied Computer Science from{" "}
-              <Link
-                className="link-design"
-                to="https://www.dal.ca/"
-                target="_blank"
-              >
-                Dalhousie University
-              </Link>
-              , Halifax (CA). Eager for creating modern websites and have a
-              strong interest in UI UX development.
-            </p>
-            <p className="subtext">
-              I’ve had privilege of working as an IT Developer at{" "}
-              <Link
-                className="link-design"
-                to="https://www.canada.ca/en/revenue-agency.html"
-                target="_blank"
-              >
-                Canada Revenue Agency
-              </Link>
-              (CRA). Also, I have experience working in Business development
-              team at{" "}
-              <Link
-                className="link-design"
-                to="https://www.townscript.com/"
-                target="_blank"
-              >
-                Townscript
-              </Link>
-              . My interest in web started back in 2017, through which I bagged
-              a web design internship at{" "}
-              <Link
-                className="link-design"
-                to="https://skillsanta.com/"
-                target="_blank"
-              >
-                SkillSanta
-              </Link>
-              .
-            </p>
-            <p className="subtext">
-              Hare are some of the technologies I can work with.
-            </p>{" "}
-            <ul className="skills-list subtext">
-              {skills && skills.map((skill, i) => <li key={i}>{skill}</li>)}
-            </ul>
-          </StyledText>
+    <div className="container" style={{ marginTop: "5%", marginBottom: "5%" }}>
+      <Reveal>
+        <h1 className="my-5 section-head">
+          <span style={{ color: "var(--highlight-color)" }}>01. </span>About me
+        </h1>
+      </Reveal>
+      <Reveal>
+        <div className="row ">
+          <div className="col">
+            <StyledText>
+              <p>
+                I’m a passionate Web Designer & Developer. Graduated in Masters
+                of Applied Computer Science from{" "}
+                <Link
+                  className="link-design"
+                  to="https://www.dal.ca/"
+                  target="_blank"
+                >
+                  Dalhousie University
+                </Link>
+                , Halifax (CA). Eager for creating modern websites and have a
+                strong interest in UI UX development.
+              </p>
+              <p className="subtext">
+                I’ve had privilege of working as an IT Developer at{" "}
+                <Link
+                  className="link-design"
+                  to="https://www.canada.ca/en/revenue-agency.html"
+                  target="_blank"
+                >
+                  Canada Revenue Agency
+                </Link>
+                (CRA). Also, I have experience working in Business development
+                team at{" "}
+                <Link
+                  className="link-design"
+                  to="https://www.townscript.com/"
+                  target="_blank"
+                >
+                  Townscript
+                </Link>
+                . My interest in web started back in 2017, through which I
+                bagged a web design internship at{" "}
+                <Link
+                  className="link-design"
+                  to="https://skillsanta.com/"
+                  target="_blank"
+                >
+                  SkillSanta
+                </Link>
+                .
+              </p>
+              <p className="subtext">
+                Hare are some of the technologies I can work with.
+              </p>{" "}
+              <ul className="skills-list subtext">
+                {skills && skills.map((skill, i) => <li key={i}>{skill}</li>)}
+              </ul>
+            </StyledText>
+          </div>
+
+          <div className="col d-flex flex-column justify-content-between align-items-center">
+            <StyledPic>
+              <div className="wrapper">
+                <img
+                  className="img"
+                  src={pic}
+                  width={300}
+                  formats={["AUTO", "WEBP", "AVIF"]}
+                  alt="Headshot"
+                />
+              </div>
+            </StyledPic>
+          </div>
         </div>
-        <div className="col d-flex flex-column justify-content-between align-items-center">
-          <StyledPic>
-            <div className="wrapper">
-              <img
-                className="img"
-                src={pic}
-                width={300}
-                formats={["AUTO", "WEBP", "AVIF"]}
-                alt="Headshot"
-              />
-            </div>
-          </StyledPic>
-        </div>
-      </div>
+      </Reveal>
     </div>
   );
 }

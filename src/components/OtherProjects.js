@@ -6,7 +6,7 @@ export default function OtherProjects(props) {
      let { title, description, techs, git, demo } = props;
 
      const StyledCard = styled.section`
-       font-family: sono;
+       font-family: var(--general-font);
 
        .card {
          background-color: var(--card-color);

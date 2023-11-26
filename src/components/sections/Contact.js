@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import emailjs from "@emailjs/browser";
 import Swal from "sweetalert2";
+import Reveal from "../Motion";
 
 export default function Contact() {
 const [result, showResult] = useState(false);
@@ -54,7 +55,7 @@ const Result = () => {
       display: inline-block;
       position: relative;
       color: var(--highlight-color);
-      font-family: sono;
+      font-family: var(--general-font);
       font-size: clamp(17px, 2vw, 20px);
     }
 
@@ -106,27 +107,7 @@ const Result = () => {
   `;
 
   const SubmitButton = styled.button`
-    color: var(--highlight-color);
-    background-color: transparent;
-    border: 1px solid var(--highlight-color);
-    border-radius: 5px;
-    font-size: clamp(15px, 2vw, 18px);
-    font-family: sono;
-    line-height: 1;
-    text-decoration: none;
-    padding: 1.25rem 1.75rem;
-    transition: var(--transition);
-    transition:0.2s ease;
-
-    &:hover,
-    &:focus-visible {
-      outline: none;
-      box-shadow: 4px 4px 0 0 var(--highlight-color);
-      transform: translate(-5px, -5px);
-    }
-    &:after {
-      display: none !important;
-    }
+    ${({ theme }) => theme.mixins.button};
   `;
   return (
     <div
@@ -138,81 +119,91 @@ const Result = () => {
           <div className="row row-cols-1 row-cols-md-2 my-5">
             <div className="col">
               <h1>Contact</h1>
-              <h2
-                className="my-5"
-                style={{
-                  fontFamily: "shapiro-air",
-                  color: "var(--text-color)",
-                  fontSize: "clamp(50px, 6vw, 5vw)",
-                  textTransform: "uppercase",
-                }}
-              >
-                Get In Touch
-              </h2>
-              <Link
-                to="mailto:subham.sharma221296@gmail.com"
-                className="link-design mb-3"
-              >
-                subham.sharma221296@gmail.com
-              </Link>
+              <Reveal>
+                <h2
+                  className="my-5"
+                  style={{
+                    fontFamily: "var(--heavy-font2)",
+                    color: "var(--text-color)",
+                    fontSize: "clamp(50px, 6vw, 5vw)",
+                    textTransform: "uppercase",
+                  }}
+                >
+                  Get In Touch
+                </h2>
+              </Reveal>
+              <Reveal>
+                <Link
+                  to="mailto:subham.sharma221296@gmail.com"
+                  className="link-design mb-3"
+                >
+                  subham.sharma221296@gmail.com
+                </Link>
+              </Reveal>
               <div>
                 <div className="mt-4">
-                  <Link
-                    to="https://www.linkedin.com/in/subham-sharma-137985128/"
-                    target="_blank"
-                    className="social-links"
-                  >
-                    <i className="fa-brands fa-linkedin-in"></i>
-                  </Link>
-                  <Link to="/" className="social-links">
-                    <i className="fa-brands fa-github"></i>
-                  </Link>
+                  <Reveal>
+                    <Link
+                      to="https://www.linkedin.com/in/subham-sharma-137985128/"
+                      target="_blank"
+                      className="social-links"
+                    >
+                      <i className="fa-brands fa-linkedin-in"></i>
+                    </Link>
+                    <Link to="/" className="social-links">
+                      <i className="fa-brands fa-github"></i>
+                    </Link>
+                  </Reveal>
                 </div>
               </div>
             </div>
-            <div className="col mt-5 text-white" style={{ fontFamily: "sono" }}>
+            <div className="col mt-5 text-white" style={{ fontFamily: "var(--general-font)" }}>
               <form ref={form} onSubmit={sendEmail}>
-                <div className="mb-3">
-                  <label htmlFor="name" className="form-label">
-                    Name
-                  </label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    name="fullName"
-                    id="name"
-                    placeholder="Please enter your full name"
-                  />
-                </div>
-                <div className="mb-3">
-                  <label htmlFor="email" className="form-label">
-                    Email Address
-                  </label>
-                  <input
-                    type="email"
-                    className="form-control"
-                    name="email"
-                    id="email"
-                    placeholder="Please enter your email address"
-                  />
-                </div>
-                <div className="mb-3">
-                  <label htmlFor="message" className="form-label">
-                    Your Message
-                  </label>
-                  <textarea
-                    className="form-control"
-                    id="message"
-                    name="message"
-                    rows="3"
-                    placeholder="Please enter your message"
-                  ></textarea>
-                </div>
-                <div className="mt-3">
-                  <SubmitButton to="/" className="submit my-2">
-                    Submit
-                  </SubmitButton>
-                </div>
+                <Reveal>
+                  <div className="mb-3">
+                    <label htmlFor="name" className="form-label">
+                      Name
+                    </label>
+                    <input
+                      type="text"
+                      className="form-control"
+                      name="fullName"
+                      id="name"
+                      placeholder="Please enter your full name"
+                    />
+                  </div>
+                  <div className="mb-3">
+                    <label htmlFor="email" className="form-label">
+                      Email Address
+                    </label>
+                    <input
+                      type="email"
+                      className="form-control"
+                      name="email"
+                      id="email"
+                      placeholder="Please enter your email address"
+                    />
+                  </div>
+                  <div className="mb-3">
+                    <label htmlFor="message" className="form-label">
+                      Your Message
+                    </label>
+                    <textarea
+                      className="form-control"
+                      id="message"
+                      name="message"
+                      rows="3"
+                      placeholder="Please enter your message"
+                    ></textarea>
+                  </div>
+                </Reveal>
+                <Reveal>
+                  <div className="mt-3">
+                    <SubmitButton to="/" className="submit my-2">
+                      Submit
+                    </SubmitButton>
+                  </div>
+                </Reveal>
                 <div>{result ? <Result /> : null}</div>
               </form>
             </div>

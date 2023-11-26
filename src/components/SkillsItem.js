@@ -11,7 +11,7 @@ export default function SkillsItem(props) {
     width: fit-content;
     padding: 5px 15px;
     border-radius: 5px;
-    font-family: Sono;
+    font-family: var(--general-font);
     text-transform: uppercase;
     font-size: 16px;
     display: inline-block;
@@ -26,7 +26,7 @@ export default function SkillsItem(props) {
           <h6
             className={`card-subtitle mb-2 `}
             style={{
-              fontFamily: "sono",
+              fontFamily: "var(--general-font)",
               fontSize: "clamp(17px, 2vw, 18px)",
               color:"var(--content-color)",
               textTransform:"uppercase",

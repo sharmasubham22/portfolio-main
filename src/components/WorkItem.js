@@ -15,14 +15,14 @@ export default function WorkItem(props) {
         <div className="card-body">
           <h6
             className="card-subtitle mb-2 text-muted"
-            style={{ fontFamily: "sono" }}
+            style={{ fontFamily: "var(--general-font)" }}
           >
             {duration}
           </h6>
           <h3
             className="card-title"
             style={{
-              fontFamily: "sono",
+              fontFamily: "var(--general-font)",
               textTransform: "uppercase",
               color: "var(--text-color)",
             }}
@@ -31,7 +31,7 @@ export default function WorkItem(props) {
           </h3>
           <h6
             className="card-subtitle mb-2 text-muted"
-            style={{ fontFamily: "sono" }}
+            style={{ fontFamily: "var(--general-font)" }}
           >
             {name}
           </h6>
@@ -48,7 +48,7 @@ export default function WorkItem(props) {
                 width: "fit-content",
                 padding: "5px 15px",
                 borderRadius: "20px",
-                fontFamily: "Sono",
+                fontFamily: "var(--general-font)",
                 textTransform: "uppercase",
                 fontSize: "14px",
               }}
@@ -62,7 +62,7 @@ export default function WorkItem(props) {
             style={{
               color: "#aba3c7",
               fontSize: "clamp(15px, 2vw, 18px)",
-              fontFamily: "sono",
+              fontFamily: "var(--general-font)",
             }}
           >
             {description}

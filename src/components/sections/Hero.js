@@ -3,9 +3,10 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 
-
 export default function Hero() {
-  const StyledHero = styled.section`
+  const StyledHero = styled.div`
+
+
     h1 {
       ${({ theme }) => theme.mixins.chip};
       margin: 0% 0% 7% 0%;
@@ -13,13 +14,13 @@ export default function Hero() {
 
     h2 {
       font-size: clamp(25px, 4vw + 0.5vw, 80px);
-      font-family: "shapiro";
+      font-family: var(--heavy-font);
       text-transform: uppercase;
       color: var(--text-color);
     }
 
     p {
-      font-family: "Sono";
+      font-family: var(--general-font);
       width: 70%;
       font-size: clamp(15px, 2vw, 20px);
       color: var(--content-color);
@@ -33,7 +34,10 @@ export default function Hero() {
       ${({ theme }) => theme.mixins.button};
       margin-left: 15px;
     }
+
   `;
+
+
 
   const one = <p>Hello there, my name is</p>;
   const two = (
@@ -66,7 +70,7 @@ export default function Hero() {
   const items = [one, two, three, four, five];
 
   return (
-    <div className="container" style={{ marginTop: "5%", marginBottom: "10%" }}>
+    <div className="container" style={{ marginTop: "5%", marginBottom: "5%" }}>
       <StyledHero>
         <h1>About</h1>
         <TransitionGroup>

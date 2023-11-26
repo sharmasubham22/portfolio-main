@@ -10,18 +10,9 @@ const Variables = css`
     --opacity: 0.5;
     --content-color: #aba3c7;
     --easing: cubic-bezier(0.645, 0.045, 0.355, 1);
-  }
-
-  .section-head {
-    font-family: "shapiro";
-    text-transform: uppercase;
-    color: var(--text-color);
-    font-size: clamp(20px, 4vw, 40px);
-  }
-
-  .navbar {
-    background-color: rgb(6, 11, 25, 0.9);
-    backdrop-filter: blur(10px);
+    --general-font: sono;
+    --heavy-font: shapiro;
+    --heavy-font2: shapiro-air;
   }
 `;
 

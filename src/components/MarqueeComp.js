@@ -7,7 +7,7 @@ export default function MarqueeComp() {
     p {
       margin: 10px 30px;
       color: var(--text-color);
-      font-family: "shapiro";
+      font-family: var(--heavy-font);
       font-size: clamp(20px, 2vw, 28px);
       display: inline-block;
       text-transform: uppercase;

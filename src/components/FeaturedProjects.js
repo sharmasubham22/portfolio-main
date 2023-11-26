@@ -6,7 +6,7 @@ export default function FeaturedProjects(props) {
   let { title, description, imageLink, techs, git, demo } = props;
 
   const StyledDiv = styled.div`
-    font-family: sono;
+    font-family: var(--general-font);
 
     p {
       color: var(--content-color);
@@ -55,7 +55,7 @@ export default function FeaturedProjects(props) {
     }
   `;
   const StyledDiv2 = styled.div`
-    font-family: sono;
+    font-family: var(--general-font);
     @media (min-width: 784px) {
       display: none;
     }
@@ -197,13 +197,13 @@ export default function FeaturedProjects(props) {
           <div className="col wrapper">
             <img
               className="banner-img"
-              style={{ objectFit: "cover", width: "clamp(300px, 100%,630px)", height: "280px" }}
+              style={{ objectFit: "cover", width: "clamp(300px, 100%,630px)", height: "300px" }}
               src={imageLink}
               alt="banner"
             ></img>
           </div>
         </StyledPic>
-        <StyledDiv className="col" >
+        <StyledDiv className="col my-3" >
           <h3 className="mb-4">{title}</h3>
           <p>{description}</p>
           {techs.map((techKey, techIndex) => {
