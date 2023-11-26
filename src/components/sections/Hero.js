@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { CSSTransition, TransitionGroup } from "react-transition-group";
+import { motion, useAnimation, useInView } from "framer-motion";
 
 export default function Hero() {
   const StyledHero = styled.div`
@@ -69,17 +69,39 @@ export default function Hero() {
 
   const items = [one, two, three, four, five];
 
+  const controls = useAnimation();
+  const ref = useRef(null);
+  const onScreen = useInView(ref, { once: true });
+
+  useEffect(() => {
+    if (onScreen) {
+      controls.start("visible");
+    }
+    // eslint-disable-next-line
+  }, [onScreen]);
+
+  const variants = {
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { staggerChildren: 0.20, duration: 0.5 },
+    },
+    hidden: { opacity: 0, y: 75 },
+  };
+
   return (
     <div className="container" style={{ marginTop: "5%", marginBottom: "5%" }}>
       <StyledHero>
         <h1>About</h1>
-        <TransitionGroup>
-          {items.map((item, i) => (
-            <CSSTransition key={i} in={true} appear={true} classNames="fadeup" timeout={2000}>
-              <div style={{ transitionDelay: `${i + 1}00ms` }}> {item}</div>
-            </CSSTransition>
-          ))}
-        </TransitionGroup>
+        <div ref={ref}>
+          <motion.div initial="hidden" animate={controls} variants={variants}>
+            {items.map((item, index) => (
+              <motion.div className="col" key={index} variants={variants}>
+                {item}
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
       </StyledHero>
     </div>
   );

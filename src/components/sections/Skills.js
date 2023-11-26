@@ -14,7 +14,7 @@ export default function Skills() {
       </Reveal>
       <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
         {skillData.map((element, index) => (
-          <Reveal>
+          <Reveal key={index}>
             <div className="col" key={index}>
               <SkillsItem
                 category={element.category}

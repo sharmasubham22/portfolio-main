@@ -30,19 +30,18 @@ export default function Projects() {
 
         const controls = useAnimation();
         const ref = useRef(null);
-        const ref2 = useRef(null);
         const onScreen = useInView(ref, { once: true });
-        const onScreen2 = useInView(ref2, { once: true });
+   
 
         useEffect(() => {
           if (onScreen) {
             controls.start("visible");
           }
-            if (onScreen2) {
-              controls.start("visible");
-            }
+        
           // eslint-disable-next-line
-        }, [onScreen],[onScreen2]);
+        }, [onScreen]);
+
+
 
         const variants = {
           visible: {
@@ -52,6 +51,8 @@ export default function Projects() {
           },
           hidden: { opacity: 0, y: 75 },
         };
+
+
   return (
     <div className="container" style={{ marginTop: "5%", marginBottom: "5%" }}>
       <StyledProjects>
@@ -90,7 +91,7 @@ export default function Projects() {
         <h3 className="section-head" style={{ marginTop: "10%" }}>
           Other Projects
         </h3>
-        <div ref={ref2}>
+        <div ref={ref}>
           <motion.div
             initial="hidden"
             animate={controls}

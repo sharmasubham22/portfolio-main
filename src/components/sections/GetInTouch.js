@@ -82,7 +82,7 @@ export default function GetInTouch() {
             <div className="col">
               <p
                 style={{
-                  fontFamily: "sono",
+                  fontFamily: "var(--general-font)",
                   color: "var(--text-color)",
                   fontSize: "clamp(15px, 2vw, 18px)",
                 }}
@@ -92,42 +92,62 @@ export default function GetInTouch() {
                 reach out and I will try my best to get back to you as soon as
                 possible.
               </p>
+
+              <h2 className="mt-5"
+                style={{
+                  fontFamily: "var(--general-font)",
+                  color: "var(--highlight-color)",
+                  fontSize: "clamp(15px, 2vw, 26px)",
+                }}
+              >
+                <b>Location</b>
+              </h2>
+              <h3
+                style={{
+                  fontFamily: "var(--general-font)",
+                  color: "var(--text-color)",
+                  fontSize: "clamp(15px, 2vw, 18px)",
+                }}
+              >
+                Halifax, NS (Canada)
+              </h3>
             </div>
           </Reveal>
-
-          <StyledDiv className="col">
-            <div className="bg">
-              <div className="circle">
-                <i class="fa-solid fa-arrow-down"></i>
-                <svg
-                  id="rotatingText"
-                  viewBox="0 0 200 200"
-                  width="400"
-                  height="400"
-                >
-                  <defs>
-                    <path
-                      id="circle"
-                      d="M 100, 100
+          <Reveal>
+            <StyledDiv className="col">
+              <div className="bg">
+                <div className="circle">
+                  <i className="fa-solid fa-arrow-down"></i>
+                  <svg
+                    id="rotatingText"
+                    viewBox="0 0 200 200"
+                    width="400"
+                    height="400"
+                  >
+                    <defs>
+                      <path
+                        id="circle"
+                        d="M 100, 100
                 m -90, 0
                 a 90, 90 0 1, 0 180, 0
                 a 90, 90 0 1, 0 -180, 0
                 "
-                    ></path>
-                  </defs>
-                  <text width="400">
-                    <textPath
-                      alignment-baseline="top"
-                      href="#circle"
-                      class="text"
-                    >
-                      Click below for contact details &#x2022;
-                    </textPath>
-                  </text>
-                </svg>
+                      ></path>
+                    </defs>
+                    <text width="400">
+                      <textPath
+                        alignmentBaseline="top"
+                        href="#circle"
+                        className="text"
+                      >
+                        Click below for contact details &#x2022;
+                      </textPath>
+                    </text>
+                  </svg>
+                </div>
               </div>
-            </div>
-          </StyledDiv>
+            </StyledDiv>
+          </Reveal>
         </div>
       </div>
     </div>

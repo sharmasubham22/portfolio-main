@@ -10,10 +10,11 @@ export default function OtherProjects(props) {
 
        .card {
          background-color: var(--card-color);
+         transition: 0.3s ease;
        }
 
-       .card:hover{
-        border: 1px solid var(--highlight-color);
+       .card:hover {
+         transform: translate(0, -10px);
        }
 
        .card-title {
@@ -45,8 +46,8 @@ export default function OtherProjects(props) {
          font-size: 24px;
        }
 
-       .project-link:hover{
-        color: var(--highlight-color);
+       .project-link:hover {
+         color: var(--highlight-color);
        }
      `;
   return (

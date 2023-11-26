@@ -50,33 +50,6 @@ const Result = () => {
       ${({ theme }) => theme.mixins.chip};
     }
 
-    .link-design {
-      text-decoration: none;
-      display: inline-block;
-      position: relative;
-      color: var(--highlight-color);
-      font-family: var(--general-font);
-      font-size: clamp(17px, 2vw, 20px);
-    }
-
-    .link-design::after {
-      content: "";
-      position: absolute;
-      width: 100%;
-      transform: scaleX(0);
-      height: 1px;
-      bottom: 0;
-      left: 0;
-      background-color: var(--highlight-color);
-      transform-origin: bottom right;
-      transition: transform 0.25s ease-out;
-    }
-
-    .link-design:hover::after {
-      transform: scaleX(1);
-      transform-origin: bottom left;
-    }
-
     .social-links {
       color: var(--text-color);
       font-size: 25px;
@@ -200,7 +173,7 @@ const Result = () => {
                 <Reveal>
                   <div className="mt-3">
                     <SubmitButton to="/" className="submit my-2">
-                      Submit
+                      Submit &rarr;
                     </SubmitButton>
                   </div>
                 </Reveal>

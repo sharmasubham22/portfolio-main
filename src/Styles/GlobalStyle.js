@@ -78,14 +78,19 @@ body{
   color: var(--highlight-color);
 }
 
+.nav-active{
+  background-color: var(--highlight-color);
+}
+
 
 .nav-social{
   color: var(--content-color);
-  margin: 0px clamp(10px, 2vw, 30px);
+  margin: 0px 30px;
   font-size: clamp(12px, 2vw, 25px);
 
   &:hover{
     color: var(--highlight-color);
+    transform: translateY(-5px);
   }
 }
 
@@ -162,9 +167,14 @@ body{
       transition: transform 0.25s ease-out;
     }
 
+    .link-design:hover {
+      color: var(--highlight-color);
+    }
+    
     .link-design:hover::after {
       transform: scaleX(1);
       transform-origin: bottom left;
+      
     }
 
 @media (max-width: 1024px){
