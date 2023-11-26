@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { motion, useAnimation, useInView } from "framer-motion";
 
 export default function OtherProjects(props) {
      let { title, description, techs, git, demo } = props;
@@ -50,43 +51,68 @@ export default function OtherProjects(props) {
          color: var(--highlight-color);
        }
      `;
+
+
+        const controls = useAnimation();
+        const ref = useRef(null);
+        const onScreen = useInView(ref, { once: true });
+
+        useEffect(() => {
+          if (onScreen) {
+            controls.start("visible");
+          }
+          // eslint-disable-next-line
+        }, [onScreen]);
+
+        const variants = {
+          visible: {
+            opacity: 1,
+            y: 0,
+            transition: { staggerChildren: 0.35, duration: 0.5 },
+          },
+          hidden: { opacity: 0, y: 75 },
+        };
   return (
     <>
-      <StyledCard>
-        <div className="card p-4">
-          <div className="card-body">
-            <div className="d-flex bd-highlight mb-3">
-              <div className="flex-grow-1 bd-highlight">
-                <i className="fa-regular fa-folder"></i>
-              </div>
-              <div className="bd-highlight">
-                <Link className="project-link" to={git}>
-                  <i className="fa-brands fa-github"></i>
-                </Link>
-              </div>
-              <div className="bd-highlight">
-                <Link className="project-link" to={demo}>
-                  <i className="fa-solid fa-arrow-up-right-from-square"></i>
-                </Link>
+      <div ref={ref}>
+        <motion.div initial="hidden" animate={controls} variants={variants}>
+          <StyledCard>
+            <div className="card p-4">
+              <div className="card-body">
+                <div className="d-flex bd-highlight mb-3">
+                  <div className="flex-grow-1 bd-highlight">
+                    <i className="fa-regular fa-folder"></i>
+                  </div>
+                  <div className="bd-highlight">
+                    <Link className="project-link" to={git}>
+                      <i className="fa-brands fa-github"></i>
+                    </Link>
+                  </div>
+                  <div className="bd-highlight">
+                    <Link className="project-link" to={demo}>
+                      <i className="fa-solid fa-arrow-up-right-from-square"></i>
+                    </Link>
+                  </div>
+                </div>
+                <h5 className="card-title fs-3">{title}</h5>
+
+                <p className="card-text">{description}</p>
+                {techs.map((techKey, techIndex) => {
+                  return (
+                    <h6
+                      className="card-subtitle mb-2"
+                      style={{ display: "inline", marginRight: "10px" }}
+                      key={techIndex}
+                    >
+                      {techKey}
+                    </h6>
+                  );
+                })}
               </div>
             </div>
-            <h5 className="card-title fs-3">{title}</h5>
-
-            <p className="card-text">{description}</p>
-            {techs.map((techKey, techIndex) => {
-              return (
-                <h6
-                  className="card-subtitle mb-2"
-                  style={{ display: "inline", marginRight: "10px" }}
-                  key={techIndex}
-                >
-                  {techKey}
-                </h6>
-              );
-            })}
-          </div>
-        </div>
-      </StyledCard>
+          </StyledCard>
+        </motion.div>
+      </div>
     </>
   );
 }

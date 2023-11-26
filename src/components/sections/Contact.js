@@ -54,12 +54,12 @@ const Result = () => {
       color: var(--text-color);
       font-size: 25px;
       margin-right: 20px;
-      padding: 20px;
+      padding: 25px 30px;
       border: 1px solid var(--highlight-color);
       background-color: rgb(126, 87, 194, 0.3);
       transition: 0.5s ease;
       opacity: 0.4;
-      border-radius: 15px;
+      border-radius: 50%;
     }
 
     .social-links:hover {
@@ -108,7 +108,7 @@ const Result = () => {
               <Reveal>
                 <Link
                   to="mailto:subham.sharma221296@gmail.com"
-                  className="link-design mb-3"
+                  className="link-design mb-5"
                 >
                   subham.sharma221296@gmail.com
                 </Link>
@@ -123,14 +123,21 @@ const Result = () => {
                     >
                       <i className="fa-brands fa-linkedin-in"></i>
                     </Link>
-                    <Link to="/" className="social-links">
+                    <Link
+                      to="https://github.com/sharmasubham22"
+                      target="_blank"
+                      className="social-links"
+                    >
                       <i className="fa-brands fa-github"></i>
                     </Link>
                   </Reveal>
                 </div>
               </div>
             </div>
-            <div className="col mt-5 text-white" style={{ fontFamily: "var(--general-font)" }}>
+            <div
+              className="col mt-5 text-white"
+              style={{ fontFamily: "var(--general-font)" }}
+            >
               <form ref={form} onSubmit={sendEmail}>
                 <Reveal>
                   <div className="mb-3">

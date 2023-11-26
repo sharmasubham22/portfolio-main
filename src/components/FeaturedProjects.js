@@ -64,7 +64,7 @@ export default function FeaturedProjects(props) {
       background-color: var(--card-color);
     }
     .card-img {
-      height: 21rem;
+      height: clamp(23rem, 23rem, 15rem);
       object-fit: cover;
     }
 

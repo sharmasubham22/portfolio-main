@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "Canada Revenue Agency, CA",
-    "position": "IT Developer",
+    "position": "IT Developer Co-op",
     "duration": "2023",
     "description": "Worked with tools like SonarQube to address and fix bugs and issues for the Java applications. Performed robustness testing of Mainframe apps. Suggested code changes and pushed the changes to development.",
     "keyPoints": ["Java", "Mainframe"]

@@ -5,8 +5,6 @@ import { motion, useAnimation, useInView } from "framer-motion";
 
 export default function Hero() {
   const StyledHero = styled.div`
-
-
     h1 {
       ${({ theme }) => theme.mixins.chip};
       margin: 0% 0% 7% 0%;
@@ -28,18 +26,17 @@ export default function Hero() {
 
     .button-hero {
       ${({ theme }) => theme.mixins.button};
+      margin-right: 15px;
     }
 
     .connect {
       ${({ theme }) => theme.mixins.button};
-      margin-left: 15px;
     }
-
   `;
 
 
 
-  const one = <p>Hello there, my name is</p>;
+  const one = <p>Hi there! My name is</p>;
   const two = (
     <h2>
       Subham Sharma. <br />

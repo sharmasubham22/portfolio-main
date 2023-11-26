@@ -65,6 +65,11 @@ export default function GetInTouch() {
     }
   `;
 
+const currentTime = Date.now();
+const dateObject = new Date(currentTime);
+
+const currentDateTime = dateObject.toLocaleString();
+
   return (
     <div>
       <div
@@ -93,7 +98,8 @@ export default function GetInTouch() {
                 possible.
               </p>
 
-              <h2 className="mt-5"
+              <h2
+                className="mt-5"
                 style={{
                   fontFamily: "var(--general-font)",
                   color: "var(--highlight-color)",
@@ -111,6 +117,15 @@ export default function GetInTouch() {
               >
                 Halifax, NS (Canada)
               </h3>
+              <p
+                style={{
+                  fontFamily: "var(--general-font)",
+                  color: "var(--text-color)",
+                  fontSize: "clamp(15px, 2vw, 18px)",
+                }}
+              >
+                {currentDateTime}
+              </p>
             </div>
           </Reveal>
           <Reveal>

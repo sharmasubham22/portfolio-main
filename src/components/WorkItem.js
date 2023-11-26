@@ -6,7 +6,7 @@ export default function WorkItem(props) {
   return (
     <div>
       <div
-        className={`card p-4`}
+        className="card h-100 p-4"
         style={{
           backgroundColor: "var(--card-color)",
           borderRadius: "7%",

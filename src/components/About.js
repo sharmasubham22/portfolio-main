@@ -8,45 +8,31 @@ import MarqueeComp from "./MarqueeComp";
 import { Link} from "react-router-dom";
 
 export default function About() {
+
   return (
     <div>
       <main>
-        <nav className="navigation">
+        {/* <nav className="navigation">
           <ul>
             <li>
-              <a
-                href="#section1"
-                
-              >
-                <span className="nav__item" htmlFor="section1"></span>
+              <a href="#section1" >
+                <span className="nav__item" htmlFor="section1">One</span>
               </a>
-              <a
-                href="#section2"
-                
-              >
-                <span className="nav__item" htmlFor="section2"></span>
+              <a href="#section2" >
+                <span className="nav__item" htmlFor="section2">Two</span>
               </a>
-              <a
-                href="#section3"
-                
-              >
-                <span className="nav__item" htmlFor="section3"></span>
+              <a href="#section3" >
+                <span className="nav__item" htmlFor="section3">Three</span>
               </a>
-              <a
-                href="#section4"
-                
-              >
-                <span className="nav__item" htmlFor="section4"></span>
+              <a href="#section4" >
+                <span className="nav__item" htmlFor="section4">Four</span>
               </a>
-              <a
-                href="#section5"
-                
-              >
-                <span className="nav__item" htmlFor="section5"></span>
+              <a href="#section5" >
+                <span className="nav__item" htmlFor="section5">Five</span>
               </a>
             </li>
           </ul>
-        </nav>
+        </nav> */}
         <section id="section1" className="section">
           <Hero />
         </section>
@@ -62,7 +48,7 @@ export default function About() {
         <section id="section5" className="section">
           <GetInTouch />
         </section>
-        <Link to="/contact" style={{ textDecoration: "none" }}>
+        <Link href="/contact" style={{ textDecoration: "none" }}>
           <MarqueeComp />
         </Link>
       </main>
