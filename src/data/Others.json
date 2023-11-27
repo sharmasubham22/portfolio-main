@@ -1,44 +1,51 @@
 [
   {
-    "title": "Project 1",
+    "title": "News Guru",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    "technologies": ["tech1", "tech2", "tech3"],
-    "git": "/",
+    "technologies": ["React", "News-Api", "Bootstrap"],
+    "git": "https://github.com/sharmasubham22/news_app",
     "demo": "/"
   },
   {
-    "title": "Project 2",
+    "title": "Halifax Foodie",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     "technologies": ["tech4", "tech5", "tech6"],
-    "git": "/",
+    "git": "",
     "demo": "/"
   },
   {
-    "title": "Project 3",
+    "title": "Teacherly",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     "technologies": ["tech7", "tech9", "tech9", "tech10"],
     "git": "/",
     "demo": "/"
   },
   {
-    "title": "Project 3",
+    "title": "Ride Share",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     "technologies": ["tech7", "tech9", "tech9", "tech10"],
     "git": "/",
     "demo": "/"
   },
   {
-    "title": "Project 3",
+    "title": "Text-Utils",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "technologies": ["tech7", "tech9", "tech9", "tech10"],
+    "git": "https://github.com/sharmasubham22/text_utils",
+    "demo": "https://project-textutils.netlify.app/"
+  },
+  {
+    "title": "Digi Soul",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     "technologies": ["tech7", "tech9", "tech9", "tech10"],
     "git": "/",
     "demo": "/"
   },
-  {
-    "title": "Project 3",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    "technologies": ["tech7", "tech9", "tech9", "tech10"],
-    "git": "/",
-    "demo": "/"
-  }
+    {
+      "title": "Find my labels",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "technologies": ["tech7", "tech9", "tech9", "tech10"],
+      "git": "https://github.com/sharmasubham22/term-project/tree/main",
+      "demo": ""
+    }
 ]

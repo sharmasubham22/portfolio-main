@@ -78,6 +78,10 @@ export default function Hero() {
       .scrollBox {
         display: none;
       }
+
+      p {
+        width:100%;
+      }
     }
   `;
 
@@ -134,7 +138,7 @@ export default function Hero() {
   };
 
   return (
-    <div className="container" style={{ marginTop: "5%", marginBottom: "5%" }}>
+    <div className="container" >
       <StyledHero>
         <h1>About</h1>
         <div ref={ref}>

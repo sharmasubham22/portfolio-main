@@ -84,15 +84,18 @@ export default function OtherProjects(props) {
                     <i className="fa-regular fa-folder"></i>
                   </div>
                   <div className="bd-highlight">
-                    <Link className="project-link" to={git}>
+                    <Link className="project-link" to={git} target='_blank'>
                       <i className="fa-brands fa-github"></i>
                     </Link>
                   </div>
+                
+                  
                   <div className="bd-highlight">
-                    <Link className="project-link" to={demo}>
+                    <Link className="project-link" to={demo} target='_blank'>
                       <i className="fa-solid fa-arrow-up-right-from-square"></i>
                     </Link>
                   </div>
+              
                 </div>
                 <h5 className="card-title fs-3">{title}</h5>
 

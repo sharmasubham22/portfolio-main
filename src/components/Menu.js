@@ -22,7 +22,7 @@ export default function Menu() {
   return (
     <>
       <div
-        className="container-fluid sticky-top menu"
+        className="container-fluid fixed-top menu"
         style={{
           borderBottom: "1px solid",
           borderColor: "var(--border-color)",

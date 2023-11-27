@@ -11,8 +11,8 @@ body{
 }
 
 ::selection {
-  color: #060b19;
-  background: #8a6de8;
+  color: var(--background-color);
+  background: var(--content-color);
   padding: 2%;
 }
 

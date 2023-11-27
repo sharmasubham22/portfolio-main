@@ -7,20 +7,21 @@
     "git": "/",
     "demo": "/"
   },
-  {
-    "title": "Project 2",
+    {
+    "title": "Personal portfolio",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    "technologies": ["tech4", "tech5", "tech6"],
-    "imgLink":"https://www.theglobeandmail.com/resizer/gew4suGzG44SaHLq5yXVIoEY3Qc=/arc-anglerfish-tgam-prod-tgam/public/2XCT3JN7ZRGMNAFSMZM2RSTH2I.jpeg",
-    "git": "/",
+    "technologies": ["React", "styled-components", "bootstrap"],
+    "imgLink":"https://drive.google.com/uc?export=view&id=1X8Wk57jIBWWDX7Szmen17e55oExuw4rK",
+    "git": "https://github.com/sharmasubham22/portfolio-main.git",
     "demo": "/"
   },
   {
-    "title": "Project 3",
+    "title": "Stories - a notebook app",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    "technologies": ["tech7", "tech9", "tech9", "tech10"],
-    "imgLink":"https://carwow-uk-wp-3.imgix.net/18015-MC20BluInfinito-scaled-e1666008987698.jpg",
-    "git": "/",
+    "technologies": ["Node.js", "Express", "React", "MongoDB"],
+    "imgLink":"https://drive.google.com/uc?export=view&id=1LumoyR1gmbdlDO2JGuaRplNUWVW7DFZM",
+    "git": "https://github.com/sharmasubham22/notebook.git",
     "demo": "/"
   }
+
 ]

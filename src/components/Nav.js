@@ -31,7 +31,7 @@ export default function Nav() {
       };
   return (
     <div
-      className="container-fluid sticky-top nav2"
+      className="container-fluid fixed-top nav2"
       style={{
         borderBottom: "1px solid",
         borderColor: "var(--border-color)",

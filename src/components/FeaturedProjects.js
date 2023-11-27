@@ -64,7 +64,7 @@ export default function FeaturedProjects(props) {
       background-color: var(--card-color);
     }
     .card-img {
-      height: clamp(23rem, 23rem, 15rem);
+      height: clamp(25rem, 24rem, 15rem);
       object-fit: cover;
     }
 
@@ -197,13 +197,17 @@ export default function FeaturedProjects(props) {
           <div className="col wrapper">
             <img
               className="banner-img"
-              style={{ objectFit: "cover", width: "clamp(300px, 100%,630px)", height: "300px" }}
+              style={{
+                objectFit: "cover",
+                width: "clamp(300px, 100%,630px)",
+                height: "300px",
+              }}
               src={imageLink}
               alt="banner"
             ></img>
           </div>
         </StyledPic>
-        <StyledDiv className="col my-3" >
+        <StyledDiv className="col my-3">
           <h3 className="mb-4">{title}</h3>
           <p>{description}</p>
           {techs.map((techKey, techIndex) => {
@@ -214,10 +218,10 @@ export default function FeaturedProjects(props) {
             );
           })}
           <div className="links">
-            <Link className="project-link" to={git}>
+            <Link className="project-link" to={git} target="_blank">
               <i className="fa-brands fa-github"></i>
             </Link>
-            <Link className="project-link" to={demo}>
+            <Link className="project-link" to={demo} target="_blank">
               <i className="fa-solid fa-arrow-up-right-from-square"></i>
             </Link>
           </div>

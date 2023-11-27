@@ -33,7 +33,10 @@ export default function About() {
             </li>
           </ul>
         </nav> */}
-        <section id="section1" className="section">
+        <section
+          id="section1"
+          className="d-flex vh-100 align-items-center"
+        >
           <Hero />
         </section>
         <section id="section2" className="section">
@@ -48,7 +51,7 @@ export default function About() {
         <section id="section5" className="section">
           <GetInTouch />
         </section>
-        <Link href="/contact" style={{ textDecoration: "none" }}>
+        <Link to="/contact" style={{ textDecoration: "none" }}>
           <MarqueeComp />
         </Link>
       </main>

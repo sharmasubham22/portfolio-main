@@ -27,68 +27,80 @@ export default function Projects() {
     .contact-section {
       text-align: center;
     }
+
+    .container {
+      margin-top: 10%;
+    }
+
+    @media (max-width: 784px) {
+      .container {
+        margin-top: 20%;
+      }
+    }
   `;
 
   return (
-    <div className="container" style={{ marginTop: "5%", marginBottom: "5%" }}>
+    <>
       <StyledProjects>
-        <h1>My Work</h1>
-        <Reveal>
-          <h2
-            className="my-5"
-            style={{
-              fontFamily: "var(--heavy-font)",
-              color: "var(--text-color)",
-              fontSize: "clamp(40px, 4vw, 8vw)",
-              textTransform: "uppercase",
-            }}
-          >
-            Projects
-          </h2>
-        </Reveal>
-        <Reveal>
-          {projectsData.map((element, index) => {
-            return (
-              <div key={index}>
-                <FeaturedProjects
-                  title={element.title}
-                  description={element.description}
-                  techs={element.technologies}
-                  imageLink={element.imgLink}
-                  git={element.git}
-                  demo={element.demo}
-                />
-              </div>
-            );
-          })}
-        </Reveal>
-        <h3 className="section-head" style={{ marginTop: "10%" }}>
-          Other Projects
-        </h3>
+        <div className="container" style={{ marginBottom: "5%" }}>
+          <h1>My Work</h1>
+          <Reveal>
+            <h2
+              className="my-5"
+              style={{
+                fontFamily: "var(--heavy-font)",
+                color: "var(--text-color)",
+                fontSize: "clamp(40px, 4vw, 8vw)",
+                textTransform: "uppercase",
+              }}
+            >
+              Projects
+            </h2>
+          </Reveal>
+          <Reveal>
+            {projectsData.map((element, index) => {
+              return (
+                <div key={index}>
+                  <FeaturedProjects
+                    title={element.title}
+                    description={element.description}
+                    techs={element.technologies}
+                    imageLink={element.imgLink}
+                    git={element.git}
+                    demo={element.demo}
+                  />
+                </div>
+              );
+            })}
+          </Reveal>
+          <h3 className="section-head" style={{ marginTop: "10%" }}>
+            Other Projects
+          </h3>
 
-        <div className="row my-5 row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-          {otherData.map((element2, index2) => {
-            return (
-              <div className="col" key={index2}>
-                <OtherProjects
-                  title={element2.title}
-                  description={element2.description}
-                  techs={element2.technologies}
-                  git={element2.git}
-                  demo={element2.demo}
-                />
-              </div>
-            );
-          })}
-        </div>
+          <div className="row my-5 row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            {otherData.map((element2, index2) => {
+              return (
+                <div className="col" key={index2}>
+                  <OtherProjects
+                    title={element2.title}
+                    description={element2.description}
+                    techs={element2.technologies}
+                    git={element2.git}
+                    demo={element2.demo}
+                  />
+                </div>
+              );
+            })}
+          </div>
 
-        <div className="contact-section">
-          <p> Did you like my profile?</p>
-          <Link type="button" className="connect" to="/contact">
-            Get in Touch!
-          </Link>
+          <div className="contact-section">
+            <p> Did you like my profile?</p>
+            <Link type="button" className="connect" to="/contact">
+              Get in Touch!
+            </Link>
+          </div>
         </div>
       </StyledProjects>
-    </div>
+    </>
   );
 }
