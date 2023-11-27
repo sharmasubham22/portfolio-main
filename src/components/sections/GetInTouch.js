@@ -113,6 +113,7 @@ const currentDateTime = dateObject.toLocaleString();
                   fontFamily: "var(--general-font)",
                   color: "var(--text-color)",
                   fontSize: "clamp(15px, 2vw, 18px)",
+                  
                 }}
               >
                 Halifax, NS (Canada)

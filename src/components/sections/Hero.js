@@ -32,6 +32,53 @@ export default function Hero() {
     .connect {
       ${({ theme }) => theme.mixins.button};
     }
+
+    .scroll {
+      text-align: end;
+      position: absolute;
+      bottom: 100px;
+      right: 15px;
+      writing-mode: vertical-rl;
+      font-size: 18px;
+    }
+
+    .scrollBox {
+      position: absolute;
+      width: 1px;
+      height: 60px;
+      /*   border:1px solid #FA003c; */
+      overflow: hidden;
+      bottom: 50px;
+      right: 50px;
+    }
+    .scrollBox:after {
+      content: "";
+      position: absolute;
+      top: -60px;
+      height: 60px;
+      width: 4px;
+      background: var(--content-color);
+      animation: scrollDrive 2s ease infinite;
+    }
+
+    @keyframes scrollDrive {
+      0% {
+        top: -60px;
+      }
+      50% {
+        top: 60px;
+      }
+      100% {
+        top: 60px;
+      }
+    }
+
+    @media (max-width: 1078px) {
+      .scroll,
+      .scrollBox {
+        display: none;
+      }
+    }
   `;
 
 
@@ -43,7 +90,7 @@ export default function Hero() {
     </h2>
   );
   const three = (
-    <h2>
+    <h2 style={{color:"var(--content-color)"}}>
       I am a <span style={{ color: "var(--highlight-color" }}>developer.</span>
     </h2>
   );
@@ -99,6 +146,12 @@ export default function Hero() {
             ))}
           </motion.div>
         </div>
+ 
+          <div>
+            <p className="scroll">scroll</p>
+            <div class="scrollBox"></div>
+          </div>
+       
       </StyledHero>
     </div>
   );

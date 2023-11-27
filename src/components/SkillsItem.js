@@ -4,19 +4,22 @@ import styled from "styled-components";
 export default function SkillsItem(props) {
   let { category, skills } = props;
 
-  const StyledChip = styled.h1`
-    color: var(--highlight-color);
-    border: 1px solid;
-    border-color: var(--highlight-color);
+  const StyledChip = styled.h5`
+    color: var(--text-color);
+    border: 1px solid var(--highlight-color);
     width: fit-content;
-    padding: 5px 15px;
-    border-radius: 5px;
-    font-family: var(--general-font);
+    padding: 10px 15px;
     text-transform: uppercase;
-    font-size: 16px;
+    border-radius: 8px;
+    font-family: var(--general-font);
     display: inline-block;
     margin-right: 10px;
-    background-color: var(--card-color);
+    transition: 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      background-color: rgb(126, 87, 194, 0.3);
+    }
   `;
 
   return (
@@ -28,9 +31,9 @@ export default function SkillsItem(props) {
             style={{
               fontFamily: "var(--general-font)",
               fontSize: "clamp(17px, 2vw, 18px)",
-              color:"var(--content-color)",
-              textTransform:"uppercase",
-              paddingBottom:"10px"
+              color: "var(--content-color)",
+              textTransform: "uppercase",
+              paddingBottom: "10px",
             }}
           >
             {category}

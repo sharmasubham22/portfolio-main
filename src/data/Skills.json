@@ -34,6 +34,6 @@
   {
     "id": 6,
     "category": "Others",
-    "skillItems": ["OOPS","Git", "JIRA", "SonarQube", "SonarLint", "Android Studio", "Figma","Adobe Photoshop", "MS Office 365"]
+    "skillItems": ["Git", "JIRA", "SonarQube", "Android Studio", "Figma", "Photoshop"]
   }
 ]
