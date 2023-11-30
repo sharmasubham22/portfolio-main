@@ -99,6 +99,15 @@ export default function Nav() {
           <motion.div variants={variants} className="p-4 bd-highlight">
             <StyledBtn type="button">My Resume</StyledBtn>
           </motion.div>
+          {/* <div className="form-check form-switch">
+            <input
+              className="form-check-input"
+              type="checkbox"
+              role="switch"
+              id="flexSwitchCheckDefault"
+              onClick={props.toggle}
+            />
+          </div> */}
         </motion.div>
       </div>
     </div>

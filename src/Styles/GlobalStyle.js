@@ -37,7 +37,7 @@ body{
     font-family: var(--heavy-font);
     text-transform: uppercase;
     color: var(--text-color);
-    font-size: clamp(20px, 4vw, 40px);
+    font-size: clamp(25px, 4vw, 40px);
   }
 
   .nav2 {

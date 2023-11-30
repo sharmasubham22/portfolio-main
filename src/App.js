@@ -1,5 +1,4 @@
 import './App.css';
-// import Navbar from './components/Navbar';
 import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import Projects from './components/sections/Projects';
 import About from './components/About';
@@ -10,16 +9,30 @@ import theme from './Styles/theme';
 import { ThemeProvider } from 'styled-components';
 import Nav from './components/Nav';
 import Menu from './components/Menu';
+// import Preloader from './components/Preloader';
 
 function App() {
+  //   const [mode, setmode] = useState("light");
+
+  // const toggleMode = () => {
+  //   if (mode === "light") {
+  //     setmode("dark");
+  //     document.querySelector("body").setAttribute("data-theme", "dark");
+     
+  //   } else {
+  //     setmode("light");
+  //     document.querySelector("body").setAttribute("data-theme", "light");
+
+  //   }
+  // };
   return (
     <>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
         <Router>
           {/* <Navbar /> */}
-          <Nav/>
-          <Menu/>
+          <Nav />
+          <Menu />
           <Routes>
             <Route path="/" element={<About />} />
             <Route path="/work" element={<Projects />} />

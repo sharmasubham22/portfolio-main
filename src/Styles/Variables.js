@@ -14,6 +14,16 @@ const Variables = css`
     --heavy-font: shapiro;
     --heavy-font2: shapiro-air;
   }
+
+  [data-theme="dark"] {
+    --background-color: rgb(255, 255, 255);
+    --border-color: rgb(5, 10, 24, 0.1);
+    --card-color: rgb(255, 255, 255);
+    --highlight-color: #9975fa;
+    --text-color: rgb(5, 10, 24);
+    --opacity: 0.5;
+    --content-color: #aba3c7;
+  }
 `;
 
 export default Variables;
