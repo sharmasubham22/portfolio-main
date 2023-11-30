@@ -1,5 +1,5 @@
 import React from "react";
-import pic from "../../images/pic2.jpg";
+import pic from "../../images/pic.png";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import Reveal from "../Motion";
