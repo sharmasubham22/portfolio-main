@@ -190,7 +190,7 @@ export default function Profile() {
                 <img
                   className="img"
                   src={pic}
-                  width={500}
+                  width={300}
                   formats={["AUTO", "WEBP", "AVIF"]}
                   alt="Headshot"
                 />

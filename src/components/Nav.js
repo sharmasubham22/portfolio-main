@@ -6,8 +6,13 @@ import styled from "styled-components";
 export default function Nav() {
   let location = useLocation();
 
-  const StyledBtn = styled.button`
+  const StyledBtn = styled.div`
     ${({ theme }) => theme.mixins.resumeBtn};
+
+    .res-btn{
+      text-decoration:none;
+      color:var(--highlight-color);
+    }
   `;
   
       const controls = useAnimation();
@@ -97,7 +102,16 @@ export default function Nav() {
             </Link>
           </motion.div>
           <motion.div variants={variants} className="p-4 bd-highlight">
-            <StyledBtn type="button">My Resume</StyledBtn>
+            <StyledBtn>
+              <Link
+              type="button"
+              className="res-btn"
+              to="https://drive.google.com/uc?export=view&id=1s6_WoJ-w99w4LENuxGMxD4ERIIvLF7bD"
+              target="_blank"
+            >
+              My Resume
+              </Link>
+            </StyledBtn>
           </motion.div>
           {/* <div className="form-check form-switch">
             <input
