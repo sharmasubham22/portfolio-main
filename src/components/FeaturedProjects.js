@@ -24,10 +24,13 @@ export default function FeaturedProjects(props) {
     .tech-skills {
       color: var(--highlight-color);
       text-transform: uppercase;
-      display: inline;
+      display: flex;
       justify-content: end;
+    }
+
+    .tech-items {
       font-size: 14px;
-      margin: 20px 0px 20px 20px;
+      margin: 0px 0px 20px 20px;
     }
 
     .links {
@@ -50,13 +53,37 @@ export default function FeaturedProjects(props) {
       color: var(--highlight-color);
     }
 
-    @media (max-width: 784px) {
+    @media (max-width: 767px) {
       display: none;
+    }
+
+    @media (max-width: 991px) and (min-width: 767px) {
+      p {
+        text-align: center;
+      }
+
+      h3 {
+        text-align: center;
+      }
+
+      .links {
+        display: flex;
+        justify-content: center;
+      }
+
+      .fa-brands,
+      .fa-solid {
+        margin: 30px 40px 0px 10px;
+      }
+
+      .tech-skills {
+        justify-content:center;
+      }
     }
   `;
   const StyledDiv2 = styled.div`
     font-family: var(--general-font);
-    @media (min-width: 784px) {
+    @media (min-width: 767px) {
       display: none;
     }
 
@@ -64,7 +91,7 @@ export default function FeaturedProjects(props) {
       background-color: var(--card-color);
     }
     .card-img {
-      height: clamp(25rem, 24rem, 15rem);
+      height: clamp(21.5rem, 22rem, 15rem);
       object-fit: cover;
     }
 
@@ -77,18 +104,35 @@ export default function FeaturedProjects(props) {
     .card-subtitle {
       color: var(--highlight-color);
       text-transform: uppercase;
+      font-size: clamp(11px, 2vw, 14px);
     }
 
     .card-text {
       color: var(--content-color);
     }
+
+    .project-link {
+      text-decoration: none;
+      color: var(--text-color);
+      font-size: 24px;
+    }
+
+    .project-link:hover {
+      color: var(--highlight-color);
+    }
+    
+
   `;
   const StyledPic = styled.div`
     position: relative;
     max-width: 650px;
 
-    @media (max-width: 784px) {
+    @media (max-width: 767px) {
       display: none;
+    }
+
+    @media (max-width: 991px) and (min-width: 767px) {
+      margin:auto;
     }
 
     .wrapper {
@@ -97,12 +141,12 @@ export default function FeaturedProjects(props) {
       width: 100%;
       border-radius: 5px;
       background-color: var(--highlight-color);
-      transition: 0.2s ease;
+      transition: 0.3s ease;
 
       &:hover,
       &:focus {
         outline: 0;
-        transform: translate(-4px, -4px);
+        transform: translateY(-10px);
 
         &:after {
           transform: translate(8px, 8px);
@@ -128,7 +172,7 @@ export default function FeaturedProjects(props) {
         display: block;
         position: absolute;
         width: 100%;
-        height: 100%;
+        
         border-radius: 5px;
         transition: 0.3s ease;
       }
@@ -210,13 +254,15 @@ export default function FeaturedProjects(props) {
         <StyledDiv className="col my-3">
           <h3 className="mb-4">{title}</h3>
           <p>{description}</p>
-          {techs.map((techKey, techIndex) => {
-            return (
-              <h5 className="tech-skills" key={techIndex}>
-                {techKey}
-              </h5>
-            );
-          })}
+          <div className="tech-skills">
+            {techs.map((techKey, techIndex) => {
+              return (
+                <h6 className="tech-items" key={techIndex}>
+                  {techKey}
+                </h6>
+              );
+            })}
+          </div>
           <div className="links">
             <Link className="project-link" to={git} target="_blank">
               <i className="fa-brands fa-github"></i>
@@ -228,7 +274,7 @@ export default function FeaturedProjects(props) {
         </StyledDiv>
       </div>
       <StyledDiv2>
-        <div className="card">
+        <div className="card h-100">
           <StyledPic2>
             <div className="wrapper">
               <img src={imageLink} className="card-img" alt="..." />
@@ -248,6 +294,14 @@ export default function FeaturedProjects(props) {
                 </h6>
               );
             })}
+            <div className="my-3">
+              <Link className="project-link" to={git} target="_blank">
+                <i className="fa-brands fa-github"></i>
+              </Link>
+              <Link className="project-link mx-5" to={demo} target="_blank">
+                <i className="fa-solid fa-arrow-up-right-from-square"></i>
+              </Link>
+            </div>
           </div>
         </div>
       </StyledDiv2>

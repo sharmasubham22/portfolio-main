@@ -7,7 +7,7 @@ const mixins = {
     border: 1px solid var(--highlight-color);
     border-radius: 5px;
     font-size: clamp(15px, 2vw, 18px);
-    font-family: sono;
+    font-family: var(--general-font);
     line-height: 1;
     text-decoration: none;
     padding: 1.25rem 1.75rem;
@@ -30,7 +30,7 @@ const mixins = {
     border: 1px solid var(--highlight-color);
     border-radius: 5px;
     font-size: clamp(15px, 2vw, 18px);
-    font-family: sono;
+    font-family: var(--general-font);
     line-height: 1;
     text-decoration: none;
     padding: 0.75rem 1rem;
@@ -54,9 +54,10 @@ const mixins = {
     width: fit-content;
     padding: 5px 10px;
     border-radius: 20px;
-    font-family: Sono;
+    font-family: var(--general-font);
     text-transform: uppercase;
     font-size: clamp(10px, 2vw, 17px);
+    user-select: none;
   `,
 };
 

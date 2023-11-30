@@ -61,7 +61,7 @@ export default function WorkItem(props) {
             className="card-text"
             style={{
               color: "#aba3c7",
-              fontSize: "clamp(15px, 2vw, 18px)",
+              fontSize: "clamp(15px, 2vw, 16px)",
               fontFamily: "var(--general-font)",
             }}
           >

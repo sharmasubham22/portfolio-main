@@ -47,14 +47,12 @@ export default function Profile() {
   `;
 
   const StyledPic = styled.div`
-    position: relative;
-    max-width: 300px; 
 
-    @media (max-width: 768px) {
+    @media (max-width: 994px) {
       margin: 50px auto 0;
 
       .img{
-        width:230px;
+        width:250px;
       }
     }
 
@@ -157,9 +155,8 @@ export default function Profile() {
                   to="https://www.canada.ca/en/revenue-agency.html"
                   target="_blank"
                 >
-                  Canada Revenue Agency
-                </Link>
-                (CRA). Also, I have experience working in Business development
+                  Canada Revenue Agency{" "}
+                </Link> (CRA). Also, I have experience working in Business development
                 team at{" "}
                 <Link
                   className="link-design"
@@ -168,8 +165,7 @@ export default function Profile() {
                 >
                   Townscript
                 </Link>
-                . My interest in web started back in 2017, through which I
-                bagged a web design internship at{" "}
+                . My interest in web started back in 2017, and started my career with a web design internship at{" "}
                 <Link
                   className="link-design"
                   to="https://skillsanta.com/"
@@ -194,7 +190,7 @@ export default function Profile() {
                 <img
                   className="img"
                   src={pic}
-                  width={300}
+                  width={500}
                   formats={["AUTO", "WEBP", "AVIF"]}
                   alt="Headshot"
                 />

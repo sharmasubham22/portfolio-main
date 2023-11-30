@@ -54,6 +54,7 @@ export default function GetInTouch() {
       border-radius: 50%;
       justify-content: center;
       align-items: center;
+      user-select: none;
     }
 
     @media (max-width: 984px) {
@@ -89,7 +90,7 @@ const currentDateTime = dateObject.toLocaleString();
                 style={{
                   fontFamily: "var(--general-font)",
                   color: "var(--text-color)",
-                  fontSize: "clamp(15px, 2vw, 18px)",
+                  fontSize: "clamp(15px, 2vw, 20px)",
                 }}
               >
                 Liked my profile? I am always open for a great chat. My inbox is
@@ -112,7 +113,7 @@ const currentDateTime = dateObject.toLocaleString();
                 style={{
                   fontFamily: "var(--general-font)",
                   color: "var(--text-color)",
-                  fontSize: "clamp(15px, 2vw, 18px)",
+                  fontSize: "clamp(15px, 2vw, 20px)",
                   
                 }}
               >
@@ -122,7 +123,7 @@ const currentDateTime = dateObject.toLocaleString();
                 style={{
                   fontFamily: "var(--general-font)",
                   color: "var(--text-color)",
-                  fontSize: "clamp(15px, 2vw, 18px)",
+                  fontSize: "clamp(15px, 2vw, 20px)",
                 }}
               >
                 {currentDateTime}
@@ -156,7 +157,7 @@ const currentDateTime = dateObject.toLocaleString();
                         href="#circle"
                         className="text"
                       >
-                        Click below for contact details &#x2022;
+                        Click down for my contact details &#x2022;
                       </textPath>
                     </text>
                   </svg>

@@ -41,7 +41,8 @@ body{
   }
 
   .nav2 {
-    background-color: rgb(6, 11, 25, 0.9);
+    background-color: var(--background-color);
+    opacity:0.9;
     backdrop-filter: blur(10px);
   }
 
@@ -54,6 +55,7 @@ body{
   text-decoration:none;
   color: var(--text-color);
   font-family:var(--general-font);
+  user-select: none;
 
   &:hover{
     color: var(--text-color);
@@ -130,6 +132,7 @@ body{
 
       .nav-btn{
         color:var(--highlight-color);
+        z-index:2;
       } 
       
       .menu .menu-nav {
@@ -145,18 +148,14 @@ body{
         gap: 1.5rem;
         background-color: var(--background-color);
         transition: 1s;
-        z-index: 9999999;
+        z-index: 1;
       }
 
       .menu .responsive_nav {
         transform: translateY(100vh);
       }
 
-      .menu-nav .nav-close-btn {
-        position: absolute;
-        top: 2rem;
-        right: 2rem;
-      }
+
 
       .menu-nav .nav-link {
         font-size: 1.2rem;
@@ -184,12 +183,60 @@ body{
         backgroun-color: yellow;
       }
 
+  .menu {
+  position: absolute;
+  cursor: pointer;
+  transition: 0.5s ease;
+
+}
+.menu:hover .bar {
+  box-shadow: 1px 1px 7px 1px RGBa(0, 0, 0, 0.3);
+}
+.menu .bar {
+  width: 30px;
+  height: 4px;
+  background: var(--highlight-color);
+  border-radius: 2px;
+  transition: 0.4s ease;
+  transform: translate(-40%, 100%)
+}
+.menu .bar:nth-child(2){
+  width: 20px;
+}
+.menu .bar:not(:first-child) {
+  margin-top: 5px;
+}
+
+#hi {
+  position: absolute;
+  left: -999px;
+  top: -999px;
+}
+
+#hi:checked + .menu {
+  transform: translate(-40%, -40%) rotatey(180deg);
+}
+#hi:checked + .menu .bar {
+  transform: rotatey(180deg) rotatex(360deg);
+}
+#hi:checked + .menu .bar:first-child {
+  transform: rotate(-40deg);
+  margin-top: 20px;
+}
+#hi:checked + .menu .bar:nth-child(2) {
+  opacity: 0;
+}
+#hi:checked + .menu .bar:nth-child(3) {
+  margin-top: -13px;
+  transform: rotate(45deg);
+}
+
   .text {
       font-weight: 600;
       letter-spacing: 2px;
       text-transform: uppercase;
       font-family: var(--general-font);
-      font-size: 24px;
+      font-size: 26px;
       fill:var(--background-color);
     }
 

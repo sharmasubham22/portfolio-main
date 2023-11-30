@@ -10,7 +10,7 @@ const Variables = css`
     --opacity: 0.5;
     --content-color: #aba3c7;
     --easing: cubic-bezier(0.645, 0.045, 0.355, 1);
-    --general-font: sono;
+    --general-font: space grotesk;
     --heavy-font: shapiro;
     --heavy-font2: shapiro-air;
   }

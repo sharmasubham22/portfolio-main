@@ -49,7 +49,7 @@ export default function Nav() {
             className="p-4 flex-grow-1 bd-highlight nav-section"
           >
             <Link className="fs-3 logo" to="/">
-              &#60;subham.sharma/&#62;
+              subh.s
             </Link>
           </motion.div>
           <motion.div

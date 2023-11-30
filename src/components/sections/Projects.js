@@ -77,7 +77,7 @@ export default function Projects() {
             Other Projects
           </h3>
 
-          <div className="row my-5 row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+          <div className="row my-5 row-cols-1 row-cols-md-2 row-cols-lg-2 g-4">
             {otherData.map((element2, index2) => {
               return (
                 <div className="col" key={index2}>

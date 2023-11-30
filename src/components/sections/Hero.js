@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { motion, useAnimation, useInView } from "framer-motion";
+import globe from '../../images/globe.svg'
 
 export default function Hero() {
   const StyledHero = styled.div`
@@ -11,10 +12,16 @@ export default function Hero() {
     }
 
     h2 {
-      font-size: clamp(25px, 4vw + 0.5vw, 80px);
+      font-size: clamp(40px, 5vw, 80px);
       font-family: var(--heavy-font);
       text-transform: uppercase;
       color: var(--text-color);
+    }
+
+    .dev-text {
+      font-size: clamp(25px, 5vw, 80px);
+      font-family: var(--heavy-font);
+      text-transform: uppercase;
     }
 
     p {
@@ -40,6 +47,7 @@ export default function Hero() {
       right: 15px;
       writing-mode: vertical-rl;
       font-size: 18px;
+      user-select: none;
     }
 
     .scrollBox {
@@ -73,6 +81,17 @@ export default function Hero() {
       }
     }
 
+    .globe-svg {
+      position: absolute;
+      overflow: hidden;
+      top: 13%;
+      left: 50%;
+      z-index: -1;
+      opacity: 0.3;
+      width: 40%;
+      transform: rotate(180deg);
+    }
+
     @media (max-width: 1078px) {
       .scroll,
       .scrollBox {
@@ -80,22 +99,31 @@ export default function Hero() {
       }
 
       p {
-        width:100%;
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 568px) {
+      .globe-svg {
+        width: 70%;
+        top: 20%;
+        left: 30%;
+        opacity:0.5;
       }
     }
   `;
 
 
 
-  const one = <p>Hi there! My name is</p>;
+  const one = <p>Hi there! 👋🏻 My name is</p>;
   const two = (
     <h2>
-      Subham Sharma. <br />
+      Subham Sharma <br />
     </h2>
   );
   const three = (
-    <h2 style={{color:"var(--content-color)"}}>
-      I am a <span style={{ color: "var(--highlight-color" }}>developer.</span>
+    <h2 className="dev-text" style={{color:"var(--content-color)"}}>
+      I am a <span style={{ color: "var(--highlight-color" }}>developer</span>
     </h2>
   );
   const four = (
@@ -138,7 +166,7 @@ export default function Hero() {
   };
 
   return (
-    <div className="container" >
+    <div className="container">
       <StyledHero>
         <h1>About</h1>
         <div ref={ref}>
@@ -150,12 +178,16 @@ export default function Hero() {
             ))}
           </motion.div>
         </div>
- 
-          <div>
-            <p className="scroll">scroll</p>
-            <div class="scrollBox"></div>
-          </div>
-       
+
+        <div>
+          <p className="scroll">scroll</p>
+          <div class="scrollBox"></div>
+        </div>
+        <motion.div
+          
+        >
+          <img src={globe} className="globe-svg" alt="..."></img>
+        </motion.div>
       </StyledHero>
     </div>
   );

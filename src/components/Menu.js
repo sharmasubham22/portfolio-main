@@ -31,7 +31,7 @@ export default function Menu() {
         <div className="d-flex bd-highlight">
           <div className="p-3 flex-fill bd-highlight menu-section">
             <Link className="fs-3 logo" to="/">
-              &#60;subham.sharma/&#62;
+              subh.s
             </Link>
           </div>
           <div className="menu-nav" ref={navRef}>
@@ -63,12 +63,6 @@ export default function Menu() {
             >
               Contact
             </Link>
-            <div
-              className="p-3 fs-3 bd-highlight menu-section nav-btn nav-close-btn"
-              onClick={showNavbar} ref={refClose}
-            >
-              <i className="fa-solid fa-xmark"></i>
-            </div>
             <div className="d-flex">
               <Link
                 to="https://www.linkedin.com/in/subham-sharma-137985128/"
@@ -87,8 +81,14 @@ export default function Menu() {
             </div>
             <StyledBtn type="button">My Resume</StyledBtn>
           </div>
+
           <div className="p-3 fs-3 bd-highlight menu-section nav-btn">
-            <i className="fa-solid fa-bars" onClick={showNavbar}></i>
+            <input type="checkbox" id="hi" />
+            <label class="menu" for="hi" ref={refClose} onClick={showNavbar}>
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+            </label>
           </div>
         </div>
       </div>
