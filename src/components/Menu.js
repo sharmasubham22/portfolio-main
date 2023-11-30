@@ -17,9 +17,8 @@ export default function Menu() {
     let location = useLocation();
 
   const StyledBtn = styled.div`
-    ${({ theme }) => theme.mixins.resumeBtn};
-
     .res-btn {
+      ${({ theme }) => theme.mixins.resumeBtn};
       text-decoration: none;
       color: var(--highlight-color);
     }
