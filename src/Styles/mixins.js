@@ -48,9 +48,9 @@ const mixins = {
   `,
 
   chip: css`
-    color: #9975fa;
+    color: var(--highlight-color);
     border: 1px solid;
-    border-color: #9975fa;
+    border-color: var(--highlight-color);
     width: fit-content;
     padding: 5px 10px;
     border-radius: 20px;

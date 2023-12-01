@@ -103,12 +103,12 @@ export default function Nav() {
           <motion.div variants={variants} className="p-4 bd-highlight">
             <StyledBtn>
               <Link
-              type="button"
-              className="res-btn"
-              to="https://drive.google.com/uc?export=view&id=1s6_WoJ-w99w4LENuxGMxD4ERIIvLF7bD"
-              target="_blank"
-            >
-              My Resume
+                type="button"
+                className="res-btn"
+                to="https://drive.google.com/uc?export=view&id=1s6_WoJ-w99w4LENuxGMxD4ERIIvLF7bD"
+                target="_blank"
+              >
+                My Resume
               </Link>
             </StyledBtn>
           </motion.div>
@@ -118,7 +118,7 @@ export default function Nav() {
               type="checkbox"
               role="switch"
               id="flexSwitchCheckDefault"
-              onClick={props.toggle}
+              onClick={props.toggleMode}
             />
           </div> */}
         </motion.div>

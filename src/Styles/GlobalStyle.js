@@ -46,11 +46,6 @@ body{
     backdrop-filter: blur(10px);
   }
 
-    .menu {
-    background-color: rgb(6, 11, 25, 0.9);
-    backdrop-filter: blur(10px);
-  }
-
 .logo{
   text-decoration:none;
   color: var(--text-color);
@@ -168,7 +163,7 @@ body{
         color:var(--content-color);
         padding:18px 25px;
         font-size: 1.5rem;
-        background-color: rgb(126, 87, 194, 0.3);
+        background-color: rgb(163, 177, 138, 0.3);
         margin: 10px 20px;
         border: 1px solid var(--highlight-color);
         border-radius: 50%;
@@ -179,30 +174,23 @@ body{
         }
       }
 
-      .section-link.active {
-        backgroun-color: yellow;
-      }
-
   .menu {
-  position: absolute;
+   background-color: var(--background-color);
+    backdrop-filter: blur(10px);
+  position: fixed;
   cursor: pointer;
   transition: 0.5s ease;
 
-}
-.menu:hover .bar {
-  box-shadow: 1px 1px 7px 1px RGBa(0, 0, 0, 0.3);
 }
 .menu .bar {
   width: 30px;
   height: 4px;
   background: var(--highlight-color);
-  border-radius: 2px;
+  
   transition: 0.4s ease;
   transform: translate(-40%, 100%)
 }
-.menu .bar:nth-child(2){
-  width: 20px;
-}
+
 .menu .bar:not(:first-child) {
   margin-top: 5px;
 }

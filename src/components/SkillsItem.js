@@ -19,7 +19,7 @@ export default function SkillsItem(props) {
 
     &:hover {
       transform: translateY(-5px);
-      background-color: rgb(126, 87, 194, 0.3);
+      color:var(--highlight-color);
     }
   `;
 

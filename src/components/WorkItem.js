@@ -60,7 +60,7 @@ export default function WorkItem(props) {
           <h4
             className="card-text"
             style={{
-              color: "#aba3c7",
+              color: "var(--content-color)",
               fontSize: "clamp(15px, 2vw, 16px)",
               fontFamily: "var(--general-font)",
             }}

@@ -9,7 +9,7 @@ import theme from './Styles/theme';
 import { ThemeProvider } from 'styled-components';
 import Nav from './components/Nav';
 import Menu from './components/Menu';
-// import Preloader from './components/Preloader';
+// import { useState } from 'react';
 
 function App() {
   //   const [mode, setmode] = useState("light");
@@ -30,7 +30,6 @@ function App() {
       <ThemeProvider theme={theme}>
         <GlobalStyle />
         <Router>
-          {/* <Navbar /> */}
           <Nav />
           <Menu />
           <Routes>

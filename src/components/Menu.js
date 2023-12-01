@@ -17,6 +17,7 @@ export default function Menu() {
     let location = useLocation();
 
   const StyledBtn = styled.div`
+  margin: 10% 0;
     .res-btn {
       ${({ theme }) => theme.mixins.resumeBtn};
       text-decoration: none;
@@ -67,6 +68,16 @@ export default function Menu() {
             >
               Contact
             </Link>
+            <StyledBtn>
+              <Link
+                type="button"
+                className="res-btn"
+                to="https://drive.google.com/uc?export=view&id=1s6_WoJ-w99w4LENuxGMxD4ERIIvLF7bD"
+                target="_blank"
+              >
+                My Resume
+              </Link>
+            </StyledBtn>
             <div className="d-flex">
               <Link
                 to="https://www.linkedin.com/in/subham-sharma-137985128/"
@@ -83,16 +94,16 @@ export default function Menu() {
                 <i className="fa-brands fa-github"></i>
               </Link>
             </div>
-            <StyledBtn>
-              <Link
-                type="button"
-                className="res-btn"
-                to="https://drive.google.com/uc?export=view&id=1s6_WoJ-w99w4LENuxGMxD4ERIIvLF7bD"
-                target="_blank"
-              >
-                My Resume
-              </Link>
-            </StyledBtn>
+
+            {/* <div className="form-check form-switch">
+              <input
+                className="form-check-input"
+                type="checkbox"
+                role="switch"
+                id="flexSwitchCheckDefault"
+                onClick={props.toggleMode}
+              />
+            </div> */}
           </div>
 
           <div className="p-3 fs-3 bd-highlight menu-section nav-btn">

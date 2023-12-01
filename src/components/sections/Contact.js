@@ -56,7 +56,7 @@ const Result = () => {
       margin-right: 20px;
       padding: 25px 30px;
       border: 1px solid var(--highlight-color);
-      background-color: rgb(126, 87, 194, 0.3);
+      background-color: rgb(163, 177, 138, 0.3);
       transition: 0.5s ease;
       opacity: 0.4;
       border-radius: 50%;
@@ -85,7 +85,7 @@ const Result = () => {
   return (
     <div
       className="d-flex w-100"
-      style={{ marginTop: "6%", marginBottom: "5%" }}
+      style={{ marginTop: "6%", marginBottom: "9%" }}
     >
       <div className="container">
         <StyledForm>

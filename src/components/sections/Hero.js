@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { motion, useAnimation, useInView } from "framer-motion";
-import globe from '../../images/globe.svg'
+// import globe from '../../images/globe.svg'
 
 export default function Hero() {
   const StyledHero = styled.div`
@@ -122,8 +122,8 @@ export default function Hero() {
     </h2>
   );
   const three = (
-    <h2 className="dev-text" style={{color:"var(--content-color)"}}>
-      I am a <span style={{ color: "var(--highlight-color" }}>developer</span>
+    <h2 className="dev-text" style={{ color: "var(--content-color)" }}>
+      I am a developer<span style={{ color: "var(--highlight-color" }}></span>
     </h2>
   );
   const four = (
@@ -186,7 +186,7 @@ export default function Hero() {
         <motion.div
           
         >
-          <img src={globe} className="globe-svg" alt="..."></img>
+          {/* <img src={globe} className="globe-svg" alt="..."></img> */}
         </motion.div>
       </StyledHero>
     </div>

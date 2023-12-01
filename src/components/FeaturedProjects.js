@@ -132,7 +132,7 @@ export default function FeaturedProjects(props) {
     }
 
     @media (max-width: 991px) and (min-width: 767px) {
-      margin:auto;
+      margin: auto;
     }
 
     .wrapper {
@@ -142,6 +142,7 @@ export default function FeaturedProjects(props) {
       border-radius: 5px;
       background-color: var(--highlight-color);
       transition: 0.3s ease;
+      backdrop-filter: blur(10px);
 
       &:hover,
       &:focus {
@@ -172,7 +173,7 @@ export default function FeaturedProjects(props) {
         display: block;
         position: absolute;
         width: 100%;
-        
+
         border-radius: 5px;
         transition: 0.3s ease;
       }
@@ -193,7 +194,7 @@ export default function FeaturedProjects(props) {
       position: relative;
       width: 100%;
       border-radius: 5px;
-      background-color: #241845;
+      background-color: var(--featured-color);
       transition: 0.8s ease;
 
       &:focus {
