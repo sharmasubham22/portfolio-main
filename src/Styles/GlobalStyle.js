@@ -63,7 +63,7 @@ body{
 
 .nav-link{
   text-decoration:none;
-  color: var(--text-color);
+  color: var(--content-color);
   font-family:var(--general-font);
 
   &:hover{

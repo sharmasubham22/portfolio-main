@@ -239,18 +239,20 @@ export default function FeaturedProjects(props) {
     <div>
       <div className=" my-5 row row-cols-1 row-cols-md-1 row-cols-lg-2">
         <StyledPic>
-          <div className="col wrapper">
-            <img
-              className="banner-img"
-              style={{
-                objectFit: "cover",
-                width: "clamp(300px, 100%,630px)",
-                height: "300px",
-              }}
-              src={imageLink}
-              alt="banner"
-            ></img>
-          </div>
+          <Link to={demo} target="_blank">
+            <div className="col wrapper">
+              <img
+                className="banner-img"
+                style={{
+                  objectFit: "cover",
+                  width: "clamp(300px, 100%,630px)",
+                  height: "300px",
+                }}
+                src={imageLink}
+                alt="banner"
+              ></img>
+            </div>
+          </Link>
         </StyledPic>
         <StyledDiv className="col my-3">
           <h3 className="mb-4">{title}</h3>

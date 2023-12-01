@@ -1,7 +1,7 @@
 [
   {
     "title": "News Guru",
-    "description": "News Guru is your source for daily news. You get all the breaking headlines at a glance based on the category you choose. Users get the news are fetched from the news-API and displayed in a clean and informative structure. ",
+    "description": "News Guru is your source for daily news. You get all the breaking headlines at a glance based on the category you choose. Users get the news that are fetched from the news-API and displayed in a clean and informative structure. ",
     "technologies": ["React", "News-Api", "Bootstrap"],
     "git": "https://github.com/sharmasubham22/news_app",
     "demo": "/"

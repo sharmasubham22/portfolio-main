@@ -26,7 +26,7 @@ export default function OtherProjects(props) {
        .card-subtitle {
          color: var(--highlight-color);
          text-transform: uppercase;
-         font-size: clamp(11px, 2vw, 1px);
+         font-size: clamp(11px, 2vw, 13px);
        }
 
        .card-text {
