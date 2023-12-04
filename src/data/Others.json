@@ -1,5 +1,12 @@
 [
   {
+    "title": "Codepen-Clone",
+    "description": "This is a 'Codepen' clone which is useful and liberating online code editor for developers. It allows users to write code in the browser, and see the results of it as you build. Primary focus on front-end languages like HTML, CSS, JavaScript, ",
+    "technologies": ["React", "code-mirror"],
+    "git": "https://github.com/sharmasubham22/codepen-clone.git",
+    "demo": "https://cp-clone.netlify.app/"
+  },
+  {
     "title": "News Guru",
     "description": "News Guru is your source for daily news. You get all the breaking headlines at a glance based on the category you choose. Users get the news that are fetched from the news-API and displayed in a clean and informative structure. ",
     "technologies": ["React", "News-Api", "Bootstrap"],
@@ -9,7 +16,7 @@
   {
     "title": "Halifax Foodie",
     "description": "It is a multi-cloud based serverless food delivery system. It is designed using serverless technologies to process data. It provides customization feature, & additional services for restaurant owners, & limited services to customers.",
-    "technologies": ["AWS", "GCP", "Node.js","React"],
+    "technologies": ["AWS", "GCP", "Node.js", "React"],
     "git": "https://github.com/sharmasubham22/halifax-foodie.git",
     "demo": ""
   },
