@@ -150,6 +150,7 @@ const Result = () => {
                       name="fullName"
                       id="name"
                       placeholder="Please enter your full name"
+                      required
                     />
                   </div>
                   <div className="mb-3">
@@ -162,6 +163,7 @@ const Result = () => {
                       name="email"
                       id="email"
                       placeholder="Please enter your email address"
+                      required
                     />
                   </div>
                   <div className="mb-3">
@@ -174,6 +176,7 @@ const Result = () => {
                       name="message"
                       rows="3"
                       placeholder="Please enter your message"
+                      required
                     ></textarea>
                   </div>
                 </Reveal>

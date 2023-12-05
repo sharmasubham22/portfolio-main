@@ -81,16 +81,6 @@ export default function Hero() {
       }
     }
 
-    .globe-svg {
-      position: absolute;
-      overflow: hidden;
-      top: 13%;
-      left: 50%;
-      z-index: -1;
-      opacity: 0.3;
-      width: 40%;
-      transform: rotate(180deg);
-    }
 
     @media (max-width: 1078px) {
       .scroll,
@@ -103,14 +93,6 @@ export default function Hero() {
       }
     }
 
-    @media (max-width: 568px) {
-      .globe-svg {
-        width: 70%;
-        top: 20%;
-        left: 30%;
-        opacity:0.5;
-      }
-    }
   `;
 
 
@@ -181,13 +163,8 @@ export default function Hero() {
 
         <div>
           <p className="scroll">scroll</p>
-          <div class="scrollBox"></div>
+          <div className="scrollBox"></div>
         </div>
-        <motion.div
-          
-        >
-          {/* <img src={globe} className="globe-svg" alt="..."></img> */}
-        </motion.div>
       </StyledHero>
     </div>
   );

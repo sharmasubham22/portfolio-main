@@ -107,10 +107,10 @@ export default function Menu() {
 
           <div className="p-3 fs-3 bd-highlight menu-section nav-btn">
             <input type="checkbox" id="hi" />
-            <label class="menu" for="hi" ref={refClose} onClick={showNavbar}>
-              <div class="bar"></div>
-              <div class="bar"></div>
-              <div class="bar"></div>
+            <label className="menu" htmlFor="hi" ref={refClose} onClick={showNavbar}>
+              <div className="bar"></div>
+              <div className="bar"></div>
+              <div className="bar"></div>
             </label>
           </div>
         </div>
