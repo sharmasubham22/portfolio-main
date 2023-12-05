@@ -31,6 +31,7 @@ export default function OtherProjects(props) {
 
        .card-text {
          color: var(--content-color);
+         font-size: clamp(14px, 2vw, 16px);
        }
 
        .fa-folder {

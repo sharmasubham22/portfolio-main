@@ -41,8 +41,7 @@ body{
   }
 
   .nav2 {
-    background-color: var(--background-color);
-    opacity:0.9;
+    background-color: rgb(2,20,31,0.9);
     backdrop-filter: blur(10px);
   }
 
