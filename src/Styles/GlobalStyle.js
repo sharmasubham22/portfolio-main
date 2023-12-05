@@ -223,7 +223,7 @@ body{
       letter-spacing: 2px;
       text-transform: uppercase;
       font-family: var(--general-font);
-      font-size: 26px;
+      font-size: 18.5px;
       fill:var(--background-color);
     }
 
@@ -232,6 +232,10 @@ body{
       animation-duration: 10s;
       animation-timing-function: linear;
       animation-iteration-count: infinite;
+    }
+
+    #wavy-circle{
+      animation: none;
     }
 
     @keyframes rotate-circle {

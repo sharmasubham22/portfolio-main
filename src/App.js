@@ -9,6 +9,7 @@ import theme from './Styles/theme';
 import { ThemeProvider } from 'styled-components';
 import Nav from './components/Nav';
 import Menu from './components/Menu';
+import ScrollTop from './components/ScrollTop';
 // import { useState } from 'react';
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
       <ThemeProvider theme={theme}>
         <GlobalStyle />
         <Router>
+          <ScrollTop />
           <Nav />
           <Menu />
           <Routes>
