@@ -105,7 +105,7 @@ export default function Nav() {
               <Link
                 type="button"
                 className="res-btn"
-                to="https://drive.google.com/uc?export=view&id=1s6_WoJ-w99w4LENuxGMxD4ERIIvLF7bD"
+                to="https://drive.google.com/uc?export=view&id=1YdfZW7XHx_kTxeKlAOLBYBgffwwpvctx"
                 target="_blank"
               >
                 My Resume

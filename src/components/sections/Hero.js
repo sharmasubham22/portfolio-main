@@ -97,7 +97,7 @@ export default function Hero() {
 
 
 
-  const one = <p>Hi there! 👋🏻 My name is</p>;
+  const one = <p>Hi there! 👋🏻 my name is</p>;
   const two = (
     <h2>
       Subham Sharma <br />

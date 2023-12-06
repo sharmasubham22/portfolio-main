@@ -5,38 +5,50 @@ import Skills from "./sections/Skills";
 import GetInTouch from "./sections/GetInTouch";
 import Hero from "./sections/Hero";
 import MarqueeComp from "./MarqueeComp";
-import { Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function About() {
-
+  // let location = useLocation();
   return (
     <div>
       <main>
         {/* <nav className="navigation">
           <ul>
             <li>
-              <a href="#section1" >
-                <span className="nav__item" htmlFor="section1">One</span>
-              </a>
-              <a href="#section2" >
-                <span className="nav__item" htmlFor="section2">Two</span>
-              </a>
-              <a href="#section3" >
-                <span className="nav__item" htmlFor="section3">Three</span>
-              </a>
-              <a href="#section4" >
-                <span className="nav__item" htmlFor="section4">Four</span>
-              </a>
-              <a href="#section5" >
-                <span className="nav__item" htmlFor="section5">Five</span>
-              </a>
+              <a
+                href="#section1"
+                className={`nav__item ${
+                  location.pathname === "/#section1" ? "active" : ""
+                }`}
+              ></a>
+              <a
+                href="#section2"
+                className={`nav__item ${
+                  location.pathname === "/#section2" ? "active" : ""
+                }`}
+              ></a>
+              <a
+                href="#section3"
+                className={`nav__item ${
+                  location.pathname === "/#section3" ? "active" : ""
+                }`}
+              ></a>
+              <a
+                href="#section4"
+                className={`nav__item ${
+                  location.pathname === "/#section4" ? "active" : ""
+                }`}
+              ></a>
+              <a
+                href="#section5"
+                className={`nav__item ${
+                  location.pathname === "/#section5" ? "active" : ""
+                }`}
+              ></a>
             </li>
           </ul>
         </nav> */}
-        <section
-          id="section1"
-          className="d-flex vh-100 align-items-center"
-        >
+        <section id="section1" className="d-flex vh-100 align-items-center">
           <Hero />
         </section>
         <section id="section2" className="section">

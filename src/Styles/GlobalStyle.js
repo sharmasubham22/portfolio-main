@@ -8,6 +8,7 @@ const GlobalStyle = createGlobalStyle`
 
 body{
   background-color: var(--background-color);
+  scroll-behavior: smooth;
 }
 
 ::selection {

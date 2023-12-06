@@ -88,7 +88,7 @@ export default function Menu() {
               <Link
                 type="button"
                 className="res-btn"
-                to="https://drive.google.com/uc?export=view&id=1s6_WoJ-w99w4LENuxGMxD4ERIIvLF7bD"
+                to="https://drive.google.com/uc?export=view&id=1YdfZW7XHx_kTxeKlAOLBYBgffwwpvctx"
                 target="_blank"
               >
                 My Resume
@@ -107,7 +107,12 @@ export default function Menu() {
 
           <div className="p-3 fs-3 bd-highlight menu-section nav-btn">
             <input type="checkbox" id="hi" />
-            <label className="menu" htmlFor="hi" ref={refClose} onClick={showNavbar}>
+            <label
+              className="menu"
+              htmlFor="hi"
+              ref={refClose}
+              onClick={showNavbar}
+            >
               <div className="bar"></div>
               <div className="bar"></div>
               <div className="bar"></div>
