@@ -3,7 +3,7 @@
     "title": "Stories - a notebook app",
     "description": "A notebook app created with M.E.R.N. stack technologies. Users can perform actions to create a new account, create notes, save notes, tag, edit note, and delete note. All user data will be stored securely in MongoDB database. ",
     "technologies": ["Node.js", "Express", "React", "MongoDB"],
-    "imgLink": "https://drive.google.com/uc?export=view&id=1jydJuAfco_O4RH8aRfojG3cgxN4BEl8Z",
+    "imgLink": "https://drive.google.com/uc?export=view&id=1-hjB-TPnDy06V1nWNPsM__g-SrSYApji",
     "git": "https://github.com/sharmasubham22/notebook.git",
     "demo": "https://mystories-app.netlify.app/"
   },
@@ -11,7 +11,7 @@
     "title": "Personal portfolio",
     "description": "A modern designed portfolio which showcases my work experiences, my projects, skills I have and much more. It highlight my capabilities which fulfills the requirement of the current trends in the industry. ",
     "technologies": ["React", "styled-components", "bootstrap"],
-    "imgLink": "https://drive.google.com/uc?export=view&id=1SqukADQAc7i0cc2whwx4_10-QGMNEg9Q",
+    "imgLink": "https://drive.google.com/uc?export=view&id=1CjHNffMxGdceBFiBvM9EJ0NyHCVGKGNU",
     "git": "https://github.com/sharmasubham22/portfolio-main.git",
     "demo": "/"
   }

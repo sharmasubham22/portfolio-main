@@ -31,7 +31,9 @@ export default function FeaturedProjects(props) {
 
     .img-div img {
       width: 100%;
+      height:auto;
       transition: 0.3s all ease-in-out;
+      shape-rendering: crispEdges;
     }
 
     .img-div:hover img {
