@@ -117,10 +117,10 @@ export default function Hero() {
   const five = (
     <div style={{ marginTop: "50px" }}>
       <Link type="button" className="button-hero" to="/contact">
-        Let's Connect!
+        Let's Connect
       </Link>
       <Link type="button" className="connect " to="/work">
-        My Work &rarr;
+        My Work
       </Link>
     </div>
   );

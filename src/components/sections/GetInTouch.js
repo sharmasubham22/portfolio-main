@@ -95,7 +95,7 @@ export default function GetInTouch() {
             <StyledDiv className="col">
               <div className="bg">
                 <div className="circle">
-                  <i className="fa-solid fa-arrow-down"></i>
+                  <i className="fa-solid fa-arrow-down-long"></i>
                   <svg
                     id="rotatingText"
                     viewBox="0 0 210 210"

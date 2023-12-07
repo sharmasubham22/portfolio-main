@@ -110,7 +110,7 @@ const Result = () => {
                   to="mailto:subham.sharma221296@gmail.com"
                   className="link-design mb-5"
                 >
-                  subham.sharma221296@gmail.com
+                  <i className="fa-solid fa-arrow-right"></i> subham.sharma221296@gmail.com
                 </Link>
               </Reveal>
               <div>
@@ -183,7 +183,7 @@ const Result = () => {
                 <Reveal>
                   <div className="mt-3">
                     <SubmitButton to="/" className="submit my-2">
-                      Submit &rarr;
+                      Submit
                     </SubmitButton>
                   </div>
                 </Reveal>

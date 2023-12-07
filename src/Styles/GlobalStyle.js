@@ -245,13 +245,18 @@ body{
       }
     }
 
+.fa-arrow-right{
+  transform:rotate(-40deg);
+  transition: transform 0.25s ease-out;
+}
+
        .link-design {
       text-decoration: none;
       display: inline-block;
       position: relative;
       color: var(--highlight-color);
       font-family: var(--general-font);
-      font-size: clamp(17px, 2vw, 20px);
+      font-size: clamp(17px, 2vw, 24px);
     }
 
     .link-design::after {
@@ -269,8 +274,13 @@ body{
 
     .link-design:hover {
       color: var(--highlight-color);
+
+      .fa-arrow-right{
+         transform:rotate(0deg);
+      }
     }
     
+
     .link-design:hover::after {
       transform: scaleX(1);
       transform-origin: bottom left;
