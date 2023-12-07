@@ -84,9 +84,9 @@ const Result = () => {
   return (
     <div
       className="d-flex w-100"
-      style={{ marginTop: "6%" }}
+      style={{ marginTop: "6%", marginBottom:"6%" }}
     >
-      <div className="container vh-100">
+      <div className="container ">
         <StyledForm>
           <div className="row row-cols-1 row-cols-xl-2 my-5">
             <div className="col">
