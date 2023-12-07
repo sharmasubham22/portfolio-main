@@ -9,7 +9,7 @@ export default function WorkItem(props) {
         className="card h-100 p-4"
         style={{
           backgroundColor: "var(--card-color)",
-          borderRadius: "7%",
+          borderRadius: "20px",
         }}
       >
         <div className="card-body">
@@ -30,7 +30,7 @@ export default function WorkItem(props) {
             {position}
           </h3>
           <h6
-            className="card-subtitle mb-2 text-muted"
+            className="card-subtitle mb-4 text-muted"
             style={{ fontFamily: "var(--general-font)" }}
           >
             {name}
@@ -38,7 +38,7 @@ export default function WorkItem(props) {
           {keys.map((keyValue, keyIndex) => (
             <h4
               key={keyIndex}
-              className="my-3"
+              
               style={{
                 marginRight: "10px",
                 display: "inline-block",
@@ -50,7 +50,7 @@ export default function WorkItem(props) {
                 borderRadius: "20px",
                 fontFamily: "var(--general-font)",
                 textTransform: "uppercase",
-                fontSize: "14px",
+                fontSize: "clamp(12px, 1.3vw, 14px)",
               }}
             >
               {keyValue}
@@ -58,7 +58,7 @@ export default function WorkItem(props) {
           ))}
 
           <h4
-            className="card-text"
+            className="card-text mt-3"
             style={{
               color: "var(--content-color)",
               fontSize: "clamp(15px, 2vw, 16px)",

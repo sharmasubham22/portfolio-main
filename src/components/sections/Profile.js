@@ -47,70 +47,44 @@ export default function Profile() {
   `;
 
   const StyledPic = styled.div`
-
     @media (max-width: 994px) {
       margin: 50px auto 0;
-
-      .img{
-        width:250px;
-      }
     }
 
     .wrapper {
-      display: block;
-      position: relative;
-      width: 100%;
-      border-radius: 5px;
+      width: 80%;
+      height: 100%;
+      overflow: hidden;
       background-color: var(--highlight-color);
-      transition: 0.3s ease;
+      margin: auto;
+      transition: 0.3s all ease-in-out;
 
       &:hover,
       &:focus {
         outline: 0;
-        transform: translate(-4px, -4px);
-
-        &:after {
-          transform: translate(8px, 8px);
-        }
+        transition: 0.3s all ease-in-out;
 
         .img {
           filter: none;
           mix-blend-mode: normal;
         }
       }
+    }
 
-      .img {
-        position: relative;
-        border-radius: 5px;
-        mix-blend-mode: multiply;
-        filter: grayscale(100%) contrast(1);
-        transition: 0.3s ease;
-      }
+    .wrapper img {
+      width: 100%;
+      mix-blend-mode: multiply;
+      filter: grayscale(100%) contrast(1);
+      transition: 0.3s ease;
+      transition: 0.3s all ease-in-out;
+    }
 
-      &:before,
-      &:after {
-        content: "";
-        display: block;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        border-radius: 5px;
-        transition: 0.3s ease;
-      }
+    .wrapper:hover {
+      border-radius: 20px;
+    }
 
-      &:before {
-        top: 0;
-        left: 0;
-        background-color: var(--background-color);
-        mix-blend-mode: screen;
-      }
-
-      &:after {
-        border: 2px solid var(--highlight-color);
-        top: 14px;
-        left: 14px;
-        z-index: -1;
-      }
+    .wrapper:hover img {
+      transform: scale(1.05);
     }
   `;
 
@@ -131,7 +105,7 @@ export default function Profile() {
         </h1>
       </Reveal>
       <Reveal>
-        <div className="row ">
+        <div className="row row-cols-1 row-cols-md-2">
           <div className="col">
             <StyledText>
               <p>
@@ -141,7 +115,7 @@ export default function Profile() {
                   className="link-design"
                   to="https://www.dal.ca/"
                   target="_blank"
-                  style={{ fontSize: 'clamp(19px, 2vw, 24px)'}}
+                  style={{ fontSize: "clamp(19px, 2vw, 24px)" }}
                 >
                   Dalhousie University
                 </Link>
@@ -156,7 +130,8 @@ export default function Profile() {
                   target="_blank"
                 >
                   Canada Revenue Agency{" "}
-                </Link> (CRA). Also, I have experience working in Business development
+                </Link>{" "}
+                (CRA). Also, I have experience working in Business development
                 team at{" "}
                 <Link
                   className="link-design"
@@ -165,7 +140,8 @@ export default function Profile() {
                 >
                   Townscript
                 </Link>
-                . My interest in web started back in 2017, and started my career with a web design internship at{" "}
+                . My interest in web started back in 2017, and started my career
+                with a web design internship at{" "}
                 <Link
                   className="link-design"
                   to="https://skillsanta.com/"
@@ -190,7 +166,6 @@ export default function Profile() {
                 <img
                   className="img"
                   src={pic}
-                  width={300}
                   formats={["AUTO", "WEBP", "AVIF"]}
                   alt="Headshot"
                 />

@@ -5,7 +5,7 @@
     "position": "IT Developer Co-op",
     "duration": "2023",
     "description": "Worked with tools like SonarQube to address and fix bugs and issues for the Java applications. Performed robustness testing of Mainframe apps. Suggested code changes and pushed the changes to development.",
-    "keyPoints": ["Java", "Mainframe"]
+    "keyPoints": ["Java", "Maven", "JUnit"]
   },
   {
     "id": 2,
@@ -21,6 +21,6 @@
     "position": "Web Design Intern",
     "duration": "2018",
     "description": "Revamped and optimized responsive web application design of UI, UX with HTML, CSS and libraries such as MaterialUI. Assisted the design team in modernizing the company's website with ReactJS framework",
-    "keyPoints": ["ReactJS", "HTML", "CSS"]
+    "keyPoints": ["React", "HTML", "CSS"]
   }
 ]
