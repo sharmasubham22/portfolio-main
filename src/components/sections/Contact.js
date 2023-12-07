@@ -84,11 +84,11 @@ const Result = () => {
   return (
     <div
       className="d-flex w-100"
-      style={{ marginTop: "6%", marginBottom: "9%" }}
+      style={{ marginTop: "6%" }}
     >
-      <div className="container">
+      <div className="container vh-100">
         <StyledForm>
-          <div className="row row-cols-1 row-cols-md-2 my-5">
+          <div className="row row-cols-1 row-cols-xl-2 my-5">
             <div className="col">
               <h1>Contact</h1>
               <Reveal>
@@ -97,7 +97,7 @@ const Result = () => {
                   style={{
                     fontFamily: "var(--heavy-font)",
                     color: "var(--text-color)",
-                    fontSize: "clamp(50px, 6vw, 5vw)",
+                    fontSize: "clamp(40px, 6vw, 5.5vw)",
                     textTransform: "uppercase",
                   }}
                 >
