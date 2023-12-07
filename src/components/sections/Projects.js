@@ -50,7 +50,7 @@ export default function Projects() {
               style={{
                 fontFamily: "var(--heavy-font)",
                 color: "var(--text-color)",
-                fontSize: "clamp(40px, 4vw, 8vw)",
+                fontSize: "clamp(50px, 4vw, 8vw)",
                 textTransform: "uppercase",
               }}
             >
@@ -73,7 +73,7 @@ export default function Projects() {
               );
             })}
           </Reveal>
-          <h3 className="section-head" style={{ marginTop: "10%" }}>
+          <h3 className="section-head" style={{ marginTop: "15%" }}>
             Other Projects
           </h3>
 

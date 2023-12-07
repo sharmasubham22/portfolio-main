@@ -8,7 +8,7 @@ export default function MarqueeComp() {
       margin: 10px 30px;
       color: var(--text-color);
       font-family: var(--heavy-font);
-      font-size: clamp(20px, 2vw, 28px);
+      font-size: clamp(25px, 2vw, 32px);
       display: inline-block;
       text-transform: uppercase;
     }

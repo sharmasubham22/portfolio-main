@@ -56,14 +56,13 @@ const Result = () => {
       margin-right: 20px;
       padding: 25px 30px;
       border: 1px solid var(--highlight-color);
-      background-color: rgb(163, 177, 138, 0.3);
       transition: 0.5s ease;
-      opacity: 0.4;
       border-radius: 50%;
     }
 
     .social-links:hover {
-      transform: scale(0.8);
+      transform: scale(0.6);
+      background-color: rgb(163, 177, 138, 0.3);
       opacity: 1;
     }
 
@@ -96,7 +95,7 @@ const Result = () => {
                 <h2
                   className="my-5"
                   style={{
-                    fontFamily: "var(--heavy-font2)",
+                    fontFamily: "var(--heavy-font)",
                     color: "var(--text-color)",
                     fontSize: "clamp(50px, 6vw, 5vw)",
                     textTransform: "uppercase",

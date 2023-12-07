@@ -70,8 +70,13 @@ export default function GetInTouch() {
       >
         <Reveal>
           <h1 className="section-head">
-            <span style={{ color: "var(--highlight-color)" }}>04. </span>Get In
-            Touch !
+            <span
+              style={{
+                color: "var(--highlight-color)",
+              }}
+            >
+              04.
+            </span> Get In Touch
           </h1>
         </Reveal>
         <div className="row row-cols-1 row-cols-md-2 my-5 d-flex align-items-center">

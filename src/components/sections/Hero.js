@@ -12,14 +12,14 @@ export default function Hero() {
     }
 
     h2 {
-      font-size: clamp(40px, 5vw, 80px);
+      font-size: clamp(50px, 5vw, 100px);
       font-family: var(--heavy-font);
       text-transform: uppercase;
       color: var(--text-color);
     }
 
     .dev-text {
-      font-size: clamp(25px, 5vw, 80px);
+      font-size: clamp(30px, 5vw, 100px);
       font-family: var(--heavy-font);
       text-transform: uppercase;
     }

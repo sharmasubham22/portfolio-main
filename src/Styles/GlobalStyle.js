@@ -34,11 +34,13 @@ body{
   background-color: #555; 
 }
 
+
+
   .section-head {
     font-family: var(--heavy-font);
     text-transform: uppercase;
     color: var(--text-color);
-    font-size: clamp(25px, 4vw, 40px);
+    font-size: clamp(30px, 4vw, 50px);
   }
 
   .nav2 {
@@ -162,14 +164,15 @@ body{
         text-decoration:none;
         color:var(--content-color);
         padding:18px 25px;
-        font-size: 1.5rem;
-        background-color: rgb(163, 177, 138, 0.3);
+        font-size: 1.5rem; 
         margin: 10px 20px;
         border: 1px solid var(--highlight-color);
         border-radius: 50%;
+         transition: 0.5s ease;
 
         &:hover{
           color:var(--content-color);
+          background-color: rgb(163, 177, 138, 0.3);
           opacity: 1;
         }
       }

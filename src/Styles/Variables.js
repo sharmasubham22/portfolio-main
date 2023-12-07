@@ -1,6 +1,8 @@
 import { css } from "styled-components";
 
+
 const Variables = css`
+
   :root {
     --background-color: #02141f;
     --border-color: rgb(255, 255, 255, 0.1);
@@ -12,8 +14,7 @@ const Variables = css`
     --featured-color: #00243b;
     --easing: cubic-bezier(0.645, 0.045, 0.355, 1);
     --general-font: space grotesk;
-    --heavy-font: shapiro;
-    --heavy-font2: shapiro-air;
+    --heavy-font: archivo black;
   }
 
   [data-theme="dark"] {
