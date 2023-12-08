@@ -142,7 +142,7 @@ const Result = () => {
               className="col mt-5 text-white"
               style={{ fontFamily: "var(--general-font)" }}
             >
-              <form ref={form} onSubmit={sendEmail}>
+              <form ref={form} className="mt-5" onSubmit={sendEmail}>
                 <Reveal>
                   <div className="mb-3">
                     <label htmlFor="name" className="form-label">
