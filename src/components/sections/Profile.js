@@ -149,7 +149,7 @@ export default function Profile() {
                 .
               </p>
               <p className="subtext">
-                Hare are some of the technologies I can work with.
+                Here are some of the technologies I can work with.
               </p>{" "}
               <ul className="skills-list subtext">
                 {skills && skills.map((skill, i) => <li key={i}>{skill}</li>)}
