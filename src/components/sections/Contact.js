@@ -71,10 +71,15 @@ const Result = () => {
     }
 
     .form-control {
-      background-color: var(--card-color);
+      background-color: transparent;
       color: var(--text-color);
       border: 1px solid var(--border-color);
       padding: 12px;
+    }
+
+    .form-control:focus {
+      border-color: var(--highlight-color);
+      box-shadow:0 0 0 0.1rem rgba(163, 177, 138, 0.6);
     }
   `;
 
