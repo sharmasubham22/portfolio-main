@@ -42,7 +42,6 @@ export default function Profile() {
         }
       }
     }
-
   `;
 
   const StyledPic = styled.div`
@@ -109,7 +108,7 @@ export default function Profile() {
           <div className="col">
             <StyledText>
               <p>
-                I’m a passionate Web Designer & Developer. Graduated in Masters
+                I’m a passionate Web Designer & Developer. Graduate in Masters
                 of Applied Computer Science from{" "}
                 <Link
                   className="link-design"
@@ -120,7 +119,7 @@ export default function Profile() {
                   Dalhousie University
                 </Link>
                 , Halifax (CA). Eager for creating modern websites and have a
-                strong interest in UI UX development.
+                strong interest in UI/UX development.
               </p>
               <p className="subtext">
                 I’ve had privilege of working as an IT Developer at{" "}
@@ -128,6 +127,7 @@ export default function Profile() {
                   className="link-design"
                   to="https://www.canada.ca/en/revenue-agency.html"
                   target="_blank"
+                  style={{ fontSize: "clamp(15px, 2vw, 18px)" }}
                 >
                   Canada Revenue Agency{" "}
                 </Link>{" "}
@@ -137,6 +137,7 @@ export default function Profile() {
                   className="link-design"
                   to="https://www.townscript.com/"
                   target="_blank"
+                  style={{ fontSize: "clamp(15px, 2vw, 18px)" }}
                 >
                   Townscript
                 </Link>
@@ -146,6 +147,7 @@ export default function Profile() {
                   className="link-design"
                   to="https://skillsanta.com/"
                   target="_blank"
+                  style={{ fontSize: "clamp(15px, 2vw, 18px)" }}
                 >
                   SkillSanta
                 </Link>
