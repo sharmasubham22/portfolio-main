@@ -83,6 +83,8 @@ const Result = () => {
     }
   `;
 
+  document.title = "Contact | Subham Sharma | Portfolio";
+
   const SubmitButton = styled.button`
     ${({ theme }) => theme.mixins.button};
   `;

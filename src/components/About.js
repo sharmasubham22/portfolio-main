@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 
 export default function About() {
   // let location = useLocation();
+  document.title="About | Subham Sharma | Portfolio";
   return (
     <div>
       <main>

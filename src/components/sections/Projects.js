@@ -39,6 +39,7 @@ export default function Projects() {
     }
   `;
 
+  document.title = "Work | Subham Sharma | Portfolio";
   return (
     <>
       <StyledProjects>
