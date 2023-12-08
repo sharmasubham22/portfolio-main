@@ -88,7 +88,7 @@ export default function Menu() {
               <Link
                 type="button"
                 className="res-btn"
-                to="https://drive.google.com/uc?export=view&id=1YdfZW7XHx_kTxeKlAOLBYBgffwwpvctx"
+                to="https://drive.google.com/uc?export=view&id=1PrCF0G_hTFWh86LmyxAdFL7D2fj58aip"
                 target="_blank"
               >
                 My Resume

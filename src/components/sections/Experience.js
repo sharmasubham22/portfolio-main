@@ -28,7 +28,8 @@ export default function Experience() {
     <div className="container" style={{ marginTop: "5%", marginBottom: "5%" }}>
       <Reveal>
         <h1 className="my-5 section-head">
-          <span style={{ color: "var(--highlight-color)" }}>02. </span>Experience
+          <span style={{ color: "var(--highlight-color)" }}>▾ </span>Experience
+          <span style={{ color: "var(--highlight-color)" }}> ▾</span>
         </h1>
       </Reveal>
       <div ref={ref}>

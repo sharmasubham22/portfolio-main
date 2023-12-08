@@ -36,7 +36,7 @@ export default function Profile() {
           content: "▹";
           position: absolute;
           left: 0;
-          fontsize: clamp(15px, 2vw, 18px);
+          font-size: clamp(15px, 2vw, 18px);
           color: var(--highlight-color);
           line-height: 22px;
         }
@@ -47,11 +47,12 @@ export default function Profile() {
   const StyledPic = styled.div`
     @media (max-width: 994px) {
       margin: 50px auto 0;
+
     }
 
     .wrapper {
       width: 70%;
-      height: 100%;
+      height: 90%;
       overflow: hidden;
       background-color: var(--highlight-color);
       margin: auto;
@@ -87,20 +88,14 @@ export default function Profile() {
     // }
   `;
 
-  const skills = [
-    "React",
-    "Express",
-    "Node.js",
-    "JavaScript",
-    "SQL"
-  ];
-
+  const skills = ["React", "Express", "Node.js", "JavaScript", "SQL"];
 
   return (
     <div className="container" style={{ marginTop: "5%", marginBottom: "5%" }}>
       <Reveal>
         <h1 className="my-5 section-head">
-          <span style={{ color: "var(--highlight-color)" }}>01. </span>About me
+          <span style={{ color: "var(--highlight-color)" }}>▾ </span>About me
+          <span style={{ color: "var(--highlight-color)" }}> ▾</span>
         </h1>
       </Reveal>
       <Reveal>

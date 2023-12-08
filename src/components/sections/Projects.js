@@ -75,7 +75,8 @@ export default function Projects() {
             })}
           </Reveal>
           <h3 className="section-head" style={{ marginTop: "15%" }}>
-            Other Projects
+            <span style={{ color: "var(--highlight-color)" }}>▾ </span>Other Projects
+            <span style={{ color: "var(--highlight-color)" }}> ▾</span>
           </h3>
 
           <div className="row my-5 row-cols-1 row-cols-md-2 row-cols-lg-2 g-4">
