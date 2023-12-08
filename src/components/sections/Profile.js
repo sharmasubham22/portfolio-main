@@ -1,5 +1,4 @@
 import React from "react";
-import pic from "../../images/pic.png";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import Reveal from "../Motion";
@@ -52,40 +51,41 @@ export default function Profile() {
     }
 
     .wrapper {
-      width: 80%;
+      width: 70%;
       height: 100%;
       overflow: hidden;
       background-color: var(--highlight-color);
       margin: auto;
       transition: 0.3s all ease-in-out;
+      border-radius: 15px;
 
-      &:hover,
-      &:focus {
-        outline: 0;
-        transition: 0.3s all ease-in-out;
+      // &:hover,
+      // &:focus {
+      //   outline: 0;
+      //   transition: 0.3s all ease-in-out;
 
-        .img {
-          filter: none;
-          mix-blend-mode: normal;
-        }
-      }
+      //   .img {
+      //     filter: none;
+      //     mix-blend-mode: normal;
+      //   }
+      // }
     }
 
     .wrapper img {
       width: 100%;
-      mix-blend-mode: multiply;
-      filter: grayscale(100%) contrast(1);
+      // mix-blend-mode: multiply;
+      // filter: grayscale(100%) contrast(1);
       transition: 0.3s ease;
       transition: 0.3s all ease-in-out;
     }
 
-    .wrapper:hover {
-      border-radius: 20px;
-    }
+    // .wrapper:hover {
+    //   border-radius: 20px;
+    // }
 
-    .wrapper:hover img {
-      transform: scale(1.05);
-    }
+    // .wrapper:hover img {
+    //   transform: scale(1.05);
+    // }
   `;
 
   const skills = [
@@ -165,7 +165,7 @@ export default function Profile() {
               <div className="wrapper">
                 <img
                   className="img"
-                  src={pic}
+                  src="https://drive.google.com/uc?export=view&id=1Mi1PRgJnCvyIjQOfba5lJPRKX6CRKmQ7"
                   formats={["AUTO", "WEBP", "AVIF"]}
                   alt="Headshot"
                 />

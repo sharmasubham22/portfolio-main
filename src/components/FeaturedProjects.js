@@ -26,18 +26,18 @@ export default function FeaturedProjects(props) {
       height: 100%;
       overflow: hidden;
       margin: 0 auto;
-      transition: 0.3s all ease-in-out;
+      transition: 0.4s all ease-in-out;
     }
 
     .img-div img {
       width: 100%;
       height:auto;
-      transition: 0.3s all ease-in-out;
+      transition: 0.4s all ease-in-out;
       shape-rendering: crispEdges;
     }
 
     .img-div:hover img {
-      transform: scale(1.05);
+      transform: scale(1.03);
     }
     .img-div:hover {
       border-radius: 20px;
