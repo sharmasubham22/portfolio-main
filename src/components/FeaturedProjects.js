@@ -75,9 +75,11 @@ export default function FeaturedProjects(props) {
   return (
     <div>
       <StyledDiv>
-        <div className="img-div">
-          <img src={imageLink} alt="project1" />
-        </div>
+        <Link to={demo} target="_blank">
+          <div className="img-div">
+            <img src={imageLink} alt="project1" />
+          </div>
+        </Link>
 
         <div className="d-flex bd-highlight fs-2 mt-4 mb-2">
           <div className="flex-grow-1 bd-highlight">

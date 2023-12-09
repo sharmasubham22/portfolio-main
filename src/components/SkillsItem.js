@@ -9,7 +9,6 @@ export default function SkillsItem(props) {
     border: 1px solid var(--highlight-color);
     width: fit-content;
     padding: 10px 15px;
-    text-transform: uppercase;
     border-radius: 8px;
     font-family: var(--general-font);
     display: inline-block;

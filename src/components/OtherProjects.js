@@ -52,6 +52,10 @@ export default function OtherProjects(props) {
        .project-link:hover {
          color: var(--highlight-color);
        }
+
+       .card-link{
+        text-decoration:none;
+       }
      `;
 
 
@@ -79,7 +83,7 @@ export default function OtherProjects(props) {
       <div ref={ref}>
         <motion.div initial="hidden" animate={controls} variants={variants}>
           <StyledCard>
-            <div className="card-group">
+            <Link className='card-link' to={git} target="_blank">
               <div className="card h-100 p-4">
                 <div className="card-body">
                   <div className="d-flex bd-highlight mb-3">
@@ -122,7 +126,7 @@ export default function OtherProjects(props) {
                   })}
                 </div>
               </div>
-            </div>
+            </Link>
           </StyledCard>
         </motion.div>
       </div>
