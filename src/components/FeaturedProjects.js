@@ -46,6 +46,7 @@ export default function FeaturedProjects(props) {
     .tech-skills {
       color: var(--highlight-color);
       text-transform: uppercase;
+      margin-bottom:20px;
     }
 
     .tech-items {
@@ -109,7 +110,7 @@ export default function FeaturedProjects(props) {
             );
           })}
         </div>
-        <p>{description}</p>
+        <p >{description}</p>
       </StyledDiv>
     </div>
   );
