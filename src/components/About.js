@@ -49,19 +49,22 @@ export default function About() {
             </li>
           </ul>
         </nav> */}
-        <section id="section1" className="d-flex vh-100 align-items-center">
+        <section
+          id="section1"
+          className="d-flex vh-100 justify-content-center align-items-center"
+        >
           <Hero />
         </section>
         <section id="section2" className="section">
           <Profile />
         </section>
-        <section id="section3" className="section">
+        <section id="section3" className="section ">
           <Experience />
         </section>
-        <section id="section4" className="section">
+        <section id="section4" className="section ">
           <Skills />
         </section>
-        <section id="section5" className="section">
+        <section id="section5" className="section ex-section">
           <GetInTouch />
         </section>
         <Link to="/contact" style={{ textDecoration: "none" }}>

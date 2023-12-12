@@ -38,7 +38,6 @@ export default function WorkItem(props) {
           {keys.map((keyValue, keyIndex) => (
             <h4
               key={keyIndex}
-              
               style={{
                 marginRight: "10px",
                 display: "inline-block",
@@ -61,7 +60,7 @@ export default function WorkItem(props) {
             className="card-text mt-3"
             style={{
               color: "var(--content-color)",
-              fontSize: "clamp(15px, 2vw, 16px)",
+              fontSize: "clamp(15px, 2vw, 20px)",
               fontFamily: "var(--general-font)",
             }}
           >

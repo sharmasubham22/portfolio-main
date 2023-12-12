@@ -91,9 +91,9 @@ const Result = () => {
   return (
     <div
       className="d-flex w-100"
-      style={{ marginTop: "6%", marginBottom:"6%" }}
+      style={{ marginTop: "6%", marginBottom: "6%" }}
     >
-      <div className="container ">
+      <div className="container">
         <StyledForm>
           <div className="row row-cols-1 row-cols-xl-2 my-5">
             <div className="col">
@@ -116,7 +116,8 @@ const Result = () => {
                   to="mailto:subham.sharma221296@gmail.com"
                   className="link-design mb-5"
                 >
-                  <i className="fa-solid fa-arrow-right"></i> subham.sharma221296@gmail.com
+                  <i className="fa-solid fa-arrow-right"></i>{" "}
+                  subham.sharma221296@gmail.com
                 </Link>
               </Reveal>
               <div>

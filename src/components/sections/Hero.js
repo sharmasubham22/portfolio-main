@@ -2,17 +2,18 @@ import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { motion, useAnimation, useInView } from "framer-motion";
+import Reveal from "../Motion";
 // import globe from '../../images/globe.svg'
 
 export default function Hero() {
   const StyledHero = styled.div`
     h1 {
       ${({ theme }) => theme.mixins.chip};
-      margin: 0% 0% 7% 0%;
+      margin: 2% 0% 3% 0%;
     }
 
     h2 {
-      font-size: clamp(50px, 5vw, 100px);
+      font-size: clamp(60px, 8vw, 100px);
       font-family: var(--heavy-font);
       text-transform: uppercase;
       color: var(--text-color);
@@ -26,18 +27,20 @@ export default function Hero() {
 
     p {
       font-family: var(--general-font);
-      width: 70%;
+      width:80%;
       font-size: clamp(15px, 2vw, 20px);
       color: var(--content-color);
     }
 
     .button-hero {
       ${({ theme }) => theme.mixins.button};
-      margin-right: 15px;
+      margin-top: 10px;
     }
 
     .connect {
       ${({ theme }) => theme.mixins.button};
+      margin-right: 15px;
+      margin-top: 10px;
     }
 
     .scroll {
@@ -81,7 +84,6 @@ export default function Hero() {
       }
     }
 
-
     @media (max-width: 1078px) {
       .scroll,
       .scrollBox {
@@ -92,7 +94,6 @@ export default function Hero() {
         width: 100%;
       }
     }
-
   `;
 
 
@@ -100,14 +101,14 @@ export default function Hero() {
   const one = <p>Hi there! 👋🏻 my name is</p>;
   const two = (
     <h2>
-      Subham Sharma <br />
+      Subham Sharma
     </h2>
   );
-  const three = (
-    <h2 className="dev-text" style={{ color: "var(--content-color)" }}>
-      I am a developer<span style={{ color: "var(--highlight-color" }}></span>
-    </h2>
-  );
+  // const three = (
+  //   <h2 className="dev-text" style={{ color: "var(--content-color)" }}>
+  //     I am a developer<span style={{ color: "var(--highlight-color" }}></span>
+  //   </h2>
+  // );
   const four = (
     <p>
       I love to design, develop & deploy. I am a software developer and I can
@@ -115,17 +116,17 @@ export default function Hero() {
     </p>
   );
   const five = (
-    <div style={{ marginTop: "50px" }}>
+    <div style={{ marginTop: "40px" }}>
+      <Link type="button" className="connect" to="/work">
+        Explore My Work
+      </Link>
       <Link type="button" className="button-hero" to="/contact">
         Let's Connect
-      </Link>
-      <Link type="button" className="connect " to="/work">
-        My Work
       </Link>
     </div>
   );
 
-  const items = [one, two, three, four, five];
+  const items = [one, two, four, five];
 
   const controls = useAnimation();
   const ref = useRef(null);
@@ -148,19 +149,31 @@ export default function Hero() {
   };
 
   return (
-    <div className="container">
+    <div className="container d-flex justify-content-center align-items-center">
       <StyledHero>
         <h1>About</h1>
-        <div ref={ref}>
-          <motion.div initial="hidden" animate={controls} variants={variants}>
-            {items.map((item, index) => (
-              <motion.div className="col" key={index} variants={variants}>
-                {item}
+        <div className="row row-cols-1 row-cols-lg-2 g-4">
+          <div className="col">
+            <div ref={ref}>
+              <motion.div
+                initial="hidden"
+                animate={controls}
+                variants={variants}
+              >
+                {items.map((item, index) => (
+                  <motion.div className="col" key={index} variants={variants}>
+                    {item}
+                  </motion.div>
+                ))}
               </motion.div>
-            ))}
-          </motion.div>
+            </div>
+          </div>
+          <Reveal>
+            <div className="col d-flex justify-content-center align-items-center">
+              <div className="patterned-col"></div>
+            </div>
+          </Reveal>
         </div>
-
         <div>
           <p className="scroll">scroll</p>
           <div className="scrollBox"></div>

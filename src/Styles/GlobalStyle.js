@@ -34,13 +34,30 @@ body{
   background-color: #555; 
 }
 
+.patterned-col{
+  background: url(https://drive.google.com/uc?export=view&id=18Y3bQ_1Gu7ebqocRCe1JFvlOXuRRtbnM);
+  height:500px;
+  width:500px;
+}
+
+@media (max-width:991px){
+  .patterned-col{
+    display:none;
+  }
+}
+
+.ex-section{
+background: url(https://drive.google.com/uc?export=view&id=1PpBENYaRX2c0IfonfbL1z1tgm5ktwBEw);
+  background-size:contain;
+  background-repeat: no-repeat;
+}
 
 
   .section-head {
     font-family: var(--heavy-font);
     text-transform: uppercase;
     color: var(--text-color);
-    font-size: clamp(30px, 4vw, 50px);
+    font-size: clamp(30px, 4vw, 60px);
   }
 
   .nav2 {
@@ -244,7 +261,7 @@ body{
 
     @keyframes rotate-circle {
       to {
-        transform: rotate(1turn);
+        transform: rotate(0turn);
       }
     }
 

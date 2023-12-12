@@ -16,22 +16,27 @@ export default function OtherProjects(props) {
 
        .card:hover {
          transform: translate(0, -10px);
+
+         .card-title {
+         color: var(--highlight-color);
+         }
        }
 
        .card-title {
          color: var(--text-color);
+         transition:0.3s ease;
          text-transform: uppercase;
        }
 
        .card-subtitle {
          color: var(--highlight-color);
          text-transform: uppercase;
-         font-size: clamp(11px, 2vw, 13px);
+         font-size: clamp(11px, 2vw, 12px);
        }
 
        .card-text {
          color: var(--content-color);
-         font-size: clamp(14px, 2vw, 16px);
+         font-size: clamp(15px, 2vw, 20px);
        }
 
        .fa-folder {
@@ -110,7 +115,7 @@ export default function OtherProjects(props) {
                       </div>
                     )}
                   </div>
-                  <h5 className="card-title fs-3">{title}</h5>
+                  <h5 className="card-title fs-2">{title}</h5>
 
                   <p className="card-text">{description}</p>
                   {techs.map((techKey, techIndex) => {
