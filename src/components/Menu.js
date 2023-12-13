@@ -94,15 +94,6 @@ export default function Menu() {
                 My Resume
               </Link>
             </StyledBtn>
-            {/* <div className="form-check form-switch">
-              <input
-                className="form-check-input"
-                type="checkbox"
-                role="switch"
-                id="flexSwitchCheckDefault"
-                onClick={props.toggleMode}
-              />
-            </div> */}
           </div>
 
           <div className="p-3 fs-3 bd-highlight menu-section nav-btn">

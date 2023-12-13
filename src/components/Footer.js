@@ -1,16 +1,7 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import styled from 'styled-components';
 
 export default function Footer() {
-
-    var [date, setDate] = useState(new Date());
-
-    useEffect(() => {
-      var timer = setInterval(() => setDate(new Date()), 1000);
-      return function cleanup() {
-        clearInterval(timer);
-      };
-    });
 
     const Footer = styled.div`
       font-family: var(--general-font);
@@ -36,12 +27,6 @@ export default function Footer() {
         {" "}
         <p className="text-muted">
           Designed and Developed with <i className="fa-solid fa-heart"></i>
-        </p>
-      </div>
-      <div>
-        <p className="text-muted">
-          Halifax, NS (Canada), {date.toLocaleDateString()},{" "}
-          {date.toLocaleTimeString()}
         </p>
       </div>
     </Footer>

@@ -196,7 +196,6 @@ background: url(https://drive.google.com/uc?export=view&id=1PpBENYaRX2c0IfonfbL1
 
   .menu {
    background-color: var(--background-color);
-    backdrop-filter: blur(10px);
   position: fixed;
   cursor: pointer;
   transition: 0.5s ease;

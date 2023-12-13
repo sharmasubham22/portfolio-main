@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import Reveal from "../Motion";
 
@@ -12,38 +12,11 @@ export default function GetInTouch() {
       position: absolute;
       color: var(--card-color);
       font-size: 70px;
-      animation: fa-solid 2s ease infinite;
       z-index:999;
     }
 
-    @keyframes fa-solid {
-      70% {
-        transform: translateY(0%);
-      }
-      80% {
-        transform: translateY(-15%);
-      }
-      90% {
-        transform: translateY(0%);
-      }
-      95% {
-        transform: translateY(-7%);
-      }
-      97% {
-        transform: translateY(0%);
-      }
-      99% {
-        transform: translateY(-3%);
-      }
-      100% {
-        transform: translateY(0);
-      }
-    }
 
-    .bg {
-      // position: absolute;
-      bottom: 0;
-    }
+
     .circle {
       position: relative;
       display: flex;
@@ -61,6 +34,15 @@ export default function GetInTouch() {
       }
     }
   `;
+
+    var [date, setDate] = useState(new Date());
+
+    useEffect(() => {
+      var timer = setInterval(() => setDate(new Date()), 1000);
+      return function cleanup() {
+        clearInterval(timer);
+      };
+    });
 
   return (
     <div>
@@ -102,6 +84,28 @@ export default function GetInTouch() {
                 reach out and I will try my best to get back to you as soon as
                 possible.
               </p>
+              <div className="mt-5">
+                <h2
+                  style={{
+                    color: "var(--highlight-color)",
+                    fontFamily: "var(--general-font)",
+                    fontSize: "clamp(15px, 2vw, 26px)",
+                  }}
+                >
+                  Location
+                </h2>
+                <p
+                  style={{
+                    color: "var(--text-color)",
+                    fontFamily: "var(--general-font)",
+                    fontSize: "clamp(15px, 2vw, 26px)",
+                  }}
+                >
+                  Halifax, NS (Canada)
+                  <br /> {date.toLocaleDateString()},{" "}
+                  {date.toLocaleTimeString()}
+                </p>
+              </div>
             </div>
           </Reveal>
           <Reveal>

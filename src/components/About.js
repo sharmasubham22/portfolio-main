@@ -6,14 +6,16 @@ import GetInTouch from "./sections/GetInTouch";
 import Hero from "./sections/Hero";
 import MarqueeComp from "./MarqueeComp";
 import { Link } from "react-router-dom";
+import Work from "./Work";
 
 export default function About() {
   // let location = useLocation();
-  document.title="About | Subham Sharma | Portfolio";
+  document.title="Subham Sharma | Portfolio";
   return (
-    <div>
-      <main>
-        {/* <nav className="navigation">
+    <>
+      <div>
+        <main>
+          {/* <nav className="navigation">
           <ul>
             <li>
               <a
@@ -49,28 +51,32 @@ export default function About() {
             </li>
           </ul>
         </nav> */}
-        <section
-          id="section1"
-          className="d-flex vh-100 justify-content-center align-items-center"
-        >
-          <Hero />
-        </section>
-        <section id="section2" className="section">
-          <Profile />
-        </section>
-        <section id="section3" className="section ">
-          <Experience />
-        </section>
-        <section id="section4" className="section ">
-          <Skills />
-        </section>
-        <section id="section5" className="section ex-section">
-          <GetInTouch />
-        </section>
-        <Link to="/contact" style={{ textDecoration: "none" }}>
-          <MarqueeComp />
-        </Link>
-      </main>
-    </div>
+          <section
+            id="section1"
+            className="d-flex vh-100 justify-content-center align-items-center"
+          >
+            <Hero />
+          </section>
+          <section id="section2" className="section">
+            <Profile />
+          </section>
+          <section id="section3" className="section">
+            <Work />
+          </section>
+          <section id="section4" className="section ">
+            <Experience />
+          </section>
+          <section id="section5" className="section ">
+            <Skills />
+          </section>
+          <section id="section6" className="section ex-section">
+            <GetInTouch />
+          </section>
+          <Link to="/contact" style={{ textDecoration: "none" }}>
+            <MarqueeComp />
+          </Link>
+        </main>
+      </div>
+    </>
   );
 }

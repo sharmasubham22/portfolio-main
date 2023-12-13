@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import Reveal from "../Motion";
-import Marquee from "react-fast-marquee";
+import BioMarquee from "../BioMarquee";
 
 export default function Profile() {
   const StyledText = styled.section`
@@ -47,8 +47,9 @@ export default function Profile() {
 
   const StyledPic = styled.div`
     .wrapper {
+      position: relative;
       width: 80%;
-      height: 90%;
+      height: 100%;
       overflow: hidden;
       background-color: var(--highlight-color);
       margin: auto;
@@ -72,14 +73,21 @@ export default function Profile() {
       // mix-blend-mode: multiply;
       // filter: grayscale(100%) contrast(1);
       transition: 0.3s ease;
+      object-fit: cover;
       transition: 0.3s all ease-in-out;
+    }
+
+    .marquee {
+      position: absolute;
+      width:100%;
+      bottom: 0.01px;
     }
 
     @media (max-width: 766px) {
       margin: 50px auto 0;
 
-      .wrapper{
-        width:95%;
+      .wrapper {
+        width: 95%;
       }
     }
 
@@ -158,7 +166,7 @@ export default function Profile() {
                         height="15"
                         viewBox="0 0 10 15"
                         fill="none"
-                        style={{marginRight:"15px"}}
+                        style={{ marginRight: "15px" }}
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
@@ -183,7 +191,10 @@ export default function Profile() {
                   formats={["AUTO", "WEBP", "AVIF"]}
                   alt="Headshot"
                 />
-                <Marquee>Hi, I am subham</Marquee>
+                <div className="marquee">
+                  <BioMarquee/>
+                 
+                  </div>
               </div>
             </StyledPic>
           </div>

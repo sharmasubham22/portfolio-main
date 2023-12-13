@@ -9,22 +9,9 @@ import { ThemeProvider } from 'styled-components';
 import Nav from './components/Nav';
 import Menu from './components/Menu';
 import ScrollTop from './components/ScrollTop';
-// import { useState } from 'react';
+import Error from "./components/Error";
 
 function App() {
-  //   const [mode, setmode] = useState("light");
-
-  // const toggleMode = () => {
-  //   if (mode === "light") {
-  //     setmode("dark");
-  //     document.querySelector("body").setAttribute("data-theme", "dark");
-     
-  //   } else {
-  //     setmode("light");
-  //     document.querySelector("body").setAttribute("data-theme", "light");
-
-  //   }
-  // };
   return (
     <>
       <ThemeProvider theme={theme}>
@@ -37,6 +24,7 @@ function App() {
             <Route path="/" element={<About />} />
             <Route path="/work" element={<Projects />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="*" element={<Error />} />
           </Routes>
           <Footer />
         </Router>
