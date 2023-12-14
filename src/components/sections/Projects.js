@@ -34,11 +34,6 @@ export default function Projects() {
       margin-top: 10%;
     }
 
-    .fa-circle-arrow-down {
-      color: var(--content-color);
-      font-size: clamp(24px, 3vw, 30px);
-    }
-
     @media (max-width: 784px) {
       .container {
         margin-top: 20%;
@@ -116,7 +111,6 @@ export default function Projects() {
           </div>
           <div className="contact-section">
             <p> Did you like my profile? Click below to connect!</p>
-            <i class="fa-solid fa-circle-arrow-down"></i>
           </div>
         </div>
         <Link to="/contact" style={{ textDecoration: "none" }}>

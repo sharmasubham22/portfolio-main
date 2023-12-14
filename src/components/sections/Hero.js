@@ -106,7 +106,7 @@ export default function Hero() {
   );
   const three = (
     <p>
-      I love to design, develop & deploy. I am a software developer and I can
+      I love to design, develop & deploy. I am a software developer and I
       build frontend and backend applications.
     </p>
   );

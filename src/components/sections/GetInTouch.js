@@ -48,7 +48,7 @@ export default function GetInTouch() {
     <div>
       <div
         className="container"
-        style={{ marginTop: "5%", marginBottom: "5%" }}
+        style={{ marginTop: "5%"}}
       >
         <Reveal>
           <h1 className="section-head">
@@ -75,7 +75,7 @@ export default function GetInTouch() {
               <p
                 style={{
                   fontFamily: "var(--general-font)",
-                  color: "var(--text-color)",
+                  color: "var(--content-color)",
                   fontSize: "clamp(15px, 2vw, 26px)",
                 }}
               >
@@ -96,7 +96,7 @@ export default function GetInTouch() {
                 </h2>
                 <p
                   style={{
-                    color: "var(--text-color)",
+                    color: "var(--content-color)",
                     fontFamily: "var(--general-font)",
                     fontSize: "clamp(15px, 2vw, 26px)",
                   }}

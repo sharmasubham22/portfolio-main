@@ -4,7 +4,7 @@ import styled from "styled-components";
 export default function SkillsItem(props) {
   let { category, skills } = props;
 
-  const StyledChip = styled.h4`
+  const StyledChip = styled.p`
     color: var(--text-color);
     border: 1px solid var(--card-color);
     background: var(--card-color);
@@ -16,6 +16,7 @@ export default function SkillsItem(props) {
     margin-right: 10px;
     transition: 0.3s ease;
     user-select: none;
+    font-size: clamp(17px, 2vw, 20px);
 
     &:hover {
       transform: translateY(-5px);

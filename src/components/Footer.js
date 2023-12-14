@@ -18,15 +18,21 @@ export default function Footer() {
       }
     `;
   return (
-    <Footer
-    >
-      <div >
-        <p className="text-muted">&#169; 2023 Subham Sharma </p>
+    <Footer>
+      <div>
+        <p style={{ color: "var(--content-color)" }}>
+          &#169; 2023{" "}
+          <span style={{ color: "var(--highlight-color)" }}>Subham Sharma</span>{" "}
+        </p>
       </div>
       <div>
         {" "}
-        <p className="text-muted">
-          Designed and Developed with <i className="fa-solid fa-heart"></i>
+        <p style={{ color: "var(--content-color)" }}>
+          Designed and Developed with{" "}
+          <i
+            className="fa-solid fa-heart"
+            style={{ color: "var(--highlight-color)" }}
+          ></i>
         </p>
       </div>
     </Footer>

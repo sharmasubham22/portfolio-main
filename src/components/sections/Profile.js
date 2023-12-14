@@ -8,7 +8,7 @@ export default function Profile() {
   const StyledText = styled.section`
     p {
       font-family: var(--general-font);
-      font-size: clamp(19px, 2vw, 30px);
+      font-size: clamp(22px, 2vw, 30px);
       color: var(--text-color);
     }
 
@@ -152,7 +152,7 @@ export default function Profile() {
                   className="link-design"
                   to="https://www.dal.ca/"
                   target="_blank"
-                  style={{ fontSize: "clamp(19px, 2vw, 30px)" }}
+                  style={{ fontSize: "clamp(22px, 2vw, 30px)" }}
                 >
                   Dalhousie University
                 </Link>

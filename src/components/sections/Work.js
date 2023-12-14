@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import Reveal from './Motion';
+import Reveal from '../Motion';
 
 export default function Work() {
     const StyledSection = styled.div`
@@ -32,7 +32,7 @@ export default function Work() {
       h4 {
         font-family: var(--general-font);
         color: var(--content-color);
-        font-size: clamp(19px, 2vw, 30px);
+        font-size: clamp(24px, 2vw, 30px);
         margin: 30px 0;
       }
 

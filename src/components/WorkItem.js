@@ -23,6 +23,7 @@ export default function WorkItem(props) {
             className="card-title"
             style={{
               fontFamily: "var(--general-font)",
+              fontSize: 'clamp(24px, 2vw, 30px)',
               textTransform: "uppercase",
               color: "var(--text-color)",
             }}
