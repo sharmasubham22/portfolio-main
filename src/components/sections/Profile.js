@@ -55,6 +55,9 @@ export default function Profile() {
       margin: auto;
       transition: 0.3s all ease-in-out;
       border-radius: 15px;
+      display: grid;
+      grid-template: 1fr / 1fr;
+      place-items: center;
 
       // &:hover,
       // &:focus {
@@ -77,11 +80,45 @@ export default function Profile() {
       transition: 0.3s all ease-in-out;
     }
 
+    .wrapper > * {
+      grid-column: 1 / 1;
+      grid-row: 1 / 1;
+    }
+
+    .marquee::before {
+      background: url(https://drive.google.com/uc?export=view&id=1Mi1PRgJnCvyIjQOfba5lJPRKX6CRKmQ7)
+        0 / cover no-repeat;
+      background-position: bottom;
+      bottom: 0px;
+    }
+
     .marquee {
       position: absolute;
+      padding: 44px 0px;
+      background: rgba(0, 0, 0, 0.5);
+      bottom: 0px;
       width: 100%;
-      bottom: 0.01px;
+      overflow: hidden;
+      z-index: 1;
     }
+
+    .marquee::before {
+      content: "";
+      margin: 0px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      filter: blur(10px);
+      z-index: -1;
+    }
+
+    // .marquee {
+    //   position: absolute;
+    //   width: 100%;
+    //   bottom: 0.01px;
+    // }
 
     @media (max-width: 766px) {
       margin: 50px auto 0;
