@@ -104,18 +104,13 @@ export default function Hero() {
       Subham Sharma
     </h2>
   );
-  // const three = (
-  //   <h2 className="dev-text" style={{ color: "var(--content-color)" }}>
-  //     I am a developer<span style={{ color: "var(--highlight-color" }}></span>
-  //   </h2>
-  // );
-  const four = (
+  const three = (
     <p>
       I love to design, develop & deploy. I am a software developer and I can
       build frontend and backend applications.
     </p>
   );
-  const five = (
+  const four = (
     <div style={{ marginTop: "40px" }}>
       {/* <Link type="button" className="connect" to="/work">
         Explore My Work
@@ -126,7 +121,7 @@ export default function Hero() {
     </div>
   );
 
-  const items = [one, two, four, five];
+  const items = [one, two, three, four];
 
   const controls = useAnimation();
   const ref = useRef(null);

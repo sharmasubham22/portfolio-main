@@ -14,9 +14,9 @@ export default function BioMarquee() {
 
     .marquee {
       padding: 15px 0px;
-      background-color: rgba(0,0,0, 0.1);
-      -webkit-backdrop-filter: blur(8px);
-      backdrop-filter: blur(8px);
+      background-color: rgba(0, 0, 0, 0.1);
+      -webkit-backdrop-filter: blur(8px) !important;
+      backdrop-filter: blur(8px) !important;
     }
   `;
   return (
