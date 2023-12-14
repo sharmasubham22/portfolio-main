@@ -58,7 +58,7 @@ export default function Projects() {
               style={{
                 fontFamily: "var(--heavy-font)",
                 color: "var(--text-color)",
-                fontSize: "clamp(50px, 4vw, 8vw)",
+                fontSize: "clamp(50px, 8vw, 100px)",
                 textTransform: "uppercase",
               }}
             >

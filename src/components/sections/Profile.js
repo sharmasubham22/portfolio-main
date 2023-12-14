@@ -51,7 +51,7 @@ export default function Profile() {
       width: 80%;
       height: 100%;
       overflow: hidden;
-      background-color: var(--highlight-color);
+      background-color: var(--background-color);
       margin: auto;
       transition: 0.3s all ease-in-out;
       border-radius: 15px;
@@ -79,7 +79,7 @@ export default function Profile() {
 
     .marquee {
       position: absolute;
-      width:100%;
+      width: 100%;
       bottom: 0.01px;
     }
 
@@ -193,7 +193,6 @@ export default function Profile() {
                 />
                 <div className="marquee">
                   <BioMarquee/>
-                 
                   </div>
               </div>
             </StyledPic>
