@@ -24,6 +24,7 @@ export default function WorkItem(props) {
             style={{
               fontFamily: "var(--general-font)",
               fontSize: 'clamp(24px, 2vw, 30px)',
+              fontWeight:"700",
               textTransform: "uppercase",
               color: "var(--text-color)",
             }}

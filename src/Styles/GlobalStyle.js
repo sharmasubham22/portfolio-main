@@ -52,12 +52,66 @@ background: url(https://drive.google.com/uc?export=view&id=1PpBENYaRX2c0IfonfbL1
   background-repeat: no-repeat;
 }
 
+.blob {
+	background: black;
+	border-radius: 50%;
+	box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+	margin: 10px;
+	height: 15px;
+	width: 15px;
+	transform: scale(1);
+	animation: pulse-black 2s infinite;
+}
+
+@keyframes pulse-black {
+	0% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+	}
+	
+	70% {
+		transform: scale(1);
+		box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+	}
+	
+	100% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+	}
+}
+
+
+.blob.green {
+	background: rgba(51, 217, 178, 1);
+	box-shadow: 0 0 0 0 rgba(51, 217, 178, 1);
+	animation: pulse-green 2s infinite;
+}
+
+@keyframes pulse-green {
+	0% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(51, 217, 178, 0.7);
+	}
+	
+	70% {
+		transform: scale(1);
+		box-shadow: 0 0 0 10px rgba(51, 217, 178, 0);
+	}
+	
+	100% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(51, 217, 178, 0);
+	}
+}
+
+
 
   .section-head {
     font-family: var(--heavy-font);
-    text-transform: uppercase;
+    // text-transform: uppercase;
+    font-weight: 700;
     color: var(--text-color);
-    font-size: clamp(30px, 4vw, 60px);
+    font-size: clamp(40px, 4vw, 60px);
   }
 
   .nav2 {
@@ -169,29 +223,11 @@ background: url(https://drive.google.com/uc?export=view&id=1PpBENYaRX2c0IfonfbL1
         transform: translateY(100vh);
       }
 
-
-
       .menu-nav .nav-link {
-        font-size: 1.2rem;
+        font-size: 24px;
         font-family: var(--heavy-font);
+        font-weight:700;
         text-transform: uppercase;
-      }
-
-      .menu-social{
-        text-decoration:none;
-        color:var(--content-color);
-        padding:18px 25px;
-        font-size: 1.5rem; 
-        margin: 10px 20px;
-        border: 1px solid var(--highlight-color);
-        border-radius: 50%;
-         transition: 0.5s ease;
-
-        &:hover{
-          color:var(--content-color);
-          background-color: rgb(163, 177, 138, 0.3);
-          opacity: 1;
-        }
       }
 
   .menu {
@@ -199,6 +235,7 @@ background: url(https://drive.google.com/uc?export=view&id=1PpBENYaRX2c0IfonfbL1
   position: fixed;
   cursor: pointer;
   transition: 0.5s ease;
+ 
 
 }
 .menu .bar {
@@ -239,7 +276,6 @@ background: url(https://drive.google.com/uc?export=view&id=1PpBENYaRX2c0IfonfbL1
 }
 
   .text {
-      font-weight: 600;
       letter-spacing: 2px;
       text-transform: uppercase;
       font-family: var(--general-font);
@@ -265,7 +301,7 @@ background: url(https://drive.google.com/uc?export=view&id=1PpBENYaRX2c0IfonfbL1
     }
 
 .fa-arrow-right{
-  transform:rotate(-40deg);
+  transform:rotate(-45deg);
   transition: transform 0.25s ease-out;
 }
 

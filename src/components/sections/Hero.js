@@ -2,45 +2,80 @@ import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { motion, useAnimation, useInView } from "framer-motion";
-import Reveal from "../Motion";
-// import globe from '../../images/globe.svg'
+import memoji from '../../images/memoji.png'
+import vector from '../../images/vector.svg'
+// import Reveal from "../Motion";
 
 export default function Hero() {
   const StyledHero = styled.div`
-    h1 {
-      ${({ theme }) => theme.mixins.chip};
-      margin: 2% 0% 3% 0%;
-    }
-
-    h2 {
-      font-size: clamp(60px, 8vw, 100px);
+    .name-text {
+      font-size: clamp(70px, 10vw, 150px);
       font-family: var(--heavy-font);
       text-transform: uppercase;
+      font-weight: 700;
       color: var(--text-color);
-    }
-
-    .dev-text {
-      font-size: clamp(30px, 5vw, 100px);
-      font-family: var(--heavy-font);
-      text-transform: uppercase;
+      line-height: 1;
+      // margin-top: 15%;
     }
 
     p {
       font-family: var(--general-font);
-      width:80%;
-      font-size: clamp(15px, 2vw, 20px);
+      // width:80%;
+      text-align: center;
+      font-size: clamp(22px, 2vw, 30px);
       color: var(--content-color);
     }
 
     .button-hero {
       ${({ theme }) => theme.mixins.button};
       margin-top: 10px;
+      background-color:var(--background-color);
     }
 
-    .connect {
-      ${({ theme }) => theme.mixins.button};
-      margin-right: 15px;
-      margin-top: 10px;
+    .memoji{
+      width:fit-content;
+      padding:15px 10px 0px 10px;
+      margin:auto;
+      margin-bottom:20px;
+      border-radius:50%;
+      background-color: var(--highlight-color);
+      user-select:none;
+    }
+
+    .memoji img{
+      border-radius:50%;
+    }
+
+    .container {
+      width: 100px;
+      height: 100px;
+      position: relative;
+    }
+
+    .vector {
+      position: absolute;
+      bottom: 0%;
+      right: 0%;
+      z-index: -1;
+      opacity: 0.3;
+      overflow: hidden;
+    }
+
+    .vector img {
+      width: 90%;
+    }
+
+    @media (max-width: 684px) {
+      .vector img {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 1500px) and (min-width:684px) {
+      .vector img {
+        width: 70%;
+        margin-right:-25%;
+      }
     }
 
     .scroll {
@@ -49,7 +84,7 @@ export default function Hero() {
       bottom: 100px;
       right: 15px;
       writing-mode: vertical-rl;
-      font-size: 18px;
+      font-size: clamp(15px, 2vw, 20px);
       user-select: none;
     }
 
@@ -85,9 +120,13 @@ export default function Hero() {
     }
 
     @media (max-width: 1078px) {
-      .scroll,
+      .scroll {
+        bottom: 45px;
+        right: 5px;
+      }
       .scrollBox {
-        display: none;
+        bottom: 0px;
+        right: 35px;
       }
 
       p {
@@ -98,30 +137,29 @@ export default function Hero() {
 
 
 
-  const one = <p>Hi there! 👋🏻 my name is</p>;
-  const two = (
-    <h2>
-      Subham Sharma
-    </h2>
-  );
-  const three = (
-    <p>
-      I love to design, develop & deploy. I am a software developer and I
-      build frontend and backend applications.
+  const one = (
+    <p className="name-text text-center">
+      Hey, I am Subham 
     </p>
   );
-  const four = (
-    <div style={{ marginTop: "40px" }}>
-      {/* <Link type="button" className="connect" to="/work">
-        Explore My Work
-      </Link> */}
+  const two = (
+    <p>
+      I love to design, develop & deploy. I am a software developer who likes to build
+      frontend and backend applications.
+    </p>
+  );
+  const three = (
+    <div
+      className="d-flex justify-content-center align-items-center"
+      style={{ marginTop: "40px" }}
+    >
       <Link type="button" className="button-hero" to="/contact">
-        Let's Connect
+        Let's Connect <i className="fa-solid fa-arrow-right"></i>
       </Link>
     </div>
   );
 
-  const items = [one, two, three, four];
+  const items = [one, two, three];
 
   const controls = useAnimation();
   const ref = useRef(null);
@@ -138,36 +176,28 @@ export default function Hero() {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { staggerChildren: 0.20, duration: 0.5 },
+      transition: { staggerChildren: 0.30, duration: 0.5 },
     },
     hidden: { opacity: 0, y: 75 },
   };
 
   return (
-    <div className="container d-flex justify-content-center align-items-center">
+    <div className="container">
       <StyledHero>
-        <h1>About</h1>
-        <div className="row row-cols-1 row-cols-lg-2 g-4">
-          <div className="col">
-            <div ref={ref}>
-              <motion.div
-                initial="hidden"
-                animate={controls}
-                variants={variants}
-              >
-                {items.map((item, index) => (
-                  <motion.div className="col" key={index} variants={variants}>
-                    {item}
-                  </motion.div>
-                ))}
+        <div className="d-flex justify-content-center align-items-center memoji">
+          <img src={memoji} width={100} alt=".." />
+        </div>
+        <div ref={ref}>
+          <motion.div initial="hidden" animate={controls} variants={variants}>
+            {items.map((item, index) => (
+              <motion.div className="col" key={index} variants={variants}>
+                {item}
               </motion.div>
-            </div>
-          </div>
-          <Reveal>
-            <div className="col d-flex justify-content-center align-items-center">
-              <div className="patterned-col"></div>
-            </div>
-          </Reveal>
+            ))}
+          </motion.div>
+        </div>
+        <div className="vector vh-100 d-flex justify-content-center align-items-center">
+          <img src={vector} alt=".." />
         </div>
         <div>
           <p className="scroll">scroll</p>

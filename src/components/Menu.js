@@ -20,6 +20,7 @@ export default function Menu() {
     .res-btn {
       ${({ theme }) => theme.mixins.resumeBtn};
       text-decoration: none;
+      font-size:24px;
       color: var(--highlight-color);
     }
   `;
@@ -68,22 +69,6 @@ export default function Menu() {
               Contact
             </Link>
 
-            <div className="d-flex">
-              <Link
-                to="https://www.linkedin.com/in/subham-sharma-137985128/"
-                target="_blank"
-                className="menu-social"
-              >
-                <i className="fa-brands fa-linkedin-in"></i>
-              </Link>
-              <Link
-                to="https://github.com/sharmasubham22"
-                target="_blank"
-                className="menu-social"
-              >
-                <i className="fa-brands fa-github"></i>
-              </Link>
-            </div>
             <StyledBtn>
               <Link
                 type="button"
@@ -91,9 +76,27 @@ export default function Menu() {
                 to="https://drive.google.com/uc?export=view&id=1PrCF0G_hTFWh86LmyxAdFL7D2fj58aip"
                 target="_blank"
               >
-                My Resume
+                Resume <i className="fa-solid fa-arrow-right"></i>
               </Link>
             </StyledBtn>
+
+            <div>
+              <Link
+                to="https://www.linkedin.com/in/subham-sharma-137985128/"
+                target="_blank"
+                className="link-design mx-4 mt-3 fs-2"
+              >
+                LinkedIn
+              </Link>
+              <br/>
+              <Link
+                to="https://github.com/sharmasubham22"
+                target="_blank"
+                className="link-design mx-4 mt-3 fs-2"
+              >
+                Github
+              </Link>
+            </div>
           </div>
 
           <div className="p-3 fs-3 bd-highlight menu-section nav-btn">

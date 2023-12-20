@@ -6,6 +6,11 @@ import BioMarquee from "../BioMarquee";
 
 export default function Profile() {
   const StyledText = styled.section`
+    h1 {
+      ${({ theme }) => theme.mixins.chip};
+      margin: 0 0 30px 0;
+    }
+    
     p {
       font-family: var(--general-font);
       font-size: clamp(22px, 2vw, 30px);
@@ -48,7 +53,7 @@ export default function Profile() {
   const StyledPic = styled.div`
     .wrapper {
       position: relative;
-      width: 80%;
+      width: 75%;
       height: 100%;
       overflow: hidden;
       background-color: var(--background-color);
@@ -141,13 +146,15 @@ export default function Profile() {
 
   return (
     <div className="container" style={{ marginTop: "5%", marginBottom: "5%" }}>
+      <StyledText>
+      <h1>About</h1>
       <Reveal>
         <div className="row row-cols-1 row-cols-lg-2">
           <div className="col">
-            <StyledText>
+            
               <p>
-                I’m a passionate Web Designer & Developer. Graduate in Masters
-                of Applied Computer Science from{" "}
+                I’m a passionate Web Designer & Developer. Master's graduate
+                from{" "}
                 <Link
                   className="link-design"
                   to="https://www.dal.ca/"
@@ -156,8 +163,9 @@ export default function Profile() {
                 >
                   Dalhousie University
                 </Link>
-                , Halifax (CA). Eager for creating modern websites and have a
-                strong interest in UI/UX development.
+                , Halifax (CA) in "Applied Computer Science". Eager for creating
+                modern websites and have a strong understanding of UI/UX
+                development.
               </p>
               <p className="subtext">
                 I’ve had privilege of working as an IT Developer at{" "}
@@ -216,9 +224,7 @@ export default function Profile() {
                     </li>
                   ))}
               </ul>
-            </StyledText>
           </div>
-
           <div className="col p-pic d-flex flex-column justify-content-between align-items-center">
             <StyledPic>
               <div className="wrapper">
@@ -229,13 +235,14 @@ export default function Profile() {
                   alt="Headshot"
                 />
                 <div className="marquee">
-                  <BioMarquee/>
-                  </div>
+                  <BioMarquee />
+                </div>
               </div>
             </StyledPic>
           </div>
         </div>
       </Reveal>
+      </StyledText>
     </div>
   );
 }

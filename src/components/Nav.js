@@ -108,7 +108,7 @@ export default function Nav() {
                 to="https://drive.google.com/uc?export=view&id=1PrCF0G_hTFWh86LmyxAdFL7D2fj58aip"
                 target="_blank"
               >
-                My Resume
+                Resume <i className="fa-solid fa-arrow-right"></i>
               </Link>
             </StyledBtn>
           </motion.div>

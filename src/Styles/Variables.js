@@ -14,7 +14,7 @@ const Variables = css`
     --featured-color: #00243b;
     --easing: cubic-bezier(0.645, 0.045, 0.355, 1);
     --general-font: space grotesk;
-    --heavy-font: archivo black;
+    --heavy-font: space grotesk, Sans-serif;
   }
 
   [data-theme="dark"] {
