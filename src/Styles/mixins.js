@@ -56,7 +56,7 @@ const mixins = {
     border-radius: 20px;
     font-family: var(--general-font);
     text-transform: uppercase;
-    font-size: clamp(10px, 2vw, 17px);
+    font-size: clamp(14px, 2vw, 17px);
     user-select: none;
   `,
 };

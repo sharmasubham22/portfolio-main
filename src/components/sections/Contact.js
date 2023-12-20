@@ -79,7 +79,14 @@ const Result = () => {
 
     .form-control:focus {
       border-color: var(--highlight-color);
-      box-shadow:0 0 0 0.1rem rgba(163, 177, 138, 0.6);
+      box-shadow: 0 0 0 0.1rem rgba(163, 177, 138, 0.6);
+    }
+
+    .send-msg {
+      color: var(--text-color);
+      font-size: clamp(22px, 2vw, 30px);
+      text-align:center;
+      font-weight:700;
     }
   `;
 
@@ -91,53 +98,56 @@ const Result = () => {
   return (
     <div
       className="d-flex w-100"
-      style={{ marginTop: "6%", marginBottom: "6%" }}
+      style={{ marginTop: "6%", marginBottom: "3%" }}
     >
       <div className="container">
         <StyledForm>
           <div className="row row-cols-1 row-cols-xl-2 my-5">
-            <div className="col">
-              <h1>Contact</h1>
-              <Reveal>
-                <h2
-                  className="my-5"
-                  style={{
-                    fontFamily: "var(--heavy-font)",
-                    color: "var(--text-color)",
-                    fontSize: "clamp(40px, 6vw, 5.5vw)",
-                    textTransform: "uppercase",
-                  }}
-                >
-                  Get In Touch
-                </h2>
-              </Reveal>
-              <Reveal>
-                <Link
-                  to="mailto:subham.sharma221296@gmail.com"
-                  className="link-design mb-5"
-                >
-                  <i className="fa-solid fa-arrow-right"></i>{" "}
-                  subham.sharma221296@gmail.com
-                </Link>
-              </Reveal>
+            <div className="col d-flex justify-content-center align-items-center">
               <div>
-                <div className="mt-4">
-                  <Reveal>
-                    <Link
-                      to="https://www.linkedin.com/in/subham-sharma-137985128/"
-                      target="_blank"
-                      className="social-links"
-                    >
-                      <i className="fa-brands fa-linkedin-in"></i>
-                    </Link>
-                    <Link
-                      to="https://github.com/sharmasubham22"
-                      target="_blank"
-                      className="social-links"
-                    >
-                      <i className="fa-brands fa-github"></i>
-                    </Link>
-                  </Reveal>
+                <h1>Contact</h1>
+                <Reveal>
+                  <h2
+                    className="my-5"
+                    style={{
+                      fontFamily: "var(--heavy-font)",
+                      color: "var(--text-color)",
+                      fontSize: "clamp(50px, 8vw, 100px)",
+                      textTransform: "uppercase",
+                      fontWeight: "700",
+                    }}
+                  >
+                    Get In Touch
+                  </h2>
+                </Reveal>
+                <Reveal>
+                  <Link
+                    to="mailto:subham.sharma221296@gmail.com"
+                    className="link-design mb-5"
+                  >
+                    <i className="fa-solid fa-arrow-right"></i>{" "}
+                    subham.sharma221296@gmail.com
+                  </Link>
+                </Reveal>
+                <div>
+                  <div className="mt-4">
+                    <Reveal>
+                      <Link
+                        to="https://www.linkedin.com/in/subham-sharma-137985128/"
+                        target="_blank"
+                        className="social-links"
+                      >
+                        <i className="fa-brands fa-linkedin-in"></i>
+                      </Link>
+                      <Link
+                        to="https://github.com/sharmasubham22"
+                        target="_blank"
+                        className="social-links"
+                      >
+                        <i className="fa-brands fa-github"></i>
+                      </Link>
+                    </Reveal>
+                  </div>
                 </div>
               </div>
             </div>
@@ -147,6 +157,7 @@ const Result = () => {
             >
               <form ref={form} className="mt-5" onSubmit={sendEmail}>
                 <Reveal>
+                  <p className="send-msg">Send a message!</p>
                   <div className="mb-3">
                     <label htmlFor="name" className="form-label">
                       Name

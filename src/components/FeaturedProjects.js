@@ -78,7 +78,10 @@ export default function FeaturedProjects(props) {
       <StyledDiv>
         <Link to={demo} target="_blank">
           <div className="img-div">
-            <img src={imageLink} alt="project1" />
+            <img
+              src={imageLink}
+              alt="projectImg"
+            />
           </div>
         </Link>
 
@@ -110,7 +113,7 @@ export default function FeaturedProjects(props) {
             );
           })}
         </div>
-        <p >{description}</p>
+        <p>{description}</p>
       </StyledDiv>
     </div>
   );

@@ -10,9 +10,10 @@ export default function Footer() {
       padding: 20px 15px 15px 15px;
       justify-content: space-between;
 
+
       @media (max-width: 870px) {
         display: inline-block;
-        width:100%;
+        width: 100%;
         padding: 10px;
         justify-content: start;
       }

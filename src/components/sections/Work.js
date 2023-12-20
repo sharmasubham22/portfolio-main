@@ -25,8 +25,9 @@ export default function Work() {
 
       h2 {
         font-family: var(--heavy-font);
+        font-weight: 700;
         color: var(--highlight-color);
-        font-size: clamp(40px, 4vw, 60px);
+        font-size: clamp(45px, 4vw, 60px);
       }
 
       h4 {
@@ -98,7 +99,7 @@ export default function Work() {
               </div>
               <div className="col col-img d-flex justify-content-center align-items-center">
                 <Link type="button" className="work-btn" to="/work">
-                  Checkout My Work <i class="fa-solid fa-arrow-right-long"></i>
+                  Checkout My Work <i class="fa-solid fa-arrow-right"></i>
                 </Link>
               </div>
             </div>

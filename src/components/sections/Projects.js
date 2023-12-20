@@ -55,6 +55,7 @@ export default function Projects() {
                 color: "var(--text-color)",
                 fontSize: "clamp(50px, 8vw, 100px)",
                 textTransform: "uppercase",
+                fontWeight:"700",
               }}
             >
               Projects
@@ -110,7 +111,7 @@ export default function Projects() {
             })}
           </div>
           <div className="contact-section">
-            <p> Did you like my profile? Click below to connect!</p>
+            <p> Like what you see? Click below to connect!</p>
           </div>
         </div>
         <Link to="/contact" style={{ textDecoration: "none" }}>
