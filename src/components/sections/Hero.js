@@ -2,8 +2,8 @@ import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { motion, useAnimation, useInView } from "framer-motion";
-import memoji from '../../images/memoji.png'
 import vector from '../../images/vector.svg'
+import memoji from '../../images/memoji.png'
 // import Reveal from "../Motion";
 
 export default function Hero() {
@@ -15,14 +15,12 @@ export default function Hero() {
       font-weight: 700;
       color: var(--text-color);
       line-height: 1;
-      // margin-top: 15%;
     }
 
     p {
       font-family: var(--general-font);
-      // width:80%;
       text-align: center;
-      font-size: clamp(22px, 2vw, 30px);
+      font-size: clamp(18px, 2vw, 30px);
       color: var(--content-color);
     }
 
@@ -74,15 +72,17 @@ export default function Hero() {
     @media (max-width: 1500px) and (min-width:684px) {
       .vector img {
         width: 70%;
-        margin-right:-25%;
+        margin-right:-20%;
       }
     }
 
     .scroll {
       text-align: end;
+      text-decoration:none;
+      color:var(--content-color);
       position: absolute;
-      bottom: 100px;
-      right: 15px;
+      bottom: 120px;
+      right: 35px;
       writing-mode: vertical-rl;
       font-size: clamp(15px, 2vw, 20px);
       user-select: none;
@@ -121,12 +121,12 @@ export default function Hero() {
 
     @media (max-width: 1078px) {
       .scroll {
-        bottom: 45px;
-        right: 5px;
+        bottom: 55px;
+        right: 10px;
       }
       .scrollBox {
-        bottom: 0px;
-        right: 35px;
+        bottom: -10px;
+        right: 25px;
       }
 
       p {
@@ -185,7 +185,11 @@ export default function Hero() {
     <div className="container">
       <StyledHero>
         <div className="d-flex justify-content-center align-items-center memoji">
-          <img src={memoji} width={100} alt=".." />
+          <img
+            src={memoji}
+            width={100}
+            alt=".."
+          />
         </div>
         <div ref={ref}>
           <motion.div initial="hidden" animate={controls} variants={variants}>
@@ -200,7 +204,7 @@ export default function Hero() {
           <img src={vector} alt=".." />
         </div>
         <div>
-          <p className="scroll">scroll</p>
+          <a href="#section2" className="scroll">scroll</a>
           <div className="scrollBox"></div>
         </div>
       </StyledHero>

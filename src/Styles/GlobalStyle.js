@@ -111,7 +111,7 @@ background: url(https://drive.google.com/uc?export=view&id=1PpBENYaRX2c0IfonfbL1
     // text-transform: uppercase;
     font-weight: 700;
     color: var(--text-color);
-    font-size: clamp(40px, 4vw, 60px);
+    font-size: clamp(40px, 4vw, 70px);
   }
 
   .nav2 {
