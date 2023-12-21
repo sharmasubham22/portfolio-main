@@ -118,7 +118,7 @@ export default function Nav() {
               type="checkbox"
               role="switch"
               id="flexSwitchCheckDefault"
-              onClick={props.toggleMode}
+              onClick={props.toggle}
             />
           </div> */}
         </motion.div>

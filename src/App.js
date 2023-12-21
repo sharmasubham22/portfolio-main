@@ -10,8 +10,20 @@ import Nav from './components/Nav';
 import Menu from './components/Menu';
 import ScrollTop from './components/ScrollTop';
 import Error from "./components/Error";
+// import { useState } from "react";
 
 function App() {
+    // const [mode, setmode] = useState("light");
+
+    // const toggleMode = () => {
+    //   if (mode === "light") {
+    //     setmode("dark");
+    //     document.querySelector("body").setAttribute("data-theme", "dark");
+    //   } else {
+    //     setmode("light");
+    //     document.querySelector("body").setAttribute("data-theme", "dark");
+    //   }
+    // };
   return (
     <>
       <ThemeProvider theme={theme}>
