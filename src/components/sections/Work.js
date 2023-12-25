@@ -54,7 +54,7 @@ export default function Work() {
     <>
       <div
         className="container"
-        style={{ marginTop: "5%", marginBottom: "5%" }}
+        style={{ marginTop: "10%", marginBottom: "5%" }}
       >
         <Reveal>
           <StyledSection>

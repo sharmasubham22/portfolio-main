@@ -34,7 +34,7 @@ export default function SkillsItem(props) {
             className={`card-subtitle `}
             style={{
               fontFamily: "var(--general-font)",
-              fontSize: "clamp(15px, 2vw, 20px)",
+              fontSize: "clamp(20px, 1vw, 22px)",
               color: "var(--content-color)",
             }}
           >

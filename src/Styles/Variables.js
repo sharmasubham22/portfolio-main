@@ -8,9 +8,9 @@ const Variables = css`
     --border-color: rgb(255, 255, 255, 0.1);
     --card-color: #032030;
     --highlight-color: #a3b18a;
-    --text-color: rgb(255, 255, 255);
+    --text-color: #e1e1da;
     --opacity: 0.5;
-    --content-color: #dad7cd;
+    --content-color: #96a9ad;
     --featured-color: #00243b;
     --easing: cubic-bezier(0.645, 0.045, 0.355, 1);
     --general-font: space grotesk;
