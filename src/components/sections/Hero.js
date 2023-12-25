@@ -144,8 +144,7 @@ export default function Hero() {
   );
   const two = (
     <p>
-      I love to design, develop & deploy. I am a software developer who likes to build
-      frontend and backend applications.
+      I love to design, develop & deploy.
     </p>
   );
   const three = (

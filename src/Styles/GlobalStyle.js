@@ -166,7 +166,7 @@ background: url(https://drive.google.com/uc?export=view&id=1PpBENYaRX2c0IfonfbL1
 
 .section{
   width:100%;
-  height:90vh;
+  height:100vh;
  display:flex;
  justify-content:center;
  align-items:center;

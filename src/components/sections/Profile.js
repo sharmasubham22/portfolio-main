@@ -130,14 +130,14 @@ export default function Profile() {
   const skills = ["React.js", "Express.js", "Node.js", "JavaScript", "SQL"];
 
   return (
-    <div className="container" style={{ marginTop: "20%", marginBottom: "10%" }}>
+    <div className="container" style={{ marginTop: "5%", marginBottom: "5%" }}>
       <StyledText>
         <h1>About</h1>
         <Reveal>
           <div className="row row-cols-1 row-cols-lg-2">
             <div className="col">
               <p>
-                I’m a passionate Web Designer & Developer. Master's graduate
+                I’m a passionate Software Developer who likes to build frontend and backend applications. Master's graduate
                 from{" "}
                 <Link
                   className="link-design"
@@ -157,31 +157,27 @@ export default function Profile() {
                   className="link-design"
                   to="https://www.canada.ca/en/revenue-agency.html"
                   target="_blank"
-                  style={{ fontSize: "clamp(15px, 2vw, 18px)" }}
+                  style={{ fontSize: "clamp(15px, 2vw, 20px)" }}
                 >
                   Canada Revenue Agency{" "}
                 </Link>{" "}
-                (CRA). Also, I have experience working in Business development
-                team at{" "}
+                (CRA). And, I have experience working at{" "}
                 <Link
                   className="link-design"
                   to="https://www.townscript.com/"
                   target="_blank"
-                  style={{ fontSize: "clamp(15px, 2vw, 18px)" }}
+                  style={{ fontSize: "clamp(15px, 2vw, 20px)" }}
                 >
                   Townscript
-                </Link>
-                . My interest in web started back in 2017, and started my career
-                with a web design internship at{" "}
+                </Link> (India) and a web design internship at{" "}
                 <Link
                   className="link-design"
                   to="https://skillsanta.com/"
                   target="_blank"
-                  style={{ fontSize: "clamp(15px, 2vw, 18px)" }}
+                  style={{ fontSize: "clamp(15px, 2vw, 20px)" }}
                 >
                   SkillSanta
-                </Link>
-                .
+                </Link> (India).
               </p>
               <p className="subtext">
                 Here are some of the technologies I can work with.
