@@ -44,7 +44,7 @@ export default function Projects() {
           <Hero />
         </section>
         <BioMarquee />
-        <section id="home-section2">
+        <section id="home-section2" >
           <StyledProjects>
             <div className="container" style={{ marginBottom: "2%" }}>
               <h1 className="my-5">My Work</h1>

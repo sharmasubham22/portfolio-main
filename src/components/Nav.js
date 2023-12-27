@@ -23,8 +23,8 @@ export default function Nav(props) {
     >
       <div className="d-flex bd-highlight">
         <div className="p-4 flex-grow-1 bd-highlight nav-section">
-          <Link className="fs-3 logo" style={{ fontWeight: "700" }} to="/">
-            {logoSvg} subh
+          <Link className="logo" to="/">
+        {logoSvg}
           </Link>
         </div>
         <div
