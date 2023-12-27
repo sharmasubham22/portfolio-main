@@ -2,15 +2,21 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import Reveal from "../Motion";
-import BioMarquee from "../BioMarquee";
-// import {vector1, vector2} from '../../images/assets'
-import { bullet1 } from "../../images/bullets";
+// import BioMarquee from "../BioMarquee";
+import {vector1, vector2} from '../../images/assets'
+import profile from '../../images/ss2.png'
 
 export default function Profile() {
   const StyledText = styled.section`
     h1 {
       ${({ theme }) => theme.mixins.chip};
       margin: 0 0 30px 0;
+    }
+
+    @media (max-width:1024px){
+      h1{
+        margin-top:60px;
+      }
     }
     
     p {
@@ -55,13 +61,12 @@ export default function Profile() {
   const StyledPic = styled.div`
     .wrapper {
       position: relative;
-      width: 75%;
+      width: 65%;
       height: 100%;
       overflow: hidden;
       background-color: var(--background-color);
       margin: auto;
       transition: 0.3s all ease-in-out;
-      border-radius: 15px;
       display: grid;
       grid-template: 1fr / 1fr;
       place-items: center;
@@ -80,49 +85,55 @@ export default function Profile() {
       grid-row: 1 / 1;
     }
 
-
-
-    .smiley {
+    .border-img {
+      width: 65%;
+      height: 100%;
+      top: 5.5%;
+      right: 13%;
       position: absolute;
-      top: -11%;
-      left: 2%;
+      border: 1px solid var(--text-color);
       z-index: -1;
+      // background:var(--card-color);
     }
 
-    .marquee::before {
-      background: url(https://drive.google.com/uc?export=view&id=1Mi1PRgJnCvyIjQOfba5lJPRKX6CRKmQ7)
-        0 / cover no-repeat;
-      background-position: bottom;
-      bottom: 0px;
-    }
-
-    .marquee {
+    .vector-asset1 {
       position: absolute;
-      padding: 44px 0px;
-      background: rgba(0, 0, 0, 0.5);
-      bottom: 0px;
-      width: 100%;
-      overflow: hidden;
-      z-index: 1;
+      top: -8%;
+      left: 8%;
+      z-index: -1;
+      width: 140px;
+      height: 148px;
     }
 
-    .marquee::before {
-      content: "";
-      margin: 0px;
+    .vector-asset2 {
       position: absolute;
-      top: 0;
+      z-index: -1;
       right: 0;
-      bottom: 0;
-      left: 0;
-      filter: blur(10px);
-      z-index: -1;
+      bottom: 20%;
+      width: 160px;
+      height: 128px;
     }
 
     @media (max-width: 766px) {
       margin: 50px auto 0;
 
       .wrapper {
-        width: 95%;
+        width: 75%;
+      }
+      .vector-asset1 {
+        width: 80px;
+        left:2%;
+        height: 80px;
+      }
+
+      .vector-asset2 {
+        width: 90px;
+        height: 80px;
+      }
+
+      .border-img {
+        width: 75%;
+        right: 8%;
       }
     }
   `;
@@ -137,8 +148,8 @@ export default function Profile() {
           <div className="row row-cols-1 row-cols-lg-2">
             <div className="col">
               <p>
-                I’m a passionate Software Developer who likes to build frontend and backend applications. Master's graduate
-                from{" "}
+                I’m a passionate Software Developer who likes to build frontend
+                and backend applications. Master's graduate from{" "}
                 <Link
                   className="link-design"
                   to="https://www.dal.ca/"
@@ -147,9 +158,7 @@ export default function Profile() {
                 >
                   Dalhousie University
                 </Link>
-                , Halifax (CA) in "Applied Computer Science". Eager for creating
-                modern websites and have a strong understanding of UI/UX
-                development.
+                , Halifax (CA) in "Applied Computer Science".
               </p>
               <p className="subtext">
                 I’ve had privilege of working as an IT Developer at{" "}
@@ -169,7 +178,8 @@ export default function Profile() {
                   style={{ fontSize: "clamp(15px, 2vw, 20px)" }}
                 >
                   Townscript
-                </Link> (India) and a web design internship at{" "}
+                </Link>{" "}
+                (India) and a web design internship at{" "}
                 <Link
                   className="link-design"
                   to="https://skillsanta.com/"
@@ -177,7 +187,9 @@ export default function Profile() {
                   style={{ fontSize: "clamp(15px, 2vw, 20px)" }}
                 >
                   SkillSanta
-                </Link> (India).
+                </Link>{" "}
+                (India). Eager for creating modern websites and have a strong
+                understanding of UI/UX development.
               </p>
               <p className="subtext">
                 Here are some of the technologies I can work with.
@@ -186,32 +198,28 @@ export default function Profile() {
                 {skills &&
                   skills.map((skill, i) => (
                     <li key={i}>
-                    {bullet1}
+                      <span style={{ color: "var(--highlight-color)" }}>
+                        ▸{" "}
+                      </span>
                       {skill}
                     </li>
                   ))}
               </ul>
             </div>
-            <div className="col p-pic d-flex flex-column justify-content-between align-items-center">
+            <div className="col p-pic d-flex flex-column justify-content-center align-items-center">
               <StyledPic style={{ position: "relative" }}>
                 <div className="wrapper">
                   <img
                     className="img"
-                    src="https://drive.google.com/uc?export=view&id=1Mi1PRgJnCvyIjQOfba5lJPRKX6CRKmQ7"
+                    src={profile}
                     formats={["AUTO", "WEBP", "AVIF"]}
                     alt="Headshot"
                   />
-                  <div className="marquee">
-                    <BioMarquee />
-                  </div>
                 </div>
-                <div className="smiley">
-                  {/* {vector1} */}
-                </div>
+                <div className="border-img"></div>
+                <div className="vector-asset1">{vector1}</div>
+                <div className="vector-asset2">{vector2}</div>
               </StyledPic>
-              <div>
-                {/* {vector2} */}
-              </div>
             </div>
           </div>
         </Reveal>

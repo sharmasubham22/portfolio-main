@@ -27,7 +27,7 @@ export default function Work() {
         font-family: var(--heavy-font);
         font-weight: 700;
         color: var(--highlight-color);
-        font-size: clamp(45px, 4vw, 60px);
+        font-size: clamp(45px, 5vw, 80px);
       }
 
       h4 {
@@ -53,8 +53,8 @@ export default function Work() {
   return (
     <>
       <div
-        className="container"
-        style={{ marginTop: "10%", marginBottom: "5%" }}
+        className="container-fluid"
+        style={{ marginTop: "5%", marginBottom: "10%" }}
       >
         <Reveal>
           <StyledSection>
@@ -64,7 +64,7 @@ export default function Work() {
                 <h4>Projects, web apps and experimentals.</h4>
               </div>
               <div className="col col-img d-flex justify-content-center align-items-center">
-                <Link type="button" className="work-btn" to="/work">
+                <Link type="button" className="work-btn" to="/">
                   Checkout My Work <i className="fa-solid fa-arrow-right"></i>
                 </Link>
               </div>

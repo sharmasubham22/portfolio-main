@@ -1,127 +1,101 @@
-import { motion, useAnimation, useInView } from "framer-motion";
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import styled from "styled-components";
+import { logoSvg, sun, moon } from "../images/assets";
 
-export default function Nav() {
+export default function Nav(props) {
   let location = useLocation();
 
   const StyledBtn = styled.div`
     .res-btn {
       ${({ theme }) => theme.mixins.resumeBtn};
       text-decoration: none;
-      color: var(--highlight-color);
     }
   `;
-  
-      const controls = useAnimation();
-      const ref = useRef(null);
-      const onScreen = useInView(ref, { once: true });
 
-      useEffect(() => {
-        if (onScreen) {
-          controls.start("visible");
-        }
-        // eslint-disable-next-line
-      }, [onScreen]);
-
-      const variants = {
-        visible: {
-          opacity: 1,
-          y: 0,
-          transition: { staggerChildren: 0.25, duration: 0.25 },
-        },
-        hidden: { opacity: 0, y: -75 },
-      };
   return (
     <div
-      className="container-fluid fixed-top nav2"
+      className="container-fluid sticky-top nav2"
       style={{
         borderBottom: "1px solid",
         borderColor: "var(--border-color)",
       }}
     >
-      <div ref={ref}>
-        <motion.div
-          initial="hidden"
-          animate={controls}
-          variants={variants}
-          className="d-flex bd-highlight"
+      <div className="d-flex bd-highlight">
+        <div className="p-4 flex-grow-1 bd-highlight nav-section">
+          <Link className="fs-3 logo" style={{ fontWeight: "700" }} to="/">
+            {logoSvg} subh
+          </Link>
+        </div>
+        <div
+          className="p-4 bd-highlight nav-section d-flex justify-content-center"
+          style={{
+            textTransform: "uppercase",
+          }}
         >
-          <motion.div
-            variants={variants}
-            className="p-4 flex-grow-1 bd-highlight nav-section"
+          <Link
+            className={`mx-4 nav-link ${
+              location.pathname === "/" ? "active" : ""
+            }`}
+            to="/"
           >
-            <Link className="fs-3 logo" to="/">
-              subh.s
-            </Link>
-          </motion.div>
-          <motion.div
-            variants={variants}
-            className="p-4 bd-highlight nav-section d-flex justify-content-center"
-            style={{
-              textTransform: "uppercase",
-            }}
+            Work
+          </Link>
+          <Link
+            className={`mx-4 nav-link ${
+              location.pathname === "/about" ? "active" : ""
+            }`}
+            type="button"
+            to="/about"
           >
+            About
+          </Link>
+        </div>
+        <div className="p-4 bd-highlight nav-section">
+          <Link
+            to="https://www.linkedin.com/in/subham-sharma-137985128/"
+            target="_blank"
+            className="nav-social"
+          >
+            <i className="fa-brands fa-linkedin-in"></i>
+          </Link>
+          <Link
+            to="https://github.com/sharmasubham22"
+            target="_blank"
+            className="nav-social"
+          >
+            <i className="fa-brands fa-github"></i>
+          </Link>
+        </div>
+        <div className="d-flex p-4 bd-highlight">
+          <StyledBtn>
             <Link
-              className={`mx-4 nav-link ${
-                location.pathname === "/" ? "active" : ""
-              }`}
               type="button"
-              to="/"
-            >
-              About
-            </Link>
-            <Link
-              className={`mx-4 nav-link ${
-                location.pathname === "/work" ? "active" : ""
-              }`}
-              to="/work"
-            >
-              Projects
-            </Link>
-          </motion.div>
-          <motion.div
-            variants={variants}
-            className="p-4 bd-highlight nav-section"
-          >
-            <Link
-              to="https://www.linkedin.com/in/subham-sharma-137985128/"
+              className="res-btn"
+              to="https://drive.google.com/uc?export=view&id=1PrCF0G_hTFWh86LmyxAdFL7D2fj58aip"
               target="_blank"
-              className="nav-social"
             >
-              <i className="fa-brands fa-linkedin-in"></i>
+              Resume <i className="fa-solid fa-arrow-right"></i>
             </Link>
-            <Link
-              to="https://github.com/sharmasubham22"
-              target="_blank"
-              className="nav-social"
+          </StyledBtn>
+          <div className="form-check form-switch d-flex justify-content-center align-items-center">
+            <label
+              for="flexSwitchCheckDefault"
+              className="fs-3"
+              style={{ color: "var(--content-color)", cursor: "pointer" }}
             >
-              <i className="fa-brands fa-github"></i>
-            </Link>
-          </motion.div>
-          <motion.div variants={variants} className="p-4 bd-highlight">
-            <StyledBtn>
-              <Link
-                type="button"
-                className="res-btn"
-                to="https://drive.google.com/uc?export=view&id=1PrCF0G_hTFWh86LmyxAdFL7D2fj58aip"
-                target="_blank"
-              >
-                Resume <i className="fa-solid fa-arrow-right"></i>
-              </Link>
-            </StyledBtn>
-          </motion.div>
-          {/* <div className="form-check form-switch">
+              {props.mode === "light" ? moon : sun}
+            </label>
             <input
               className="form-check-input"
               type="checkbox"
               role="switch"
               id="flexSwitchCheckDefault"
               onClick={props.toggle}
+              style={{ display: "none" }}
             />
-          </div> */}
-        </motion.div>
+          </div>
+        </div>
       </div>
     </div>
   );

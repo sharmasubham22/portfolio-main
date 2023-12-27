@@ -28,10 +28,6 @@ export default function MarqueeComp() {
       padding: 25px 0px;
     }
 
-    .marquee:hover {
-      background-color: var(--card-color);
-      pointer: cursor;
-    }
   `;
   return (
     <div>

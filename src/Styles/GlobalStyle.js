@@ -104,7 +104,18 @@ background: url(https://drive.google.com/uc?export=view&id=1PpBENYaRX2c0IfonfbL1
 	}
 }
 
+.bullet-hashtag{
+  width:58px;
+  height:50px;
+  margin-right:10px;
+}
 
+@media (max-width:684px){
+.bullet-hashtag{
+  width:35px;
+  height:30px;
+}
+}
 
   .section-head {
     font-family: var(--heavy-font);
@@ -115,7 +126,7 @@ background: url(https://drive.google.com/uc?export=view&id=1PpBENYaRX2c0IfonfbL1
   }
 
   .nav2 {
-    background-color: rgb(2,20,31,0.9);
+    background-color: var(--background-color);
     backdrop-filter: blur(10px);
   }
 
@@ -138,6 +149,7 @@ background: url(https://drive.google.com/uc?export=view&id=1PpBENYaRX2c0IfonfbL1
   text-decoration:none;
   color: var(--content-color);
   font-family:var(--general-font);
+  font-weight:700;
 
   &:hover{
     color: var(--highlight-color);
@@ -152,16 +164,20 @@ background: url(https://drive.google.com/uc?export=view&id=1PpBENYaRX2c0IfonfbL1
   background-color: var(--highlight-color);
 }
 
-
 .nav-social{
   color: var(--content-color);
   margin: 0px 30px;
   font-size: clamp(12px, 2vw, 25px);
+  transition: 0.3s;
 
   &:hover{
     color: var(--highlight-color);
     transform: translateY(-5px);
   }
+}
+
+.hero-section{
+  height:90vh;
 }
 
 .section{
@@ -279,8 +295,14 @@ background: url(https://drive.google.com/uc?export=view&id=1PpBENYaRX2c0IfonfbL1
       letter-spacing: 2px;
       text-transform: uppercase;
       font-family: var(--general-font);
-      font-size: 18.5px;
-      fill:var(--background-color);
+      font-size: 16.2px;
+      fill:var(--content-color);
+    }
+
+    @media (max-width:694px){
+      .text{
+        letter-spacing: 1.5px;
+      }
     }
 
     #rotatingText {
@@ -296,7 +318,7 @@ background: url(https://drive.google.com/uc?export=view&id=1PpBENYaRX2c0IfonfbL1
 
     @keyframes rotate-circle {
       to {
-        transform: rotate(0turn);
+        transform: rotate(1turn);
       }
     }
 
@@ -335,11 +357,18 @@ background: url(https://drive.google.com/uc?export=view&id=1PpBENYaRX2c0IfonfbL1
       }
     }
     
-
     .link-design:hover::after {
       transform: scaleX(1);
       transform-origin: bottom left;
-      
+    }
+
+    .brand-icons{
+      text-decoration:none;
+      color:var(--content-color);
+
+      &:hover{
+        color:var(--content-color);
+      }
     }
 
 @media (max-width: 1024px){

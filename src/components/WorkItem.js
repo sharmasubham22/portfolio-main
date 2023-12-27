@@ -6,10 +6,11 @@ export default function WorkItem(props) {
   return (
     <div>
       <div
-        className="card h-100 p-4"
+        className="card h-100 p-4 border-0"
         style={{
           backgroundColor: "var(--card-color)",
-          borderRadius: "20px",
+          borderRadius: "10px",
+          boxShadow: 'rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset'
         }}
       >
         <div className="card-body">

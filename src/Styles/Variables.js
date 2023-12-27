@@ -2,14 +2,14 @@ import { css } from "styled-components";
 
 
 const Variables = css`
-
   :root {
     --background-color: #02141f;
     --border-color: rgb(255, 255, 255, 0.1);
     --card-color: #032030;
-    --highlight-color: #a3b18a;
+    --highlight-color: #64ffdb;
     --text-color: #e1e1da;
     --opacity: 0.5;
+    --button-text: #e1e1da;
     --content-color: #96a9ad;
     --featured-color: #00243b;
     --easing: cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -18,14 +18,15 @@ const Variables = css`
   }
 
   [data-theme="dark"] {
-    --background-color: #f0f3fa;
+    --background-color: #e1e1da;
     --border-color: rgb(5, 10, 24, 0.1);
-    --card-color: #d5deef;
+    --card-color: #d5d3c8;
     --featured-color: #00243b;
-    --highlight-color: #02a3f5;
-    --text-color: black;
+    --highlight-color: #a27867;
+    --text-color: #2a2b25;
     --opacity: 0.5;
-    --content-color: #395886;
+    --button-text: #e1e1da;
+    --content-color: #8e918e;
   }
 `;
 

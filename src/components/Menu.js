@@ -1,8 +1,9 @@
 import React, { useRef } from 'react'
 import { Link, useLocation } from 'react-router-dom';
 import styled from 'styled-components';
+import { logoSvg, moon, sun } from '../images/assets';
 
-export default function Menu() {
+export default function Menu(props) {
     const navRef = useRef();
     const refClose = useRef();
 
@@ -21,7 +22,6 @@ export default function Menu() {
       ${({ theme }) => theme.mixins.resumeBtn};
       text-decoration: none;
       font-size:24px;
-      color: var(--highlight-color);
     }
   `;
   return (
@@ -35,8 +35,8 @@ export default function Menu() {
       >
         <div className="d-flex bd-highlight">
           <div className="p-3 flex-fill bd-highlight menu-section">
-            <Link className="fs-3 logo" to="/">
-              subh.s
+            <Link className="fs-3 logo" style={{ fontWeight: "700" }} to="/">
+              {logoSvg} subh
             </Link>
           </div>
           <div className="menu-nav" ref={navRef}>
@@ -44,32 +44,23 @@ export default function Menu() {
               className={`mx-4 nav-link ${
                 location.pathname === "/" ? "active" : ""
               }`}
-              type="button"
               to="/"
+              onClick={handleCloseClick}
+            >
+              Work
+            </Link>
+            <Link
+              className={`mx-4 nav-link ${
+                location.pathname === "/about" ? "active" : ""
+              }`}
+              type="button"
+              to="/about"
               onClick={handleCloseClick}
             >
               About
             </Link>
-            <Link
-              className={`mx-4 nav-link ${
-                location.pathname === "/work" ? "active" : ""
-              }`}
-              to="/work"
-              onClick={handleCloseClick}
-            >
-              Projects
-            </Link>
-            <Link
-              className={`mx-4 nav-link ${
-                location.pathname === "/contact" ? "active" : ""
-              }`}
-              to="/contact"
-              onClick={handleCloseClick}
-            >
-              Contact
-            </Link>
 
-            <StyledBtn>
+            <StyledBtn className="my-2">
               <Link
                 type="button"
                 className="res-btn"
@@ -86,16 +77,39 @@ export default function Menu() {
                 target="_blank"
                 className="link-design mx-4 mt-3 fs-2"
               >
-                LinkedIn
+                <i class="fa-brands fa-linkedin fs-4 brand-icons"></i>
+                <span className="mx-2">LinkedIn</span>
               </Link>
-              <br/>
+              <br />
               <Link
                 to="https://github.com/sharmasubham22"
                 target="_blank"
                 className="link-design mx-4 mt-3 fs-2"
               >
-                Github
+                <i className="fa-brands fa-github fs-4 brand-icons"></i>
+                <span className="mx-2">Github</span>
               </Link>
+            </div>
+            <div className="form-check form-switch">
+              <label
+                for="flexSwitchCheckDefault"
+                className="fs-1"
+                style={{
+                  color: "var(--content-color)",
+                  cursor: "pointer",
+                  marginLeft: "-40px",
+                }}
+              >
+                {props.mode === "light" ? moon : sun}
+              </label>
+              <input
+                className="form-check-input"
+                type="checkbox"
+                role="switch"
+                id="flexSwitchCheckDefault"
+                onClick={props.toggle}
+                style={{ display: "none" }}
+              />
             </div>
           </div>
 

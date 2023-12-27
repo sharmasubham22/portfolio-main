@@ -1,20 +1,40 @@
 import React, { useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { motion, useAnimation, useInView } from "framer-motion";
-import vector from '../../images/vector.svg'
-import memoji from '../../images/memoji.png'
-// import Reveal from "../Motion";
+import { arrow, rotateText } from "../../images/assets";
 
 export default function Hero() {
   const StyledHero = styled.div`
     .name-text {
-      font-size: clamp(70px, 10vw, 150px);
+      font-size: clamp(40px, 8vw, 130px);
       font-family: var(--heavy-font);
       text-transform: uppercase;
       font-weight: 700;
       color: var(--text-color);
-      line-height: 1;
+      line-height: 0.8;
+      user-select: none;
+    }
+
+    .hero-text {
+      background: linear-gradient(
+        to bottom,
+        var(--highlight-color) 0%,
+        transparent 100%
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      opacity: 0.3;
+    }
+
+    .hero-text2 {
+      background: linear-gradient(
+        to top,
+        var(--highlight-color) 0%,
+        transparent 100%
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      opacity: 0.3;
     }
 
     p {
@@ -24,68 +44,48 @@ export default function Hero() {
       color: var(--content-color);
     }
 
-    .button-hero {
-      ${({ theme }) => theme.mixins.button};
-      margin-top: 10px;
-      background-color:var(--background-color);
-    }
-
-    .memoji{
-      width:fit-content;
-      padding:15px 10px 0px 10px;
-      margin:auto;
-      margin-bottom:20px;
-      border-radius:50%;
-      background-color: var(--highlight-color);
-      user-select:none;
-    }
-
-    .memoji img{
-      border-radius:50%;
-    }
-
     .container {
       width: 100px;
       height: 100px;
       position: relative;
     }
 
-    .vector {
-      position: absolute;
-      bottom: 0%;
-      right: 0%;
-      z-index: -1;
-      opacity: 0.3;
-      overflow: hidden;
-    }
-
-    .vector img {
-      width: 90%;
-    }
-
-    @media (max-width: 684px) {
-      .vector img {
-        width: 100%;
-      }
-    }
-
-    @media (max-width: 1500px) and (min-width:684px) {
-      .vector img {
-        width: 70%;
-        margin-right:-20%;
-      }
-    }
-
     .scroll {
       text-align: end;
-      text-decoration:none;
-      color:var(--content-color);
+      text-decoration: none;
+      color: var(--content-color);
       position: absolute;
-      bottom: 120px;
+      // background: var(--card-color);
+      bottom: 30px;
       right: 35px;
       writing-mode: vertical-rl;
       font-size: clamp(15px, 2vw, 20px);
       user-select: none;
+    }
+
+    .circle {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      user-select: none;
+    }
+
+    .fa-solid {
+      position: absolute;
+      color: var(--card-color);
+      font-size: 10px;
+      z-index: 999;
+      border: 1px solid var(--highlight-color);
+      border-radius: 50%;
+      padding: 15px 15px;
+      width: 80px;
+      height: 80px;
+    }
+
+    .svg {
+      width: 140px;
+      height: 140px;
     }
 
     .scrollBox {
@@ -119,10 +119,23 @@ export default function Hero() {
       }
     }
 
+    @media (max-width: 684px) {
+      .fa-solid {
+        padding: 10px;
+        width: 50px;
+        height: 50px;
+      }
+
+      .svg {
+        width: 80px;
+        height: 80px;
+      }
+    }
+
     @media (max-width: 1078px) {
       .scroll {
-        bottom: 55px;
-        right: 10px;
+        bottom: 10px;
+        right: 30px;
       }
       .scrollBox {
         bottom: -10px;
@@ -135,30 +148,16 @@ export default function Hero() {
     }
   `;
 
-
-
   const one = (
-    <p className="name-text text-center">
-      Hey, I am Subham 
-    </p>
+    <p className="name-text text-center hero-text">Hey, I'm Subham</p>
   );
-  const two = (
-    <p>
-      I love to design, develop & deploy.
-    </p>
-  );
+  const two = <p className="name-text text-center">Hey, I'm Subham</p>;
   const three = (
-    <div
-      className="d-flex justify-content-center align-items-center"
-      style={{ marginTop: "40px" }}
-    >
-      <Link type="button" className="button-hero" to="/contact">
-        Let's Connect <i className="fa-solid fa-arrow-right"></i>
-      </Link>
-    </div>
+    <p className="name-text text-center hero-text2">Hey, I'm Subham</p>
   );
+  const four = <p>I love to design, develop & deploy!</p>;
 
-  const items = [one, two, three];
+  const items = [one, two, three, four];
 
   const controls = useAnimation();
   const ref = useRef(null);
@@ -175,7 +174,7 @@ export default function Hero() {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { staggerChildren: 0.30, duration: 0.5 },
+      transition: { staggerChildren: 0.3, duration: 0.5 },
     },
     hidden: { opacity: 0, y: 75 },
   };
@@ -183,28 +182,20 @@ export default function Hero() {
   return (
     <div className="container">
       <StyledHero>
-        <div className="d-flex justify-content-center align-items-center memoji">
-          <img
-            src={memoji}
-            width={100}
-            alt=".."
-          />
-        </div>
         <div ref={ref}>
           <motion.div initial="hidden" animate={controls} variants={variants}>
             {items.map((item, index) => (
-              <motion.div className="col" key={index} variants={variants}>
+              <motion.div key={index} variants={variants}>
                 {item}
               </motion.div>
             ))}
           </motion.div>
         </div>
-        <div className="vector vh-100 d-flex justify-content-center align-items-center">
-          <img src={vector} alt=".." />
-        </div>
-        <div>
-          <a href="#section2" className="scroll">scroll</a>
-          <div className="scrollBox"></div>
+        <div className="scroll">
+          <a href="#home-section2" className="circle">
+            <div className="fa-solid">{arrow}</div>
+            <div className="svg">{rotateText}</div>
+          </a>
         </div>
       </StyledHero>
     </div>
