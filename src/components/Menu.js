@@ -35,8 +35,8 @@ export default function Menu(props) {
       >
         <div className="d-flex bd-highlight">
           <div className="p-3 flex-fill bd-highlight menu-section">
-            <Link className="fs-3 logo" style={{ fontWeight: "700" }} to="/">
-              {logoSvg} subh
+            <Link className="logo" to="/">
+              {logoSvg}
             </Link>
           </div>
           <div className="menu-nav" ref={navRef}>

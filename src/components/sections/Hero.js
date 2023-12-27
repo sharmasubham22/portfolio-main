@@ -155,7 +155,12 @@ export default function Hero() {
   const three = (
     <p className="name-text text-center hero-text2">Hey, I'm Subham</p>
   );
-  const four = <p>I love to design, develop & deploy!</p>;
+  const four = (
+    <p>
+      I am a <spna style={{fontWeight:"700"}}>Software Developer</spna> and I love to design, develop &
+      deploy!
+    </p>
+  );
 
   const items = [one, two, three, four];
 
