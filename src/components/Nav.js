@@ -80,7 +80,7 @@ export default function Nav(props) {
           </StyledBtn>
           <div className="form-check form-switch d-flex justify-content-center align-items-center">
             <label
-              for="flexSwitchCheckDefault"
+              htmlFor="flexSwitchCheckDefault"
               className="fs-3"
               style={{ color: "var(--content-color)", cursor: "pointer" }}
             >

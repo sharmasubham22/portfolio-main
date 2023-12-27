@@ -171,7 +171,7 @@ export default function GetInTouch() {
                   to="https://www.linkedin.com/in/subham-sharma-137985128/"
                   target="_blank"
                 >
-                  <i class="fa-brands fa-linkedin fs-4 brand-icons"></i>
+                  <i className="fa-brands fa-linkedin fs-4 brand-icons"></i>
                   <span className="link-design mx-2">LinkedIn</span>
                 </Link>
                 <Link
@@ -199,7 +199,7 @@ export default function GetInTouch() {
                     fontSize: "clamp(15px, 2vw, 26px)",
                   }}
                 >
-                  <i class="fa-solid fa-map-pin"></i> Halifax, NS (Canada)
+                  <i className="fa-solid fa-map-pin"></i> Halifax, NS (Canada)
                 </p>
               </div>
             </div>

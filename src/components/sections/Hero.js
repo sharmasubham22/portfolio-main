@@ -1,6 +1,6 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import styled from "styled-components";
-import { motion, useAnimation, useInView } from "framer-motion";
+// import { motion, useAnimation, useInView } from "framer-motion";
 import { arrow, rotateText } from "../../images/assets";
 
 export default function Hero() {
@@ -159,38 +159,38 @@ export default function Hero() {
 
   const items = [one, two, three, four];
 
-  const controls = useAnimation();
-  const ref = useRef(null);
-  const onScreen = useInView(ref, { once: true });
+  // const controls = useAnimation();
+  // const ref = useRef(null);
+  // const onScreen = useInView(ref, { once: true });
 
-  useEffect(() => {
-    if (onScreen) {
-      controls.start("visible");
-    }
-    // eslint-disable-next-line
-  }, [onScreen]);
+  // useEffect(() => {
+  //   if (onScreen) {
+  //     controls.start("visible");
+  //   }
+  //   // eslint-disable-next-line
+  // }, [onScreen]);
 
-  const variants = {
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { staggerChildren: 0.3, duration: 0.5 },
-    },
-    hidden: { opacity: 0, y: 75 },
-  };
+  // const variants = {
+  //   visible: {
+  //     opacity: 1,
+  //     y: 0,
+  //     transition: { staggerChildren: 0.3, duration: 0.5 },
+  //   },
+  //   hidden: { opacity: 0, y: 75 },
+  // };
 
   return (
     <div className="container">
       <StyledHero>
-        <div ref={ref}>
-          <motion.div initial="hidden" animate={controls} variants={variants}>
+        {/* <div ref={ref}>
+          <motion.div initial="hidden" animate={controls} variants={variants}> */}
             {items.map((item, index) => (
-              <motion.div key={index} variants={variants}>
+              <div key={index} >
                 {item}
-              </motion.div>
+             </div>
             ))}
-          </motion.div>
-        </div>
+          {/* </motion.div>
+        </div> */}
         <div className="scroll">
           <a href="#home-section2" className="circle">
             <div className="fa-solid">{arrow}</div>
