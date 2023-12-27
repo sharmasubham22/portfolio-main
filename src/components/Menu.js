@@ -77,7 +77,7 @@ export default function Menu(props) {
                 target="_blank"
                 className="link-design mx-4 mt-3 fs-2"
               >
-                <i class="fa-brands fa-linkedin fs-4 brand-icons"></i>
+                <i className="fa-brands fa-linkedin fs-4 brand-icons"></i>
                 <span className="mx-2">LinkedIn</span>
               </Link>
               <br />
@@ -92,7 +92,7 @@ export default function Menu(props) {
             </div>
             <div className="form-check form-switch">
               <label
-                for="flexSwitchCheckDefault"
+                htmlFor="flexSwitchCheckDefault"
                 className="fs-1"
                 style={{
                   color: "var(--content-color)",
