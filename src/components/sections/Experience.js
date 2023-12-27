@@ -1,21 +1,21 @@
-import React, { useEffect, useRef } from 'react'
-import WorkItem from '../WorkItem'
-import workData from '../../data/Work.json'
-import Reveal from '../Motion';
-import { motion, useAnimation, useInView } from 'framer-motion';
-import { bullet4 } from '../../images/bullets';
+import React, { useEffect, useRef } from "react";
+import WorkItem from "../WorkItem";
+import workData from "../../data/Work.json";
+import Reveal from "../Motion";
+import { motion, useAnimation, useInView } from "framer-motion";
+import { bullet4 } from "../../images/bullets";
 
-export default function Experience() { 
-    const controls = useAnimation();
-    const ref = useRef(null);
-    const onScreen = useInView(ref, { once: true });
+export default function Experience() {
+  const controls = useAnimation();
+  const ref = useRef(null);
+  const onScreen = useInView(ref, { once: true });
 
-    useEffect(() => {
-      if (onScreen) {
-        controls.start("visible");
-      }
-      // eslint-disable-next-line
-    }, [onScreen]);
+  useEffect(() => {
+    if (onScreen) {
+      controls.start("visible");
+    }
+    // eslint-disable-next-line
+  }, [onScreen]);
 
   const variants = {
     visible: {
@@ -28,10 +28,8 @@ export default function Experience() {
   return (
     <div className="container" style={{ marginTop: "5%", marginBottom: "5%" }}>
       <Reveal>
-        <h1 className="my-5 section-head">
-          <span>
-           {bullet4}
-          </span> Experience
+        <h1 className="my-5 section-head d-flex">
+          <div className="bullet-hashtag">{bullet4}</div> Experience
         </h1>
       </Reveal>
       <div ref={ref}>
@@ -43,7 +41,7 @@ export default function Experience() {
         >
           {workData.map((element, index) => {
             return (
-              <motion.div className="col" key={index} variants={variants}>
+              <motion.div key={index} variants={variants} className="col">
                 <WorkItem
                   name={element.name}
                   position={element.position}

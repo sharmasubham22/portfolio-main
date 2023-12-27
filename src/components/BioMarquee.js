@@ -15,11 +15,13 @@ export default function BioMarquee() {
     }
 
     .marquee {
-      padding: 15px 0px;
+      border-top: 1px solid var(--border-color);
+      border-bottom: 1px solid var(--border-color);
+      padding: 25px 0px;
     }
   `;
   return (
-    <div>
+    <div className='mt-3'>
       <StyledMarquee>
         <Marquee className="marquee" autoFill={true}>
           <p>Software Developer</p>
@@ -29,6 +31,8 @@ export default function BioMarquee() {
           <p>Backend</p>
           {bullet2}
           <p>Web Developer</p>
+          {bullet2}
+          <p>Full Stack</p>
           {bullet2}
           <p>Designer</p>
           {bullet2}

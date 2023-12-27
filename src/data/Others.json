@@ -50,7 +50,7 @@
   },
   {
     "title": "Text-Utils",
-    "description": "Textutils gives you a way to analyze your text efficiently. Be it word count, character count or just get a preview of the formatted text. It is a free tool that provides instant character count & word count statistics for a given text.",
+    "description": "Textutils application gives you a way to analyze your text efficiently. Be it word count, character count or just get a preview of the formatted text. It is a free tool that provides instant character count & word count statistics for a given text.",
     "technologies": ["React", "Bootstrap"],
     "git": "https://github.com/sharmasubham22/text_utils",
     "demo": "https://project-textutils.netlify.app/"

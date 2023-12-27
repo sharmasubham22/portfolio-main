@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { bullet3, line } from "../images/bullets";
+import { line } from "../images/bullets";
 
 export default function SkillsItem(props) {
   let { category, skills } = props;
@@ -18,6 +18,8 @@ export default function SkillsItem(props) {
     transition: 0.3s ease;
     user-select: none;
     font-size: clamp(17px, 2vw, 20px);
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px,
+      rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
 
     &:hover {
       transform: translateY(-5px);
@@ -31,14 +33,15 @@ export default function SkillsItem(props) {
       <div className={`card bg-transparent border-0`}>
         <div className="card-body ">
           <p
-            className={`card-subtitle `}
+            className={`card-subtitle`}
             style={{
               fontFamily: "var(--general-font)",
               fontSize: "clamp(20px, 1vw, 22px)",
+              fontWeight: "700",
               color: "var(--content-color)",
             }}
           >
-            {bullet3}
+            <span style={{ color: "var(--highlight-color)" }}>▸ </span>
             {category}
           </p>
           {line}

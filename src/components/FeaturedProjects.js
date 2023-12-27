@@ -18,7 +18,8 @@ export default function FeaturedProjects(props) {
     h3 {
       color: var(--text-color);
       text-transform: uppercase;
-      font-size: clamp(22px, 4vw, 36px);
+      font-weight:700;
+      font-size: clamp(24px, 4vw, 36px);
     }
 
     .img-div {

@@ -2,15 +2,11 @@ import React from "react";
 import Profile from "./sections/Profile";
 import Experience from "./sections/Experience";
 import Skills from "./sections/Skills";
-import GetInTouch from "./sections/GetInTouch";
-import Hero from "./sections/Hero";
-import MarqueeComp from "./MarqueeComp";
-import { Link } from "react-router-dom";
 import Work from "./sections/Work";
 
 export default function About() {
   // let location = useLocation();
-  document.title="Subham Sharma | Portfolio";
+  document.title = "About | Subham Sharma";
   return (
     <>
       <div>
@@ -57,30 +53,18 @@ export default function About() {
               </li>
             </ul>
           </nav> */}
-          <section
-            id="section1"
-            className="d-flex vh-100 justify-content-center align-items-center"
-          >
-            <Hero />
-          </section>
-          <section id="section2" className="section">
+          <section id="section1" className="section">
             <Profile />
           </section>
-          <section id="section3" className="section">
-            <Work />
-          </section>
-          <section id="section4" className="section ">
+          <section id="section2" className="section ">
             <Experience />
           </section>
-          <section id="section5" className="section ">
+          <section id="section3" className="section ">
             <Skills />
           </section>
-          <section id="section6" className="section ex-section">
-            <GetInTouch />
+          <section id="section4" className="section">
+            <Work />
           </section>
-          <Link to="/contact" style={{ textDecoration: "none" }}>
-            <MarqueeComp />
-          </Link>
         </main>
       </div>
     </>

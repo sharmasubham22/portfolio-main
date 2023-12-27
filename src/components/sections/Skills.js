@@ -8,8 +8,8 @@ export default function Skills() {
   return (
     <div className="container" style={{ marginTop: "5%", marginBottom: "5%" }}>
       <Reveal>
-        <h1 className="my-5 section-head">
-      {bullet4} Things I Know
+        <h1 className="my-5 section-head d-flex">
+          <div className="bullet-hashtag">{bullet4}</div> Things I Know
         </h1>
       </Reveal>
       <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
