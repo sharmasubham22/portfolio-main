@@ -128,6 +128,7 @@ background: url(https://drive.google.com/uc?export=view&id=1PpBENYaRX2c0IfonfbL1
   .nav2 {
     background-color: var(--background-color);
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
   }
 
 .logo{
@@ -248,7 +249,6 @@ background: url(https://drive.google.com/uc?export=view&id=1PpBENYaRX2c0IfonfbL1
 
   .menu {
    background-color: var(--background-color);
-  position: fixed;
   cursor: pointer;
   transition: 0.5s ease;
  
@@ -369,6 +369,94 @@ background: url(https://drive.google.com/uc?export=view&id=1PpBENYaRX2c0IfonfbL1
       &:hover{
         color:var(--content-color);
       }
+    }
+
+    .section-list{
+   list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+    }
+
+    .section-list:before{
+      content: "";
+  display: inline-block;
+  width: 2px;
+  background: var(--border-color);
+  position: absolute;
+  left: 3px;
+  top: 20px;
+  height: calc(100% - 25px );
+    }
+
+    .section-list .list-item {
+  position: relative;
+  padding-left: 30px;
+
+}
+
+.section-list .list-item:before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: var(--highlight-color);
+  position: absolute;
+  left: 0;
+  top: 5px;
+
+  border-radius: 10px;
+}
+
+ .section-list2{
+   list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    }
+
+  .section-list2:before{
+    content: "";
+    display: inline-block;
+    width: 2px;
+    background: var(--border-color);
+    position: absolute;
+    left: 3px;
+    top: 20px;
+    height: calc(100% - 0px );
+    }
+
+    .section-list2:before .section-list2:last-child{
+      content:none;
+    }
+
+  .section-list2 .list-item2 {
+    position: relative;
+    padding-left: 30px;
+}
+
+.section-list2 .list-item2:before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: var(--highlight-color);
+  position: absolute;
+  left: 0;
+  top: 8px;
+  border-radius: 10px;
+}
+
+    .skills-container {
+      width: 100%;
+      background-color: var(--background-color);
+      border-radius:10px;
+    }
+
+    .skills {
+      text-align: right;
+      padding-top: 3px;
+      padding-bottom: 3px;
     }
 
 @media (max-width: 1024px){

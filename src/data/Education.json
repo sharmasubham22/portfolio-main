@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "name": "Dalhousie University, Halifax, CA",
+    "course": "Masters of Applied Computer Science",
+    "duration": "2022-2023"
+  },
+  {
+    "id": 2,
+    "name": "Christ University, Bangalore, IN",
+    "course": "Bachelors in Computer Science",
+    "duration": "2015-2019"
+  }
+]

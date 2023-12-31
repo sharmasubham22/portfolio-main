@@ -44,11 +44,12 @@ export default function Projects() {
           <Hero />
         </section>
         <BioMarquee />
-        <section id="home-section2" >
-          <StyledProjects>
-            <div className="container" style={{ marginBottom: "2%" }}>
-              <h1 className="my-5">My Work</h1>
-              <Reveal>
+        <section id="home-section2">
+          <Reveal>
+            <StyledProjects>
+              <div className="container" style={{ marginBottom: "2%" }}>
+                <h1 className="my-5">My Work</h1>
+
                 <h2
                   className="my-5"
                   style={{
@@ -61,8 +62,6 @@ export default function Projects() {
                 >
                   Projects
                 </h2>
-              </Reveal>
-              <Reveal>
                 {projectsData.map((element, index) => {
                   return (
                     <div key={index}>
@@ -77,28 +76,31 @@ export default function Projects() {
                     </div>
                   );
                 })}
-              </Reveal>
-              <h3 className="section-head d-flex" style={{ marginTop: "15%" }}>
-                <div className="bullet-hashtag">{bullet4}</div> Other Projects
-              </h3>
+                <h3
+                  className="section-head d-flex"
+                  style={{ marginTop: "15%" }}
+                >
+                  <div className="bullet-hashtag">{bullet4}</div> Other Projects
+                </h3>
 
-              <div className="row mt-5 row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-                {otherData.map((element2, index2) => {
-                  return (
-                    <div className="col" key={index2}>
-                      <OtherProjects
-                        title={element2.title}
-                        description={element2.description}
-                        techs={element2.technologies}
-                        git={element2.git}
-                        demo={element2.demo}
-                      />
-                    </div>
-                  );
-                })}
+                <div className="row mt-5 row-cols-1 row-cols-md-1 row-cols-lg-2 row-cols-xl-3 g-4">
+                  {otherData.map((element2, index2) => {
+                    return (
+                      <div className="col" key={index2}>
+                        <OtherProjects
+                          title={element2.title}
+                          description={element2.description}
+                          techs={element2.technologies}
+                          git={element2.git}
+                          demo={element2.demo}
+                        />
+                      </div>
+                    );
+                  })}
+                </div>
               </div>
-            </div>
-          </StyledProjects>
+            </StyledProjects>
+          </Reveal>
         </section>
         <section id="home-section3" className="section">
           <GetInTouch />

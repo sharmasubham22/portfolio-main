@@ -1,7 +1,6 @@
 import React from "react";
 import Marquee from "react-fast-marquee";
 import styled from "styled-components";
-import { bullet5 } from "../images/bullets";
 
 export default function MarqueeComp() {
   const StyledMarquee = styled.section`
@@ -13,6 +12,11 @@ export default function MarqueeComp() {
       display: inline-block;
       text-transform: uppercase;
       font-weight: 700;
+    }
+
+    .fa-arrow-right {
+      font-size: clamp(25px, 2vw, 32px);
+      color: var(--highlight-color);
     }
 
     .dot {
@@ -27,32 +31,29 @@ export default function MarqueeComp() {
       border-top: 1px solid var(--border-color);
       padding: 25px 0px;
     }
-
   `;
   return (
     <div>
       <StyledMarquee>
         <Marquee className="marquee" autoFill={true}>
+          <p>Just say hi</p>
+          <i className="fa-solid fa-arrow-right"></i>
           <p>
-            Just say hi <i className="fa-solid fa-arrow-right"></i>
+            Contact Me 
           </p>
-          {bullet5}
+          <i className="fa-solid fa-arrow-right"></i>
           <p>
-            Contact Me <i className="fa-solid fa-arrow-right"></i>
+            Get in Touch 
           </p>
-          {bullet5}
+          <i className="fa-solid fa-arrow-right"></i>
           <p>
-            Get in Touch <i className="fa-solid fa-arrow-right"></i>
+            Hire Me 
           </p>
-          {bullet5}
+          <i className="fa-solid fa-arrow-right"></i>
           <p>
-            Hire Me <i className="fa-solid fa-arrow-right"></i>
+            Work together 
           </p>
-          {bullet5}
-          <p>
-            Work together <i className="fa-solid fa-arrow-right"></i>
-          </p>
-          {bullet5}
+          <i className="fa-solid fa-arrow-right"></i>
         </Marquee>
       </StyledMarquee>
     </div>

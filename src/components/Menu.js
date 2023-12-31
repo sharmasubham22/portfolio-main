@@ -27,14 +27,14 @@ export default function Menu(props) {
   return (
     <>
       <div
-        className="container-fluid fixed-top menu"
+        className="container-fluid sticky-top menu"
         style={{
           borderBottom: "1px solid",
           borderColor: "var(--border-color)",
         }}
       >
         <div className="d-flex bd-highlight">
-          <div className="p-3 flex-fill bd-highlight menu-section">
+          <div className="p-4 flex-fill bd-highlight menu-section">
             <Link className="logo" to="/">
               {logoSvg}
             </Link>

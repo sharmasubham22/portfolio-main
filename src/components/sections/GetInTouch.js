@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import styled from "styled-components";
 import Reveal from "../Motion";
-import { bullet4 } from "../../images/bullets";
+// import { bullet4 } from "../../images/bullets";
 import emailjs from "@emailjs/browser";
 import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
@@ -138,13 +138,19 @@ export default function GetInTouch() {
     ${({ theme }) => theme.mixins.button};
   `;
 
+  const StyledChip = styled.h1`
+    ${({ theme }) => theme.mixins.chip};
+  `;
+
   return (
     <div>
       <div className="container" style={{ marginTop: "5%" }}>
         <Reveal>
-          <h1 className="my-5 section-head d-flex">
-            <div className="bullet-hashtag">{bullet4}</div> Get in Touch
-          </h1>
+          <StyledChip>Contact</StyledChip>
+            <h1 className="my-5 section-head d-flex">
+              {/* <div className="bullet-hashtag">{bullet4}</div>  */}
+              Get in Touch{" "}
+            </h1>
         </Reveal>
         <div className="row row-cols-1 row-cols-lg-2 my-5 g-4">
           <Reveal>
