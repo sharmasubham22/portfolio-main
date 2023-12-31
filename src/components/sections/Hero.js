@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 // import { motion, useAnimation, useInView } from "framer-motion";
 import { arrow, rotateText } from "../../images/assets";
+import Reveal from "../Motion";
 
 export default function Hero() {
   const StyledHero = styled.div`
@@ -44,6 +45,15 @@ export default function Hero() {
       color: var(--content-color);
     }
 
+  
+    @media (max-width: 1078px) {
+      p {
+        width: 100%;
+      }
+    }
+  `;
+
+  const Scroll = styled.div`
     .container {
       width: 100px;
       height: 100px;
@@ -88,37 +98,6 @@ export default function Hero() {
       height: 140px;
     }
 
-    .scrollBox {
-      position: absolute;
-      width: 1px;
-      height: 60px;
-      /*   border:1px solid #FA003c; */
-      overflow: hidden;
-      bottom: 50px;
-      right: 50px;
-    }
-    .scrollBox:after {
-      content: "";
-      position: absolute;
-      top: -60px;
-      height: 60px;
-      width: 4px;
-      background: var(--content-color);
-      animation: scrollDrive 2s ease infinite;
-    }
-
-    @keyframes scrollDrive {
-      0% {
-        top: -60px;
-      }
-      50% {
-        top: 60px;
-      }
-      100% {
-        top: 60px;
-      }
-    }
-
     @media (max-width: 684px) {
       .fa-solid {
         padding: 10px;
@@ -132,18 +111,16 @@ export default function Hero() {
       }
     }
 
-    @media (max-width: 1078px) {
+    @media (min-width: 684px) and (max-width: 1078px) {
+      .scroll {
+        bottom: 35px;
+        right: 30px;
+      }
+    }
+    @media (max-width: 684px) {
       .scroll {
         bottom: 10px;
         right: 30px;
-      }
-      .scrollBox {
-        bottom: -10px;
-        right: 25px;
-      }
-
-      p {
-        width: 100%;
       }
     }
   `;
@@ -164,45 +141,23 @@ export default function Hero() {
 
   const items = [one, two, three, four];
 
-  // const controls = useAnimation();
-  // const ref = useRef(null);
-  // const onScreen = useInView(ref, { once: true });
-
-  // useEffect(() => {
-  //   if (onScreen) {
-  //     controls.start("visible");
-  //   }
-  //   // eslint-disable-next-line
-  // }, [onScreen]);
-
-  // const variants = {
-  //   visible: {
-  //     opacity: 1,
-  //     y: 0,
-  //     transition: { staggerChildren: 0.3, duration: 0.5 },
-  //   },
-  //   hidden: { opacity: 0, y: 75 },
-  // };
-
   return (
     <div className="container">
-      <StyledHero>
-        {/* <div ref={ref}>
-          <motion.div initial="hidden" animate={controls} variants={variants}> */}
-            {items.map((item, index) => (
-              <div key={index} >
-                {item}
-             </div>
-            ))}
-          {/* </motion.div>
-        </div> */}
+      <Reveal>
+        <StyledHero>
+          {items.map((item, index) => (
+            <div key={index}>{item}</div>
+          ))}
+        </StyledHero>
+      </Reveal>
+      <Scroll>
         <div className="scroll">
           <a href="#home-section2" className="circle">
             <div className="fa-solid">{arrow}</div>
             <div className="svg">{rotateText}</div>
           </a>
         </div>
-      </StyledHero>
+      </Scroll>
     </div>
   );
 }

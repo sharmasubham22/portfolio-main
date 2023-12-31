@@ -7,11 +7,12 @@ export default function Work() {
     const StyledSection = styled.div`
       .work-btn {
         ${({ theme }) => theme.mixins.button};
-        font-size: clamp(19px, 2vw, 26px);
+        font-size: clamp(19px, 2vw, 22px);
       }
 
       .row {
         background-color: var(--card-color);
+        border-radius: 10px;
       }
 
       .col-text {
@@ -27,7 +28,7 @@ export default function Work() {
         font-family: var(--heavy-font);
         font-weight: 700;
         color: var(--highlight-color);
-        font-size: clamp(45px, 5vw, 80px);
+        font-size: clamp(45px, 5vw, 60px);
       }
 
       h4 {
@@ -39,8 +40,13 @@ export default function Work() {
 
       @media (max-width: 991px) {
         margin-top: 20%;
+
+        .row {
+          border-radius:0px;
+        }
+
         .col-text {
-          padding: 10%;
+          padding: 10% 10% 0 10%;
           border-right: none;
           border-top: 1px solid var(--highlight-color);
         }
@@ -53,8 +59,8 @@ export default function Work() {
   return (
     <>
       <div
-        className="container-fluid"
-        style={{ marginTop: "5%", marginBottom: "10%" }}
+        className="container"
+        style={{ marginBottom: "5%" }}
       >
         <Reveal>
           <StyledSection>

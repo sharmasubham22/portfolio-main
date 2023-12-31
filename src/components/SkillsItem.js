@@ -1,55 +1,39 @@
 import React from "react";
-import styled from "styled-components";
-import { line } from "../images/bullets";
+
 
 export default function SkillsItem(props) {
-  let { category, skills } = props;
+  let { category, percentage, skills} = props;
 
-  const StyledChip = styled.p`
-    color: var(--text-color);
-    border: 1px solid var(--card-color);
-    background: var(--card-color);
-    width: fit-content;
-    padding: 10px 15px;
-    border-radius: 8px;
-    font-family: var(--general-font);
-    display: inline-block;
-    margin-right: 10px;
-    transition: 0.3s ease;
-    user-select: none;
-    font-size: clamp(17px, 2vw, 20px);
-    box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px,
-      rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
-
-    &:hover {
-      transform: translateY(-5px);
-      color: var(--highlight-color);
-      border: 1px solid var(--highlight-color);
-    }
-  `;
 
   return (
     <div>
       <div className={`card bg-transparent border-0`}>
         <div className="card-body ">
           <p
-            className={`card-subtitle`}
+            className={`card-subtitle mb-2`}
             style={{
               fontFamily: "var(--general-font)",
-              fontSize: "clamp(20px, 1vw, 22px)",
-              fontWeight: "700",
+              fontSize: "clamp(11px, 1vw, 14px)",
               color: "var(--content-color)",
             }}
           >
-            <span style={{ color: "var(--highlight-color)" }}>▸ </span>
-            {category}
+            <span
+              style={{ fontWeight: "700", fontSize: "clamp(14px, 1vw, 18px)" }}
+            >
+              {category}
+            </span>{" "}
+            {skills}
           </p>
-          {line}
-          {skills.map((keyValue, keyIndex) => (
-            <StyledChip className="my-1" key={keyIndex}>
-              {keyValue}
-            </StyledChip>
-          ))}
+          <div className="skills-container">
+            <div
+              className="skills"
+              style={{
+                width: `${percentage}%`,
+                backgroundColor: "var(--highlight-color)",
+                borderRadius: "10px",
+              }}
+            ></div>
+          </div>
         </div>
       </div>
     </div>
