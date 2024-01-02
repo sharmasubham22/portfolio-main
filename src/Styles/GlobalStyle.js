@@ -170,6 +170,7 @@ background: url(https://drive.google.com/uc?export=view&id=1PpBENYaRX2c0IfonfbL1
   margin: 0px 30px;
   font-size: clamp(12px, 2vw, 25px);
   transition: 0.3s;
+  text-decoration:none;
 
   &:hover{
     color: var(--highlight-color);
@@ -459,6 +460,17 @@ background: url(https://drive.google.com/uc?export=view&id=1PpBENYaRX2c0IfonfbL1
       padding-bottom: 3px;
     }
 
+.ph-fill {
+ color:var(--content-color);
+ font-size: clamp(25px, 3vw, 25px);
+ transition:0.3s ease-out;
+}
+
+.ph-fill:hover{
+ color:var(--highlight-color);
+}
+
+
 @media (max-width: 1024px){
 .navigation{
   display:none;
@@ -468,6 +480,12 @@ background: url(https://drive.google.com/uc?export=view&id=1PpBENYaRX2c0IfonfbL1
   height:100%;
 }
 }
+
+// @media (max-width: 554px){
+//   .hero-section{
+//   height:80vh;
+// }
+// }
 
 @media (max-width: 1104px){
   .nav2{

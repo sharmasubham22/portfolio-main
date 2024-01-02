@@ -134,7 +134,7 @@ export default function Hero() {
   );
   const four = (
     <p>
-      I am a <spna style={{fontWeight:"700"}}>Software Developer</spna> and I love to design, develop &
+      I am a <span style={{fontWeight:"700"}}>Software Developer</span> and I love to design, develop &
       deploy!
     </p>
   );

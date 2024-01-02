@@ -8,28 +8,27 @@ export default function WorkItem(props) {
       <ul className="section-list">
         <li className="list-item ">
           <div>
-            <h6
-              className="card-subtitle mb-2 text-muted"
-              style={{ fontFamily: "var(--general-font)" }}
-            >
-              {duration}
-            </h6>
+      
             <h3
               className="card-title"
               style={{
                 fontFamily: "var(--general-font)",
                 fontSize: "clamp(15px, 2vw, 20px)",
-               
+
                 color: "var(--text-color)",
               }}
             >
               {position}
             </h3>
             <h6
-              className="card-subtitle mb-2 text-muted"
-              style={{ fontFamily: "var(--general-font)" }}
+              className="card-subtitle mb-2 "
+              style={{
+                fontFamily: "var(--general-font)",
+                fontSize: "clamp(15px, 1vw, 16px)",
+                color: "var(--content-color)",
+              }}
             >
-              {name}
+              {name} ({duration})
             </h6>
             {keys.map((keyValue, keyIndex) => (
               <h4
@@ -46,7 +45,7 @@ export default function WorkItem(props) {
                   borderRadius: "20px",
                   fontFamily: "var(--general-font)",
                   textTransform: "uppercase",
-                  fontSize: "clamp(12px, 1.3vw, 14px)",
+                  fontSize: "clamp(12px, 1vw, 12px)",
                 }}
               >
                 {keyValue}

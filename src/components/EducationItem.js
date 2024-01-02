@@ -19,7 +19,7 @@ export default function EducationItem(props) {
               {course}
             </h3>
             <h6
-              className="card-subtitle text-muted mb-3"
+              className="card-subtitle mb-3"
               style={{
                 fontFamily: "var(--general-font)",
                 fontSize: "clamp(15px, 1vw, 16px)",

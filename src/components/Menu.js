@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import { Link, useLocation } from 'react-router-dom';
 import styled from 'styled-components';
-import { logoSvg, moon, sun } from '../images/assets';
+import { logoSvg} from '../images/assets';
 
 export default function Menu(props) {
     const navRef = useRef();
@@ -77,7 +77,7 @@ export default function Menu(props) {
                 target="_blank"
                 className="link-design mx-4 mt-3 fs-2"
               >
-                <i className="fa-brands fa-linkedin fs-4 brand-icons"></i>
+                <i class="ph ph-linkedin-logo fs-4 brand-icons"></i>
                 <span className="mx-2">LinkedIn</span>
               </Link>
               <br />
@@ -86,7 +86,7 @@ export default function Menu(props) {
                 target="_blank"
                 className="link-design mx-4 mt-3 fs-2"
               >
-                <i className="fa-brands fa-github fs-4 brand-icons"></i>
+                <i class="ph ph-github-logo fs-4 brand-icons"></i>
                 <span className="mx-2">Github</span>
               </Link>
             </div>
@@ -100,7 +100,11 @@ export default function Menu(props) {
                   marginLeft: "-40px",
                 }}
               >
-                {props.mode === "light" ? moon : sun}
+                {props.mode === "light" ? (
+                  <i class="ph-fill ph-moon"></i>
+                ) : (
+                  <i class="ph-fill ph-sun"></i>
+                )}
               </label>
               <input
                 className="form-check-input"

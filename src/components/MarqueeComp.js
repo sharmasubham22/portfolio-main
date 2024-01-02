@@ -14,7 +14,7 @@ export default function MarqueeComp() {
       font-weight: 700;
     }
 
-    .fa-arrow-right {
+    .ph {
       font-size: clamp(25px, 2vw, 32px);
       color: var(--highlight-color);
     }
@@ -37,23 +37,15 @@ export default function MarqueeComp() {
       <StyledMarquee>
         <Marquee className="marquee" autoFill={true}>
           <p>Just say hi</p>
-          <i className="fa-solid fa-arrow-right"></i>
-          <p>
-            Contact Me 
-          </p>
-          <i className="fa-solid fa-arrow-right"></i>
-          <p>
-            Get in Touch 
-          </p>
-          <i className="fa-solid fa-arrow-right"></i>
-          <p>
-            Hire Me 
-          </p>
-          <i className="fa-solid fa-arrow-right"></i>
-          <p>
-            Work together 
-          </p>
-          <i className="fa-solid fa-arrow-right"></i>
+          <i class="ph ph-arrow-up-right"></i>
+          <p>Contact Me</p>
+          <i class="ph ph-arrow-up-right"></i>
+          <p>Get in Touch</p>
+          <i class="ph ph-arrow-up-right"></i>
+          <p>Hire Me</p>
+          <i class="ph ph-arrow-up-right"></i>
+          <p>Work together</p>
+          <i class="ph ph-arrow-up-right"></i>
         </Marquee>
       </StyledMarquee>
     </div>

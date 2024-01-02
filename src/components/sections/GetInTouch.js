@@ -9,13 +9,9 @@ import { Link } from "react-router-dom";
 export default function GetInTouch() {
   const StyledDiv = styled.div`
     justify-items: center;
-
-    .fa-solid {
-      position: absolute;
-      color: var(--card-color);
-      font-size: 70px;
-      z-index: 999;
-    }
+    background: var(--card-color);
+    padding: 5%;
+    border-radius: 10px;
 
     .circle {
       position: relative;
@@ -92,8 +88,9 @@ export default function GetInTouch() {
 
     .send-msg {
       color: var(--text-color);
-      font-size: clamp(22px, 2vw, 30px);
-      font-weight: 700;
+       font-size: clamp(20px, 2vw, 26px);
+      font-family:var(--general-font);
+      font-weight:700;
     }
   `;
 
@@ -147,10 +144,10 @@ export default function GetInTouch() {
       <div className="container" style={{ marginTop: "5%" }}>
         <Reveal>
           <StyledChip>Contact</StyledChip>
-            <h1 className="my-5 section-head d-flex">
-              {/* <div className="bullet-hashtag">{bullet4}</div>  */}
-              Get in Touch{" "}
-            </h1>
+          <h1 className="my-5 section-head d-flex">
+            {/* <div className="bullet-hashtag">{bullet4}</div>  */}
+            Get in Touch{" "}
+          </h1>
         </Reveal>
         <div className="row row-cols-1 row-cols-lg-2 my-5 g-4">
           <Reveal>
@@ -176,16 +173,19 @@ export default function GetInTouch() {
                 <Link
                   to="https://www.linkedin.com/in/subham-sharma-137985128/"
                   target="_blank"
+                  className="fs-4"
+                  style={{ textDecoration: "none" }}
                 >
-                  <i className="fa-brands fa-linkedin fs-4 brand-icons"></i>
+                  <i class="ph ph-linkedin-logo brand-icons"></i>
                   <span className="link-design mx-2">LinkedIn</span>
                 </Link>
                 <Link
                   to="https://github.com/sharmasubham22"
                   target="_blank"
-                  className="mx-5"
+                  className="mx-5 fs-4"
+                  style={{ textDecoration: "none" }}
                 >
-                  <i className="fa-brands fa-github fs-4 brand-icons"></i>
+                  <i class="ph ph-github-logo brand-icons"></i>
                   <span className="link-design mx-2">Github</span>
                 </Link>
               </div>
@@ -205,15 +205,21 @@ export default function GetInTouch() {
                     fontSize: "clamp(15px, 2vw, 26px)",
                   }}
                 >
-                  <i className="fa-solid fa-map-pin"></i> Halifax, NS (Canada)
+                  <i class="ph ph-map-pin"></i> Halifax, NS (Canada)
                 </p>
               </div>
             </div>
           </Reveal>
           <Reveal>
-            <StyledDiv className="col text-white d-flex justify-content-center">
+            <StyledDiv className="col form-box text-white d-flex justify-content-center">
               <form ref={form} onSubmit={sendEmail} style={{ width: "100%" }}>
-                <p className="send-msg">Send a message!</p>
+                <p className="send-msg">
+                  <i
+                    class="ph ph-paper-plane-tilt"
+                    style={{ color: "var(--highlight-color)" }}
+                  ></i>{" "}
+                  Send a message!
+                </p>
 
                 <div className="form-group mb-3" style={{ display: "grid" }}>
                   <input

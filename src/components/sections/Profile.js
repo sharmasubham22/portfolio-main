@@ -195,8 +195,9 @@ export default function Profile() {
               <div className="profile-section about">
                 <h2>Get to know me better!</h2>
                 <p className="subtext">
-                  Hello! I am Subham, and I’m a Software Developer who likes to build
-                  frontend and backend applications. A master of science graduate from{" "}
+                  Hello! I am Subham, and I’m a Software Developer who likes to
+                  build frontend and backend applications. A master of science
+                  graduate from{" "}
                   <Link
                     className="link-design"
                     to="https://www.dal.ca/"
@@ -255,19 +256,31 @@ export default function Profile() {
               </div>
               <div className="profile-section mt-4">
                 <h2>
-                  <i class="fa-solid fa-graduation-cap"></i> Education
+                  <i
+                    class="ph ph-graduation-cap"
+                    style={{ color: "var(--highlight-color)" }}
+                  ></i>{" "}
+                  Education
                 </h2>
                 <Education />
               </div>
               <div className="profile-section mt-4">
                 <h2>
-                  <i class="fa-solid fa-earth-americas"></i> Work Experience
+                  <i
+                    class="ph ph-globe"
+                    style={{ color: "var(--highlight-color)" }}
+                  ></i>{" "}
+                  Work Experience
                 </h2>
                 <Experience />
               </div>
               <div className="profile-section mt-4 ">
                 <h2>
-                  <i class="fa-solid fa-layer-group"></i> Skills and Toolkits
+                  <i
+                    class="ph ph-stack-simple"
+                    style={{ color: "var(--highlight-color)" }}
+                  ></i>{" "}
+                  Skills and Toolkits
                 </h2>
                 <Skills />
               </div>

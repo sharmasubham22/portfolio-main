@@ -28,13 +28,13 @@ export default function Work() {
         font-family: var(--heavy-font);
         font-weight: 700;
         color: var(--highlight-color);
-        font-size: clamp(45px, 5vw, 60px);
+        font-size: clamp(30px, 4vw, 60px);
       }
 
       h4 {
         font-family: var(--general-font);
         color: var(--content-color);
-        font-size: clamp(24px, 2vw, 30px);
+        font-size: clamp(18px, 2vw, 30px);
         margin: 30px 0;
       }
 
@@ -49,6 +49,7 @@ export default function Work() {
           padding: 10% 10% 0 10%;
           border-right: none;
           border-top: 1px solid var(--highlight-color);
+          text-align:center
         }
 
         .col-img {
