@@ -39,7 +39,7 @@ const mixins = {
     line-height: 1;
     text-decoration: none;
     padding: 0.75rem 1rem;
-    transition: 0.2s ease;
+    transition: 0.2s ease-out;
 
     &:hover,
     &:focus-visible {

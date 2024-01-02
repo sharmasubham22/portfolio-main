@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import styled from "styled-components";
-import { logoSvg, sun, moon } from "../images/assets";
+import { logoSvg } from "../images/assets";
 import { motion } from "framer-motion";
 
 export default function Nav(props) {
@@ -16,7 +16,7 @@ export default function Nav(props) {
 
   return (
     <motion.div
-      style={{ position: "sticky", top: "0" , zIndex:1000}}
+      style={{ position: "sticky", top: "0", zIndex: 1000 }}
       variants={{
         hidden: { opacity: 0, y: -50 },
         visible: { opacity: 1, y: 0 },
@@ -68,14 +68,14 @@ export default function Nav(props) {
               target="_blank"
               className="nav-social"
             >
-              <i className="fa-brands fa-linkedin-in"></i>
+              <i class="ph ph-linkedin-logo"></i>
             </Link>
             <Link
               to="https://github.com/sharmasubham22"
               target="_blank"
               className="nav-social"
             >
-              <i className="fa-brands fa-github"></i>
+              <i class="ph ph-github-logo"></i>
             </Link>
           </div>
           <div className="d-flex p-4 bd-highlight">
@@ -95,7 +95,11 @@ export default function Nav(props) {
                 className="fs-3"
                 style={{ color: "var(--content-color)", cursor: "pointer" }}
               >
-                {props.mode === "light" ? moon : sun}
+                {props.mode === "light" ? (
+                  <i class="ph-fill ph-moon"></i>
+                ) : (
+                  <i class="ph-fill ph-sun"></i>
+                )}
               </label>
               <input
                 className="form-check-input"

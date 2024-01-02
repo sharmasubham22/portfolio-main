@@ -58,8 +58,7 @@ export default function FeaturedProjects(props) {
       border-radius: 20px;
     }
 
-    .fa-brands,
-    .fa-solid {
+    .ph {
       margin-left: 40px;
     }
 
@@ -79,10 +78,7 @@ export default function FeaturedProjects(props) {
       <StyledDiv>
         <Link to={demo} target="_blank">
           <div className="img-div">
-            <img
-              src={imageLink}
-              alt="projectImg"
-            />
+            <img src={imageLink} alt="projectImg" />
           </div>
         </Link>
 
@@ -92,12 +88,12 @@ export default function FeaturedProjects(props) {
           </div>
           <div className="bd-highlight">
             <Link className="project-link" to={git} target="_blank">
-              <i className="fa-brands fa-github"></i>
+              <i class="ph ph-github-logo"></i>
             </Link>
           </div>
           <div className="bd-highlight">
             <Link className="project-link" to={demo} target="_blank">
-              <i className="fa-solid fa-arrow-up-right-from-square"></i>
+              <i class="ph ph-arrow-square-out"></i>
             </Link>
           </div>
         </div>

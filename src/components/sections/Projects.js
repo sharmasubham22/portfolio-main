@@ -5,7 +5,6 @@ import styled from "styled-components";
 import OtherProjects from "../OtherProjects";
 import otherData from "../../data/Others";
 import Reveal from "../Motion";
-import { bullet4 } from "../../images/bullets";
 import Hero from "./Hero";
 import BioMarquee from "../BioMarquee";
 import GetInTouch from "./GetInTouch";
@@ -80,7 +79,7 @@ export default function Projects() {
                   className="section-head d-flex"
                   style={{ marginTop: "15%" }}
                 >
-                  <div className="bullet-hashtag">{bullet4}</div> Other Projects
+                  Other Projects
                 </h3>
 
                 <div className="row mt-5 row-cols-1 row-cols-md-1 row-cols-lg-2 row-cols-xl-3 g-4">
