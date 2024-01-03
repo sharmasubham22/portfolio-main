@@ -68,14 +68,14 @@ export default function Nav(props) {
               target="_blank"
               className="nav-social"
             >
-              <i class="ph ph-linkedin-logo"></i>
+              <i className="ph ph-linkedin-logo"></i>
             </Link>
             <Link
               to="https://github.com/sharmasubham22"
               target="_blank"
               className="nav-social"
             >
-              <i class="ph ph-github-logo"></i>
+              <i className="ph ph-github-logo"></i>
             </Link>
           </div>
           <div className="d-flex p-4 bd-highlight">
@@ -96,9 +96,9 @@ export default function Nav(props) {
                 style={{ color: "var(--content-color)", cursor: "pointer" }}
               >
                 {props.mode === "light" ? (
-                  <i class="ph-fill ph-moon"></i>
+                  <i className="ph-fill ph-moon"></i>
                 ) : (
-                  <i class="ph-fill ph-sun"></i>
+                  <i className="ph-fill ph-sun"></i>
                 )}
               </label>
               <input
