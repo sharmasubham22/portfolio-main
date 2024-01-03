@@ -22,7 +22,7 @@ export default function Footer() {
         <p style={{ color: "var(--content-color)" }}>
           Designed and Coded with{" "}
           <i
-            className="fa-solid fa-heart"
+            className="ph-duotone ph-heart"
             style={{ color: "var(--highlight-color)" }}
           ></i>
         </p>

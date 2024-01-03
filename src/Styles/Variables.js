@@ -26,7 +26,7 @@ const Variables = css`
     --text-color: #2a2b25;
     --opacity: 0.5;
     --button-text: #e1e1da;
-    --content-color: #8e918e;
+    --content-color: #676e72;
   }
 `;
 

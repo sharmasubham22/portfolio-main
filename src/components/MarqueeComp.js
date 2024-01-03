@@ -37,15 +37,15 @@ export default function MarqueeComp() {
       <StyledMarquee>
         <Marquee className="marquee" autoFill={true}>
           <p>Just say hi</p>
-          <i class="ph ph-arrow-up-right"></i>
+          <i className="ph ph-arrow-up-right"></i>
           <p>Contact Me</p>
-          <i class="ph ph-arrow-up-right"></i>
+          <i className="ph ph-arrow-up-right"></i>
           <p>Get in Touch</p>
-          <i class="ph ph-arrow-up-right"></i>
+          <i className="ph ph-arrow-up-right"></i>
           <p>Hire Me</p>
-          <i class="ph ph-arrow-up-right"></i>
+          <i className="ph ph-arrow-up-right"></i>
           <p>Work together</p>
-          <i class="ph ph-arrow-up-right"></i>
+          <i className="ph ph-arrow-up-right"></i>
         </Marquee>
       </StyledMarquee>
     </div>

@@ -17,7 +17,6 @@ export default function OtherProjects(props) {
     }
 
     .card:hover {
-      transform: translate(0, -10px);
 
       .card-title {
         color: var(--highlight-color);
@@ -74,7 +73,7 @@ export default function OtherProjects(props) {
               <div className="flex-grow-1 bd-highlight">{projectSvg}</div>
               <div className="bd-highlight">
                 <Link className="project-link" to={git} target="_blank">
-                  <i class="ph ph-github-logo"></i>
+                  <i className="ph ph-github-logo"></i>
                 </Link>
               </div>
               {!demo ? (
@@ -82,7 +81,7 @@ export default function OtherProjects(props) {
               ) : (
                 <div className="bd-highlight">
                   <Link className="project-link" to={demo} target="_blank">
-                    <i class="ph ph-arrow-square-out"></i>
+                    <i className="ph ph-arrow-square-out"></i>
                   </Link>
                 </div>
               )}

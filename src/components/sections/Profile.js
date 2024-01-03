@@ -257,7 +257,7 @@ export default function Profile() {
               <div className="profile-section mt-4">
                 <h2>
                   <i
-                    class="ph ph-graduation-cap"
+                    className="ph ph-graduation-cap"
                     style={{ color: "var(--highlight-color)" }}
                   ></i>{" "}
                   Education
@@ -267,7 +267,7 @@ export default function Profile() {
               <div className="profile-section mt-4">
                 <h2>
                   <i
-                    class="ph ph-globe"
+                    className="ph ph-globe"
                     style={{ color: "var(--highlight-color)" }}
                   ></i>{" "}
                   Work Experience
@@ -277,7 +277,7 @@ export default function Profile() {
               <div className="profile-section mt-4 ">
                 <h2>
                   <i
-                    class="ph ph-stack-simple"
+                    className="ph ph-stack-simple"
                     style={{ color: "var(--highlight-color)" }}
                   ></i>{" "}
                   Skills and Toolkits

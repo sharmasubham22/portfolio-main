@@ -77,7 +77,7 @@ export default function Menu(props) {
                 target="_blank"
                 className="link-design mx-4 mt-3 fs-2"
               >
-                <i class="ph ph-linkedin-logo fs-4 brand-icons"></i>
+                <i className="ph ph-linkedin-logo fs-4 brand-icons"></i>
                 <span className="mx-2">LinkedIn</span>
               </Link>
               <br />
@@ -86,7 +86,7 @@ export default function Menu(props) {
                 target="_blank"
                 className="link-design mx-4 mt-3 fs-2"
               >
-                <i class="ph ph-github-logo fs-4 brand-icons"></i>
+                <i className="ph ph-github-logo fs-4 brand-icons"></i>
                 <span className="mx-2">Github</span>
               </Link>
             </div>
@@ -101,9 +101,9 @@ export default function Menu(props) {
                 }}
               >
                 {props.mode === "light" ? (
-                  <i class="ph-fill ph-moon"></i>
+                  <i className="ph-fill ph-moon"></i>
                 ) : (
-                  <i class="ph-fill ph-sun"></i>
+                  <i className="ph-fill ph-sun"></i>
                 )}
               </label>
               <input

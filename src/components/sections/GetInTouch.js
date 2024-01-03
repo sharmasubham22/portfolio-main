@@ -176,7 +176,7 @@ export default function GetInTouch() {
                   className="fs-4"
                   style={{ textDecoration: "none" }}
                 >
-                  <i class="ph ph-linkedin-logo brand-icons"></i>
+                  <i className="ph ph-linkedin-logo brand-icons"></i>
                   <span className="link-design mx-2">LinkedIn</span>
                 </Link>
                 <Link
@@ -185,7 +185,7 @@ export default function GetInTouch() {
                   className="mx-5 fs-4"
                   style={{ textDecoration: "none" }}
                 >
-                  <i class="ph ph-github-logo brand-icons"></i>
+                  <i className="ph ph-github-logo brand-icons"></i>
                   <span className="link-design mx-2">Github</span>
                 </Link>
               </div>
@@ -205,7 +205,7 @@ export default function GetInTouch() {
                     fontSize: "clamp(15px, 2vw, 26px)",
                   }}
                 >
-                  <i class="ph ph-map-pin"></i> Halifax, NS (Canada)
+                  <i className="ph ph-map-pin"></i> Halifax, NS (Canada)
                 </p>
               </div>
             </div>
@@ -215,7 +215,7 @@ export default function GetInTouch() {
               <form ref={form} onSubmit={sendEmail} style={{ width: "100%" }}>
                 <p className="send-msg">
                   <i
-                    class="ph ph-paper-plane-tilt"
+                    className="ph ph-paper-plane-tilt"
                     style={{ color: "var(--highlight-color)" }}
                   ></i>{" "}
                   Send a message!

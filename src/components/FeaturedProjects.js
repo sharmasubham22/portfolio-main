@@ -88,12 +88,12 @@ export default function FeaturedProjects(props) {
           </div>
           <div className="bd-highlight">
             <Link className="project-link" to={git} target="_blank">
-              <i class="ph ph-github-logo"></i>
+              <i className="ph ph-github-logo"></i>
             </Link>
           </div>
           <div className="bd-highlight">
             <Link className="project-link" to={demo} target="_blank">
-              <i class="ph ph-arrow-square-out"></i>
+              <i className="ph ph-arrow-square-out"></i>
             </Link>
           </div>
         </div>
