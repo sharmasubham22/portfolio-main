@@ -12,7 +12,7 @@ export default function Hero() {
       text-transform: uppercase;
       font-weight: 700;
       color: var(--text-color);
-      line-height: 0.8;
+      line-height: 0.4;
       user-select: none;
     }
 
@@ -20,22 +20,26 @@ export default function Hero() {
       background: linear-gradient(
         to bottom,
         var(--highlight-color) 0%,
+        transparent 90%,
         transparent 100%
       );
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       opacity: 0.3;
+      line-height: 1;
     }
 
     .hero-text2 {
       background: linear-gradient(
         to top,
         var(--highlight-color) 0%,
+        transparent 90%,
         transparent 100%
       );
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       opacity: 0.3;
+      line-height: 1;
     }
 
     p {
@@ -45,7 +49,6 @@ export default function Hero() {
       color: var(--content-color);
     }
 
-  
     @media (max-width: 1078px) {
       p {
         width: 100%;
