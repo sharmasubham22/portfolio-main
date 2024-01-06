@@ -3,7 +3,7 @@
     "title": "Stories - a notebook app",
     "description": "A notebook app created with M.E.R.N. stack technologies. Users can perform actions to create a new account, create notes, save notes, tag, edit note, and delete note. All user data will be stored securely in MongoDB database. ",
     "technologies": ["Node.js", "Express", "React", "MongoDB"],
-    "imgLink": "https://drive.google.com/uc?export=view&id=1kDvW1rsQ5ZWXrrBmVv3xGEmt97Ep9OTU",
+    "imgLink": "https://drive.google.com/uc?export=view&id=1Qx-fiJ3jeEppyTk4sRL1SYU369YiCUdt",
     "git": "https://github.com/sharmasubham22/notebook.git",
     "demo": "https://mystories-app.netlify.app/"
   },
