@@ -2,19 +2,18 @@ import React from "react";
 
 export default function WorkItem(props) {
   let { name, position, duration, keys } = props;
- 
+
   return (
     <div>
       <ul className="section-list">
         <li className="list-item ">
           <div>
-      
             <h3
               className="card-title"
               style={{
                 fontFamily: "var(--general-font)",
                 fontSize: "clamp(15px, 2vw, 20px)",
-
+                fontWeight: "400",
                 color: "var(--text-color)",
               }}
             >
@@ -26,6 +25,7 @@ export default function WorkItem(props) {
                 fontFamily: "var(--general-font)",
                 fontSize: "clamp(15px, 1vw, 16px)",
                 color: "var(--content-color)",
+                fontWeight: "200",
               }}
             >
               {name} ({duration})
@@ -41,11 +41,12 @@ export default function WorkItem(props) {
                   border: "1px solid",
                   borderColor: "var(--highlight-color)",
                   width: "fit-content",
-                  padding: "5px 15px",
+                  padding: "5px 10px",
                   borderRadius: "20px",
                   fontFamily: "var(--general-font)",
                   textTransform: "uppercase",
                   fontSize: "clamp(12px, 1vw, 12px)",
+                  fontWeight: "200",
                 }}
               >
                 {keyValue}

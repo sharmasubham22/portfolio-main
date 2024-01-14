@@ -6,7 +6,7 @@ export default function Footer() {
     font-family: var(--general-font);
     border-top: 1px solid var(--border-color);
     display: flex;
-    padding: 20px 15px 15px 15px;
+    padding: 35px 15px 15px 15px;
     justify-content: space-between;
 
     @media (max-width: 870px) {
@@ -19,22 +19,34 @@ export default function Footer() {
   return (
     <Footer>
       <div>
-        <p style={{ color: "var(--content-color)" }}>
-          Designed and Coded with{" "}
+        <p
+          style={{
+            color: "var(--content-color)",
+            fontSize: "clamp(15px, 2vw, 20px)",
+            fontWeight: "200",
+          }}
+        >
+          Designed, Developed and Deployed with{" "}
           <i
-            className="ph-duotone ph-heart"
+            className="fa-solid fa-heart"
             style={{ color: "var(--highlight-color)" }}
           ></i>
         </p>
       </div>
       <div>
         {" "}
-        <p style={{ color: "var(--content-color)" }}>
+        <p
+          style={{
+            color: "var(--content-color)",
+            fontSize: "clamp(15px, 2vw, 20px)",
+            fontWeight: "200",
+          }}
+        >
           &#169; 2023{" "}
           <span
             style={{
               color: "var(--highlight-color)",
-              fontWeight: "700",
+              fontWeight: "500",
               textTransform: "uppercase",
             }}
           >

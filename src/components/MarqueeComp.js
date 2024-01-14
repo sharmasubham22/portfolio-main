@@ -8,14 +8,13 @@ export default function MarqueeComp() {
       margin: 10px 30px;
       color: var(--text-color);
       font-family: var(--heavy-font);
-      font-size: clamp(25px, 2vw, 32px);
-      display: inline-block;
+      font-size: clamp(40px, 8vw, 102px);
       text-transform: uppercase;
       font-weight: 700;
     }
 
     .ph {
-      font-size: clamp(25px, 2vw, 32px);
+      font-size: clamp(40px, 8vw, 102px);
       color: var(--highlight-color);
     }
 
@@ -28,14 +27,13 @@ export default function MarqueeComp() {
     }
 
     .marquee {
-      border-top: 1px solid var(--border-color);
-      padding: 25px 0px;
+      padding: 5px 0px;
     }
   `;
   return (
     <div>
       <StyledMarquee>
-        <Marquee className="marquee" autoFill={true}>
+        <Marquee className="marquee" autoFill={true} speed={130}>
           <p>Just say hi</p>
           <i className="ph ph-arrow-up-right"></i>
           <p>Contact Me</p>

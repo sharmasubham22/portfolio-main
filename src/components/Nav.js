@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import styled from "styled-components";
-import { logoSvg } from "../images/assets";
+// import { logoSvg } from "../images/assets";
 import { motion } from "framer-motion";
 
 export default function Nav(props) {
@@ -23,7 +23,7 @@ export default function Nav(props) {
       }}
       initial="hidden"
       animate="visible"
-      transition={{ delay: 0.5, duration: 0.5 }}
+      transition={{ delay: 4.5, duration: 0.5 }}
     >
       <div
         className="container-fluid nav2"
@@ -34,8 +34,17 @@ export default function Nav(props) {
       >
         <div className="d-flex bd-highlight">
           <div className="p-4 flex-grow-1 bd-highlight nav-section">
-            <Link className="logo" to="/">
-              {logoSvg}
+            <Link className="logo fs-2" to="/">
+              {/* {logoSvg} */}
+              subham.
+              <span
+                style={{
+                  color: "var(--highlight-color)",
+                }}
+              >
+                sharma
+              </span>
+              
             </Link>
           </div>
           <div

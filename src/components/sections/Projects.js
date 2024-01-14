@@ -1,20 +1,17 @@
 import React from "react";
 import FeaturedProjects from "../FeaturedProjects";
-import projectsData from "../../data/Projects.json";
 import styled from "styled-components";
 import OtherProjects from "../OtherProjects";
-import otherData from "../../data/Others";
 import Reveal from "../Motion";
 import Hero from "./Hero";
 import BioMarquee from "../BioMarquee";
 import GetInTouch from "./GetInTouch";
 import MarqueeComp from "../MarqueeComp";
+import { featured, others } from "../../data/Projects";
+// import Profile from "./Profile";
 
 export default function Projects() {
   const StyledProjects = styled.section`
-    h1 {
-      ${({ theme }) => theme.mixins.chip};
-    }
 
     .connect {
       ${({ theme }) => theme.mixins.button};
@@ -43,25 +40,11 @@ export default function Projects() {
           <Hero />
         </section>
         <BioMarquee />
-        <section id="home-section2">
+        <section id="home-section2" style={{ marginTop: "100px" }}>
           <Reveal>
-            <StyledProjects>
-              <div className="container" style={{ marginBottom: "2%" }}>
-                <h1 className="my-5">My Work</h1>
-
-                <h2
-                  className="my-5"
-                  style={{
-                    fontFamily: "var(--heavy-font)",
-                    color: "var(--text-color)",
-                    fontSize: "clamp(50px, 8vw, 100px)",
-                    textTransform: "uppercase",
-                    fontWeight: "700",
-                  }}
-                >
-                  Projects
-                </h2>
-                {projectsData.map((element, index) => {
+            <StyledProjects style={{ marginBottom: "2%" }}>
+              <div className="container">
+                {featured.map((element, index) => {
                   return (
                     <div key={index}>
                       <FeaturedProjects
@@ -75,33 +58,48 @@ export default function Projects() {
                     </div>
                   );
                 })}
-                <h3
-                  className="section-head d-flex"
-                  style={{ marginTop: "15%" }}
+              </div>
+              <h6
+                style={{
+                  color: "var(--text-color)",
+                  fontFamily: "var(--general-font)",
+                  textTransform: "uppercase",
+                  padding: "2vw",
+                  fontSize: "clamp(15px, 2vw, 20px)",
+                  fontWeight:"200"
+                }}
+              >
+                <span
+                  style={{
+                    color: "var(--highlight-color)",
+                  }}
                 >
-                  Other Projects
-                </h3>
+                  ●
+                </span>{" "}
+                Other Noteworthy Projects
+              </h6>
 
-                <div className="row mt-5 row-cols-1 row-cols-md-1 row-cols-lg-2 row-cols-xl-3 g-4">
-                  {otherData.map((element2, index2) => {
-                    return (
-                      <div className="col" key={index2}>
-                        <OtherProjects
-                          title={element2.title}
-                          description={element2.description}
-                          techs={element2.technologies}
-                          git={element2.git}
-                          demo={element2.demo}
-                        />
-                      </div>
-                    );
-                  })}
-                </div>
+              <div>
+                {others.map((element2, index2) => {
+                  return (
+                    <div key={index2}>
+                      <OtherProjects
+                        title={element2.title}
+                        techs={element2.technologies}
+                        git={element2.git}
+                        demo={element2.demo}
+                      />
+                    </div>
+                  );
+                })}
               </div>
             </StyledProjects>
           </Reveal>
         </section>
-        <section id="home-section3" className="section">
+{/* <section>
+  <Profile/>
+</section> */}
+        <section id="home-section3">
           <GetInTouch />
         </section>
         <MarqueeComp />

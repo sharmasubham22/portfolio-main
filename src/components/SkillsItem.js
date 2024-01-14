@@ -13,12 +13,13 @@ export default function SkillsItem(props) {
             className={`card-subtitle mb-2`}
             style={{
               fontFamily: "var(--general-font)",
-              fontSize: "clamp(11px, 1vw, 14px)",
+              fontSize: "clamp(11px, 1vw, 16px)",
               color: "var(--content-color)",
+              fontWeight: "200",
             }}
           >
             <span
-              style={{ fontWeight: "700", fontSize: "clamp(14px, 1vw, 18px)" }}
+              style={{ fontWeight: "400", fontSize: "clamp(14px, 1vw, 18px)", color:"var(--text-color)" }}
             >
               {category}
             </span>{" "}

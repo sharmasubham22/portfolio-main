@@ -3,23 +3,24 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export default function FeaturedProjects(props) {
-  let { title, description, imageLink, techs, git, demo } = props;
+  let { title, imageLink, techs, git, demo } = props;
 
   const StyledDiv = styled.div`
     font-family: var(--general-font);
-    margin-bottom: 10%;
+    margin-bottom: 100px;
 
     p {
       color: var(--content-color);
       margin-bottom: 5%;
-      font-size: clamp(15px, 2vw, 20px);
+      font-size: clamp(18px, 2vw, 30px);
     }
 
     h3 {
       color: var(--text-color);
-      text-transform: uppercase;
-      font-weight:700;
-      font-size: clamp(24px, 4vw, 36px);
+      // text-transform: uppercase;
+      font-weight: 700;
+      font-family: var(--heavy-font);
+      font-size: clamp(30px, 4vw, 47px);
     }
 
     .img-div {
@@ -32,7 +33,7 @@ export default function FeaturedProjects(props) {
 
     .img-div img {
       width: 100%;
-      height:auto;
+      height: auto;
       transition: 0.4s all ease-in-out;
       shape-rendering: crispEdges;
     }
@@ -47,28 +48,29 @@ export default function FeaturedProjects(props) {
     .tech-skills {
       color: var(--highlight-color);
       text-transform: uppercase;
-      margin-bottom:20px;
+      margin-bottom: 20px;
     }
 
     .tech-items {
-      font-size: clamp(10px, 1vw, 14px);
+      font-size: clamp(12px, 2vw, 20px);
       margin: 10px 0px 20px 20px;
       border: 1px solid var(--highlight-color);
       padding: 5px 10px;
       border-radius: 20px;
-    }
-
-    .ph {
-      margin-left: 40px;
+      font-weight:400;
     }
 
     .project-link {
       text-decoration: none;
       color: var(--text-color);
-      font-size: clamp(22px, 2vw, 24px);
+      font-size: clamp(22px, 2vw, 28px);
+      padding: 7px 10px;
+      border-radius: 50%;
+      transition: 0.2s;
     }
 
     .project-link:hover {
+      background-color: var(--card-color);
       color: var(--highlight-color);
     }
   `;
@@ -87,7 +89,7 @@ export default function FeaturedProjects(props) {
             <h3>{title}</h3>
           </div>
           <div className="bd-highlight">
-            <Link className="project-link" to={git} target="_blank">
+            <Link className="project-link mx-4" to={git} target="_blank">
               <i className="ph ph-github-logo"></i>
             </Link>
           </div>
@@ -110,7 +112,7 @@ export default function FeaturedProjects(props) {
             );
           })}
         </div>
-        <p>{description}</p>
+        {/* <p>{description}</p> */}
       </StyledDiv>
     </div>
   );

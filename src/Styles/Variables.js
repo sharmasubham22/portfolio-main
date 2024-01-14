@@ -1,5 +1,4 @@
-import { css } from "styled-components";
-
+import { css } from "styled-components"; 
 
 const Variables = css`
   :root {
@@ -13,8 +12,8 @@ const Variables = css`
     --content-color: #96a9ad;
     --featured-color: #00243b;
     --easing: cubic-bezier(0.645, 0.045, 0.355, 1);
-    --general-font: space grotesk;
-    --heavy-font: space grotesk, Sans-serif;
+    --general-font: Bai Jamjuree;
+    --heavy-font: cabinet grotesk, Sans-serif;
   }
 
   [data-theme="dark"] {
@@ -22,7 +21,7 @@ const Variables = css`
     --border-color: rgb(5, 10, 24, 0.1);
     --card-color: #d5d3c8;
     --featured-color: #00243b;
-    --highlight-color: #a27867;
+    --highlight-color: #b46049;
     --text-color: #2a2b25;
     --opacity: 0.5;
     --button-text: #e1e1da;
