@@ -1,7 +1,6 @@
 import React from 'react'
 import Marquee from 'react-fast-marquee'
 import styled from 'styled-components';
-import { bullet2 } from '../images/bullets';
 
 export default function BioMarquee() {
   const StyledMarquee = styled.section`
@@ -9,33 +8,41 @@ export default function BioMarquee() {
       margin: 10px 30px;
       color: var(--text-color);
       font-family: var(--heavy-font);
-      font-size: clamp(25px, 2vw, 32px);
+      font-size: clamp(40px, 8vw, 102px);
       text-transform: uppercase;
       font-weight: 700;
+    }
+
+    .dot {
+      height: clamp(15px, 5vw, 35px);
+      width: clamp(15px, 5vw, 35px);
+      background-color: var(--highlight-color);
+      border-radius: 50%;
+      display: inline-block;
     }
 
     .marquee {
       border-top: 1px solid var(--border-color);
       border-bottom: 1px solid var(--border-color);
-      padding: 25px 0px;
+      padding: 5px 0px;
     }
   `;
   return (
-    <div className='mt-3'>
+    <div className="mt-3">
       <StyledMarquee>
-        <Marquee className="marquee" autoFill={true}>
+        <Marquee className="marquee" autoFill={true} speed={130}>
           <p>Software Developer</p>
-          {bullet2}
-          <p>Frontend</p>
-          {bullet2}
-          <p>Backend</p>
-          {bullet2}
+          <span className="dot"></span>
+          <p>Front-End</p>
+          <span className="dot"></span>
+          <p>Back-End</p>
+          <span className="dot"></span>
           <p>Web Developer</p>
-          {bullet2}
+          <span className="dot"></span>
           <p>Full Stack</p>
-          {bullet2}
+          <span className="dot"></span>
           <p>Designer</p>
-          {bullet2}
+          <span className="dot"></span>
         </Marquee>
       </StyledMarquee>
     </div>

@@ -1,7 +1,6 @@
 import React, { useRef } from 'react'
 import { Link, useLocation } from 'react-router-dom';
 import styled from 'styled-components';
-import { logoSvg} from '../images/assets';
 
 export default function Menu(props) {
     const navRef = useRef();
@@ -35,8 +34,15 @@ export default function Menu(props) {
       >
         <div className="d-flex bd-highlight">
           <div className="p-4 flex-fill bd-highlight menu-section">
-            <Link className="logo" to="/">
-              {logoSvg}
+            <Link className="logo fs-2" to="/">
+              subham.
+              <span
+                style={{
+                  color: "var(--highlight-color)",
+                }}
+              >
+                sharma
+              </span>
             </Link>
           </div>
           <div className="menu-nav" ref={navRef}>
@@ -117,7 +123,7 @@ export default function Menu(props) {
             </div>
           </div>
 
-          <div className="p-3 fs-3 bd-highlight menu-section nav-btn">
+          <div className="bd-highlight menu-section nav-btn">
             <input type="checkbox" id="hi" />
             <label
               className="menu"

@@ -21,8 +21,8 @@ export default function Profile() {
         margin-top: 60px;
       }
 
-      .about{
-        margin-top:30px;
+      .about {
+        margin-top: 30px;
       }
     }
 
@@ -36,13 +36,13 @@ export default function Profile() {
       font-family: var(--general-font);
       color: var(--text-color);
       font-size: clamp(22px, 2vw, 30px);
-      font-weight: 700;
+      font-weight: 400;
     }
 
     .fa-solid {
       color: var(--highlight-color);
       font-size: clamp(18px, 1.5vw, 25px);
-      margin-right:10px;
+      margin-right: 10px;
     }
 
     p {
@@ -55,6 +55,7 @@ export default function Profile() {
       font-family: var(--general-font);
       font-size: clamp(15px, 2vw, 20px);
       color: var(--content-color);
+      font-weight: 200;
     }
 
     ul.skills-list {
@@ -86,7 +87,7 @@ export default function Profile() {
 
   const StyledPic = styled.div`
     position: sticky;
-    top: 140px;
+    top: 146px;
 
     .wrapper {
       position: relative;
@@ -115,56 +116,12 @@ export default function Profile() {
       grid-row: 1 / 1;
     }
 
-    // .border-img {
-    //   width: 65%;
-    //   height: 100%;
-    //   top: 5.5%;
-    //   right: 13%;
-    //   position: absolute;
-    //   border: 1px solid var(--text-color);
-    //   z-index: -1;
-    //   // background:var(--card-color);
-    // }
-
-    .vector-asset1 {
-      position: absolute;
-      top: -8%;
-      left: 8%;
-      z-index: -1;
-      width: 140px;
-      height: 148px;
-    }
-
-    .vector-asset2 {
-      position: absolute;
-      z-index: -1;
-      right: 0;
-      bottom: 20%;
-      width: 160px;
-      height: 128px;
-    }
-
     @media (max-width: 766px) {
       .wrapper {
         width: 100%;     
       }
       .wrapper img {
         height: 100%;
-      }
-
-      .vector-asset1 {
-        width: 80px;
-        left: 2%;
-        height: 80px;
-      }
-
-      .vector-asset2 {
-        width: 90px;
-        height: 80px;
-      }
-
-      .border-img {
-        display: none;
       }
     }
   `;
@@ -175,8 +132,8 @@ export default function Profile() {
     <div className="container" style={{ marginBottom: "5%" }}>
       <Reveal>
         <StyledText>
-          <div className="row row-cols-1 row-cols-lg-2 mt-5">
-            <div className="col p-pic ">
+          <div className="row row-cols-1 row-cols-md-1 row-cols-lg-2 mt-5">
+            <div className="col-xl-5 p-pic">
               <StyledPic>
                 <div className="wrapper">
                   <img
@@ -186,12 +143,9 @@ export default function Profile() {
                     alt="Headshot"
                   />
                 </div>
-                <div className="border-img"></div>
-                {/* <div className="vector-asset1">{vector1}</div>
-                <div className="vector-asset2">{vector2}</div> */}
               </StyledPic>
             </div>
-            <div className="col profile-text">
+            <div className="col-xl-7 profile-text">
               <div className="profile-section about">
                 <h2>Get to know me better!</h2>
                 <p className="subtext">

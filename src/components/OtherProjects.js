@@ -1,105 +1,62 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { projectSvg } from "../images/assets";
 
 export default function OtherProjects(props) {
-  let { title, description, techs, git, demo } = props;
+  let { title, techs, git, demo } = props;
+
+  const techItem = techs.join(" • ");
 
   const StyledCard = styled.section`
     font-family: var(--general-font);
 
-    .card {
-      background-color: var(--card-color);
-      transition: 0.3s ease;
-      box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px,
-        rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
-    }
-
-    .card:hover {
-
-      .card-title {
-        color: var(--highlight-color);
-      }
-    }
-
-    .card-title {
-      color: var(--text-color);
-      transition: 0.3s ease;
-      text-transform: uppercase;
-      font-weight: 700;
-    }
-
-    .card-subtitle {
-      color: var(--highlight-color);
-      text-transform: uppercase;
-      font-size: clamp(11px, 2vw, 12px);
-    }
-
-    .card-text {
+    .techs {
       color: var(--content-color);
-      font-size: clamp(15px, 2vw, 20px);
+      font-size: clamp(15px, 2vw, 18px);
+      font-weight:200;
     }
-
-    .fa-folder {
-      font-size: 50px;
-      color: var(--highlight-color);
-    }
-    .ph {
-      margin-left: 30px;
-    }
-
     .project-link {
       text-decoration: none;
       color: var(--text-color);
-      font-size: 24px;
+      transition: 0.3s;
     }
 
     .project-link:hover {
       color: var(--highlight-color);
     }
 
-    .card-link {
-      text-decoration: none;
-    }
   `;
 
   return (
     <>
-      <StyledCard className="card-group">
-        <div className="card h-100 p-4 border-0">
-          <div className="card-body">
-            <div className="d-flex bd-highlight mb-3">
-              <div className="flex-grow-1 bd-highlight">{projectSvg}</div>
-              <div className="bd-highlight">
-                <Link className="project-link" to={git} target="_blank">
-                  <i className="ph ph-github-logo"></i>
-                </Link>
-              </div>
+      <StyledCard className="elem">
+        <div className="overlay"></div>
+        <div className="w-100">
+          <div className="d-flex justify-content-between">
+            <div>
+              <h2 className="title">{title}</h2>
+              <p className="techs">{techItem}</p>
+            </div>
+            <div className="d-flex align-items-center fs-2">
+              <Link className="project-link" to={git} target="_blank">
+                <i className="ph ph-github-logo"></i>
+              </Link>
+
               {!demo ? (
                 ""
               ) : (
                 <div className="bd-highlight">
-                  <Link className="project-link" to={demo} target="_blank">
+                  <Link
+                    className="project-link"
+                    to={demo}
+                    target="_blank"
+                    style={{ marginLeft: "35px" }}
+                  >
                     <i className="ph ph-arrow-square-out"></i>
                   </Link>
                 </div>
               )}
             </div>
-            <h5 className="card-title fs-2">{title}</h5>
-
-            <p className="card-text">{description}</p>
-            {techs.map((techKey, techIndex) => {
-              return (
-                <h6
-                  className="card-subtitle mb-2"
-                  style={{ display: "inline", marginRight: "14px" }}
-                  key={techIndex}
-                >
-                  {techKey}
-                </h6>
-              );
-            })}
           </div>
         </div>
       </StyledCard>

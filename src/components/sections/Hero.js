@@ -7,13 +7,12 @@ import Reveal from "../Motion";
 export default function Hero() {
   const StyledHero = styled.div`
     .name-text {
-      font-size: clamp(40px, 8vw, 130px);
+      font-size: clamp(40px, 11vw, 150px);
       font-family: var(--heavy-font);
+      font-weight: 900;
       text-transform: uppercase;
-      font-weight: 700;
       color: var(--text-color);
       line-height: 0.4;
-      user-select: none;
     }
 
     .hero-text {
@@ -25,8 +24,9 @@ export default function Hero() {
       );
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      opacity: 0.3;
+      opacity: 0.6;
       line-height: 1;
+      user-select: none;
     }
 
     .hero-text2 {
@@ -38,8 +38,9 @@ export default function Hero() {
       );
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      opacity: 0.3;
+      opacity: 0.6;
       line-height: 1;
+      user-select: none;
     }
 
     p {
@@ -47,6 +48,7 @@ export default function Hero() {
       text-align: center;
       font-size: clamp(18px, 2vw, 30px);
       color: var(--content-color);
+      font-weight:200;
     }
 
     @media (max-width: 1078px) {
@@ -74,6 +76,7 @@ export default function Hero() {
       writing-mode: vertical-rl;
       font-size: clamp(15px, 2vw, 20px);
       user-select: none;
+      font-weight: 200;
     }
 
     .circle {
@@ -109,8 +112,8 @@ export default function Hero() {
       }
 
       .svg {
-        width: 80px;
-        height: 80px;
+        width: 100px;
+        height: 100px;
       }
     }
 
@@ -122,7 +125,7 @@ export default function Hero() {
     }
     @media (max-width: 684px) {
       .scroll {
-        bottom: 10px;
+        bottom: 5px;
         right: 30px;
       }
     }
@@ -137,7 +140,7 @@ export default function Hero() {
   );
   const four = (
     <p>
-      I am a <span style={{fontWeight:"700"}}>Software Developer</span> and I love to design, develop &
+      I am a <span style={{fontWeight:"500"}}>Software Developer</span> and I love to design, develop &
       deploy!
     </p>
   );
@@ -145,7 +148,7 @@ export default function Hero() {
   const items = [one, two, three, four];
 
   return (
-    <div className="container">
+    <div className="container-fluid">
       <Reveal>
         <StyledHero>
           {items.map((item, index) => (
@@ -155,10 +158,10 @@ export default function Hero() {
       </Reveal>
       <Scroll>
         <div className="scroll">
-          <a href="#home-section2" className="circle">
+          <div className="circle">
             <div className="fa-solid">{arrow}</div>
             <div className="svg">{rotateText}</div>
-          </a>
+          </div>
         </div>
       </Scroll>
     </div>

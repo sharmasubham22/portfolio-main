@@ -1,7 +1,7 @@
-import React from 'react'
+import React from "react";
 
 export default function EducationItem(props) {
-    let {duration, name, course} = props;
+  let { duration, name, course } = props;
   return (
     <div>
       <ul className="section-list2">
@@ -12,7 +12,7 @@ export default function EducationItem(props) {
               style={{
                 fontFamily: "var(--general-font)",
                 fontSize: "clamp(15px, 2vw, 20px)",
-
+                fontWeight: "400",
                 color: "var(--text-color)",
               }}
             >
@@ -24,6 +24,7 @@ export default function EducationItem(props) {
                 fontFamily: "var(--general-font)",
                 fontSize: "clamp(15px, 1vw, 16px)",
                 color: "var(--content-color)",
+                fontWeight: "200",
               }}
             >
               {name} ({duration})
