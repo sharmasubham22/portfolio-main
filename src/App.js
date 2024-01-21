@@ -1,6 +1,4 @@
 import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
-import Projects from './components/sections/Projects';
-import About from './components/About';
 import Footer from './components/Footer';
 import GlobalStyle from './Styles/GlobalStyle';
 import theme from './Styles/theme';
@@ -10,6 +8,8 @@ import Menu from './components/Menu';
 import ScrollTop from './components/ScrollTop';
 import Error from "./components/Error";
 import { useState } from "react";
+import Loader from "./components/Loader";
+import Home from "./components/sections/Home";
 // import Cursor from "./components/Cursor";
 
 function App() {
@@ -27,27 +27,18 @@ function App() {
       }
     };
 
-    setTimeout(function(){
-      document.querySelector("#loader").style.top = "-100%";
-    }, 4000)
-
   return (
     <>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
         <Router>
-          <div id="loader" className="d-flex justify-content-center align-items-center">
-            <h1 className="loader-text">Design</h1>
-            <h1 className="loader-text">Develop</h1>
-            <h1 className="loader-text">Deploy</h1>
-          </div>
+          <Loader/>
           {/* <Cursor/> */}
           <ScrollTop />
           <Nav toggle={toggleMode} mode={mode} />
           <Menu toggle={toggleMode} mode={mode} />
           <Routes>
-            <Route path="/about" element={<About />} />
-            <Route path="/" element={<Projects />} />
+            <Route path="/" element={<Home />} />
             <Route path="/*" element={<Error />} />
           </Routes>
           <Footer />

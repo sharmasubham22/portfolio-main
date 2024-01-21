@@ -10,7 +10,7 @@ export default function MarqueeComp() {
       font-family: var(--heavy-font);
       font-size: clamp(40px, 8vw, 102px);
       text-transform: uppercase;
-      font-weight: 700;
+      font-weight: 400;
     }
 
     .ph {

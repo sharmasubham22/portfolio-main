@@ -1,16 +1,17 @@
 import React from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
-// import { logoSvg } from "../images/assets";
 import { motion } from "framer-motion";
+import { logoSvg } from "../images/assets";
 
 export default function Nav(props) {
-  let location = useLocation();
+  // let location = useLocation();
 
   const StyledBtn = styled.div`
     .res-btn {
       ${({ theme }) => theme.mixins.resumeBtn};
-      text-decoration: none;
+      text-decoration:none;
+      cursor:pointer;
     }
   `;
 
@@ -23,31 +24,22 @@ export default function Nav(props) {
       }}
       initial="hidden"
       animate="visible"
-      transition={{ delay: 4.5, duration: 0.5 }}
+      transition={{ delay: 5, duration: 0.5 }}
     >
       <div
         className="container-fluid nav2"
-        style={{
-          borderBottom: "1px solid",
-          borderColor: "var(--border-color)",
-        }}
+        // style={{
+        //   borderBottom: "1px solid",
+        //   borderColor: "var(--border-color)",
+        // }}
       >
         <div className="d-flex bd-highlight">
           <div className="p-4 flex-grow-1 bd-highlight nav-section">
-            <Link className="logo fs-2" to="/">
-              {/* {logoSvg} */}
-              subham.
-              <span
-                style={{
-                  color: "var(--highlight-color)",
-                }}
-              >
-                sharma
-              </span>
-              
+            <Link className="logo fs-3" to="/">
+              {logoSvg}
             </Link>
           </div>
-          <div
+          {/* <div
             className="p-4 bd-highlight nav-section d-flex justify-content-center"
             style={{
               textTransform: "uppercase",
@@ -59,7 +51,7 @@ export default function Nav(props) {
               }`}
               to="/"
             >
-              Work
+              <span style={{ color: "var(--highlight-color)" }}>01. </span>Work
             </Link>
             <Link
               className={`mx-4 nav-link ${
@@ -68,23 +60,34 @@ export default function Nav(props) {
               type="button"
               to="/about"
             >
-              About
+              <span style={{ color: "var(--highlight-color)" }}>02. </span>About
             </Link>
-          </div>
-          <div className="p-4 bd-highlight nav-section">
+          </div> */}
+          <div className="bd-highlight nav-section d-flex align-items-center mx-4">
             <Link
               to="https://www.linkedin.com/in/subham-sharma-137985128/"
               target="_blank"
-              className="nav-social"
+              className="link-design mx-4"
+              style={{
+                textDecoration: "none",
+                fontSize: "clamp(15px, 2vw, 20px)",
+              }}
             >
-              <i className="ph ph-linkedin-logo"></i>
+              LinkedIn
             </Link>
+
             <Link
               to="https://github.com/sharmasubham22"
               target="_blank"
-              className="nav-social"
+              className="link-design"
+              style={{
+                textDecoration: "none",
+                fontSize: "clamp(15px, 2vw, 20px)",
+              }}
             >
-              <i className="ph ph-github-logo"></i>
+            
+                Github
+          
             </Link>
           </div>
           <div className="d-flex p-4 bd-highlight">
@@ -95,7 +98,9 @@ export default function Nav(props) {
                 to="https://drive.google.com/uc?export=view&id=1PrCF0G_hTFWh86LmyxAdFL7D2fj58aip"
                 target="_blank"
               >
-                Resume <i className="fa-solid fa-arrow-right"></i>
+                <span>
+                  <i className="ph ph-download-simple"></i> Resume
+                </span>
               </Link>
             </StyledBtn>
             <div className="form-check form-switch d-flex justify-content-center align-items-center">

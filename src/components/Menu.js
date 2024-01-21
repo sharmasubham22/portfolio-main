@@ -1,6 +1,7 @@
 import React, { useRef } from 'react'
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { logoSvg } from '../images/assets';
 
 export default function Menu(props) {
     const navRef = useRef();
@@ -10,50 +11,76 @@ export default function Menu(props) {
       navRef.current.classList.toggle("responsive_nav");
     };
 
-    const handleCloseClick = ()=>{
-      refClose.current.click();
+    // const handleCloseClick = ()=>{
+    //   refClose.current.click();
+    // }
+
+    // let location = useLocation();
+
+  const StyledBtn = styled.a`
+    padding: 10px 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 50px;
+    font-weight: 200;
+    color: var(--text-color);
+    position: relative;
+    overflow: hidden;
+    font-size: clamp(24px, 3vw, 28px);
+    font-family: var(--general-font);
+    text-decoration:none;
+
+    &:after {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background-color: var(--text-color2);
+      left: 0;
+      bottom: -100%;
+      border-radius: 50%;
+      transition: all ease 0.4s;
     }
 
-    let location = useLocation();
+    &:hover::after {
+      bottom: 0;
+      border-radius: 0%;
+    }
 
-  const StyledBtn = styled.div`
-    .res-btn {
-      ${({ theme }) => theme.mixins.resumeBtn};
+    span {
       text-decoration: none;
-      font-size:24px;
+      color: var(--text-color);
+      z-index: 2;
+      position: relative;
+    }
+
+    &:hover span {
+      color: var(--background-color);
     }
   `;
   return (
     <>
       <div
         className="container-fluid sticky-top menu"
-        style={{
-          borderBottom: "1px solid",
-          borderColor: "var(--border-color)",
-        }}
+        // style={{
+        //   borderBottom: "1px solid",
+        //   borderColor: "var(--border-color)",
+        // }}
       >
         <div className="d-flex bd-highlight">
           <div className="p-4 flex-fill bd-highlight menu-section">
             <Link className="logo fs-2" to="/">
-              subham.
-              <span
-                style={{
-                  color: "var(--highlight-color)",
-                }}
-              >
-                sharma
-              </span>
+              {logoSvg}
             </Link>
           </div>
           <div className="menu-nav" ref={navRef}>
-            <Link
+            {/* <Link
               className={`mx-4 nav-link ${
                 location.pathname === "/" ? "active" : ""
               }`}
               to="/"
               onClick={handleCloseClick}
             >
-              Work
+              <span style={{ color: "var(--highlight-color)"}}>01. </span>Work
             </Link>
             <Link
               className={`mx-4 nav-link ${
@@ -63,19 +90,8 @@ export default function Menu(props) {
               to="/about"
               onClick={handleCloseClick}
             >
-              About
-            </Link>
-
-            <StyledBtn className="my-2">
-              <Link
-                type="button"
-                className="res-btn"
-                to="https://drive.google.com/uc?export=view&id=1PrCF0G_hTFWh86LmyxAdFL7D2fj58aip"
-                target="_blank"
-              >
-                Resume <i className="fa-solid fa-arrow-right"></i>
-              </Link>
-            </StyledBtn>
+              <span style={{ color: "var(--highlight-color)" }}>02. </span>About
+            </Link> */}
 
             <div>
               <Link
@@ -90,19 +106,27 @@ export default function Menu(props) {
               <Link
                 to="https://github.com/sharmasubham22"
                 target="_blank"
-                className="link-design mx-4 mt-3 fs-2"
+                className="link-design mx-4 mt-4 fs-2"
               >
                 <i className="ph ph-github-logo fs-4 brand-icons"></i>
                 <span className="mx-2">Github</span>
               </Link>
             </div>
+            <StyledBtn
+              className="res-btn my-2"
+              href="https://drive.google.com/uc?export=view&id=1PrCF0G_hTFWh86LmyxAdFL7D2fj58aip"
+              target="_blank"
+            >
+              <span>
+                Resume <i className="ph ph-download-simple"></i>
+              </span>
+            </StyledBtn>
             <div className="form-check form-switch">
               <label
                 htmlFor="flexSwitchCheckDefault"
                 className="fs-1"
                 style={{
                   color: "var(--content-color)",
-                  cursor: "pointer",
                   marginLeft: "-40px",
                 }}
               >

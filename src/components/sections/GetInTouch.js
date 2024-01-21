@@ -32,7 +32,7 @@ export default function GetInTouch() {
       background-color: transparent;
       outline: 0;
       border:0;
-      border: 1px solid var(--text-color); 
+      border: 1px solid var(--border-color); 
       font-family: var(--general-font);
       color: var(--text-color);
       font-size: clamp(15px, 2vw, 20px);
@@ -108,33 +108,9 @@ export default function GetInTouch() {
   `;
 
   return (
-    <div>
-      <div className="container-xxl" style={{ marginTop: "100px" }}>
-        <p
-          className="text-center"
-          style={{
-            fontFamily: "var(--heavy-font)",
-            color: "var(--text-color)",
-            fontSize: "clamp(35px, 8vw, 84px)",
-            lineHeight: "1",
-          }}
-        >
-          <span
-            style={{
-              color: "var(--highlight-color)",
-            }}
-          >
-            ●{" "}
-          </span>
-          Get in Touch{" "}
-          <span
-            style={{
-              color: "var(--highlight-color)",
-            }}
-          >
-            ●
-          </span>
-        </p>
+    <>
+      <div className="container-xxl mb-5" >
+    
         <Reveal>
           <div>
             <p
@@ -143,12 +119,25 @@ export default function GetInTouch() {
                 fontFamily: "var(--general-font)",
                 color: "var(--content-color)",
                 fontSize: "clamp(15px, 2vw, 20px)",
-                fontWeight: "200",
+                fontWeight: "400",
               }}
             >
-              If you have questions or just want to say hi, do reach out and I
+              I am currently looking for my next opportunity! If you like my
+              work, have questions or just want to say hi, do reach out and I
               will try my best to get back to you as soon as possible.
             </p>
+          </div>
+          <div className="mb-4">
+            <div className="d-flex justify-content-center">
+              {" "}
+              <Link
+                to="mailto:subham.sharma221296@gmail.com"
+                className="link-design my-4"
+              >
+                <i className="fa-solid fa-arrow-right"></i>{" "}
+                subham.sharma221296@gmail.com
+              </Link>
+            </div>
           </div>
         </Reveal>
         <Reveal>
@@ -192,56 +181,16 @@ export default function GetInTouch() {
 
               <div className="mt-3 d-flex justify-content-center ">
                 <SubmitButton to="/" className="submit my-2">
-                  Send Message
+                  <span>
+                    Send Message <i className="fa-solid fa-arrow-right"></i>
+                  </span>
                 </SubmitButton>
               </div>
               <div>{result ? <Result /> : null}</div>
             </form>
           </StyledDiv>
-          <div className="mb-5">
-            <div className="d-flex justify-content-center">
-              {" "}
-              <Link
-                to="mailto:subham.sharma221296@gmail.com"
-                className="link-design my-4"
-              >
-                <i className="fa-solid fa-arrow-right"></i>{" "}
-                subham.sharma221296@gmail.com
-              </Link>
-            </div>
-            <div className="my-2 d-flex justify-content-center">
-              <Link
-                to="https://www.linkedin.com/in/subham-sharma-137985128/"
-                target="_blank"
-                className="fs-4"
-                style={{ textDecoration: "none" }}
-              >
-                <i className="ph ph-linkedin-logo brand-icons"></i>
-                <span className="link-design mx-2">LinkedIn</span>
-              </Link>
-              <Link
-                to="https://github.com/sharmasubham22"
-                target="_blank"
-                className="mx-4 fs-4"
-                style={{ textDecoration: "none" }}
-              >
-                <i className="ph ph-github-logo brand-icons"></i>
-                <span className="link-design mx-2">Github</span>
-              </Link>
-              <Link
-                type="button"
-                className="fs-4"
-                to="https://drive.google.com/uc?export=view&id=1PrCF0G_hTFWh86LmyxAdFL7D2fj58aip"
-                target="_blank"
-                style={{ textDecoration: "none" }}
-              >
-                <i class="ph ph-read-cv-logo brand-icons"></i>{" "}
-                <span className="link-design mx-2">Resume</span>
-              </Link>
-            </div>
-          </div>
         </Reveal>
       </div>
-    </div>
+    </>
   );
 }

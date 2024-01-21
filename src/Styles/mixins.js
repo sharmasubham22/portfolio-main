@@ -2,57 +2,87 @@ import { css } from "styled-components";
 
 const mixins = {
   button: css`
-    color: var(--highlight-color);
-    background-color: transparent;
-    border: 1.5px solid var(--highlight-color);
-    border-radius: 3px;
-    font-size: clamp(15px, 2vw, 20px);
-    font-weight: 200;
+    padding: 10px 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 50px;
+    font-weight: 400;
+    color: var(--text-color);
+    position: relative;
+    overflow: hidden;
+    font-size: clamp(15px, 2vw, 24px);
     font-family: var(--general-font);
-    line-height: 1;
-    text-decoration: none;
-    padding: 1.25rem 1.75rem;
-    transition: 0.3s ease;
-    box-shadow: 1px 1px 0px var(--highlight-color),
-      2px 2px 0px var(--highlight-color), 3px 3px 0px var(--highlight-color),
-      4px 4px 0px var(--highlight-color), 5px 5px 0px var(--highlight-color),
-      6px 6px 0px var(--highlight-color);
+    background: transparent;
 
-    &:hover,
-    &:focus-visible {
-      outline: none;
-      box-shadow: none;
-      transform: translate(5px, 5px);
-      background-color: transparent;
-      color: var(--highlight-color);
-    }
     &:after {
-      display: none !important;
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background-color: var(--text-color2);
+      left: 0;
+      bottom: -100%;
+      border-radius: 50%;
+      transition: all ease 0.4s;
+    }
+
+    &:hover::after {
+      bottom: 0;
+      border-radius: 0%;
+    }
+
+    span {
+      text-decoration: none;
+      color: var(--text-color);
+      z-index: 2;
+      position: relative;
+    }
+
+    &:hover span {
+      color: var(--background-color);
+    }
+
+    &:hover span .fa-arrow-right {
+      transform: rotate(0deg);
     }
   `,
 
   resumeBtn: css`
-    color: var(--background-color);
-    background-color: var(--highlight-color);
-    border: 1px solid var(--highlight-color);
-    border-radius: 25px;
+    padding: 7px 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 50px;
+    font-weight: 200;
+    color: var(--text-color);
+    position: relative;
+    overflow: hidden;
     font-size: clamp(15px, 2vw, 18px);
     font-family: var(--general-font);
-    line-height: 1;
-    text-decoration: none;
-    padding: 0.75rem 1rem;
-    transition: 0.2s ease-out;
 
-    &:hover,
-    &:focus-visible {
-      outline: none;
-      // box-shadow: 4px 4px 0 0 var(--highlight-color);
-      // transform: translate(0px, -5px);
-      background-color: transparent;
-      color: var(--highlight-color);
-    }
     &:after {
-      display: none !important;
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background-color: var(--text-color2);
+      left: 0;
+      bottom: -100%;
+      border-radius: 50%;
+      transition: all ease 0.4s;
+    }
+
+    &:hover::after {
+      bottom: 0;
+      border-radius: 0%;
+    }
+
+    span {
+      text-decoration: none;
+      color: var(--text-color);
+      z-index: 2;
+      position: relative;
+    }
+
+    &:hover span {
+      color: var(--background-color);
     }
   `,
 

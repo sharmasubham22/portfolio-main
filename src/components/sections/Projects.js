@@ -1,109 +1,85 @@
-import React from "react";
+import React from 'react'
+import { featured, others } from "../../data/ProjectsData";
+import OtherProjects from "../OtherProjects";
 import FeaturedProjects from "../FeaturedProjects";
 import styled from "styled-components";
-import OtherProjects from "../OtherProjects";
-import Reveal from "../Motion";
-import Hero from "./Hero";
-import BioMarquee from "../BioMarquee";
-import GetInTouch from "./GetInTouch";
-import MarqueeComp from "../MarqueeComp";
-import { featured, others } from "../../data/Projects";
-// import Profile from "./Profile";
+import { headSvg } from "../../images/assets";
 
 export default function Projects() {
-  const StyledProjects = styled.section`
+    const StyledProjects = styled.section`
+      .connect {
+        ${({ theme }) => theme.mixins.button};
+        margin-bottm: 15px;
+      }
 
-    .connect {
-      ${({ theme }) => theme.mixins.button};
-      margin-bottm: 15px;
-    }
+      .contact-section {
+        text-align: center;
+      }
 
-    .contact-section {
-      text-align: center;
-    }
-
-    .contact-section p {
-      font-size: clamp(15px, 2vw, 20px);
-      color: var(--content-color);
-      font-family: var(--general-font);
-    }
-  `;
-
-  document.title = "Subham Sharma | Portfolio";
+      .contact-section p {
+        font-size: clamp(15px, 2vw, 20px);
+        color: var(--content-color);
+        font-family: var(--general-font);
+      }
+    `;
   return (
-    <>
-      <main>
-        <section
-          id="home-section1"
-          className="d-flex hero-section justify-content-center align-items-center"
-        >
-          <Hero />
-        </section>
-        <BioMarquee />
-        <section id="home-section2" style={{ marginTop: "100px" }}>
-          <Reveal>
-            <StyledProjects style={{ marginBottom: "2%" }}>
-              <div className="container">
-                {featured.map((element, index) => {
-                  return (
-                    <div key={index}>
-                      <FeaturedProjects
-                        title={element.title}
-                        description={element.description}
-                        techs={element.technologies}
-                        imageLink={element.imgLink}
-                        git={element.git}
-                        demo={element.demo}
-                      />
-                    </div>
-                  );
-                })}
-              </div>
-              <h6
-                style={{
-                  color: "var(--text-color)",
-                  fontFamily: "var(--general-font)",
-                  textTransform: "uppercase",
-                  padding: "2vw",
-                  fontSize: "clamp(15px, 2vw, 20px)",
-                  fontWeight:"200"
-                }}
+    <StyledProjects className="container-fluid">
+      <p className="text-center section-head">
+        My{headSvg}
+        <i style={{ fontWeight: "700" }}>Work</i>
+      </p>
+      <header className="mb-4">
+        <div>
+          <p>Projects</p>
+          <span className="spacer"></span>
+          <p>Web Applications</p>
+          <span className="spacer"></span>
+          <p>Experimentals</p>
+        </div>
+      </header>
+    
+        <div className="row row-cols-1 row-cols-lg-2 p-md-5">
+          {featured.map((element, index) => {
+            return (
+              <div
+                className="col d-flex justify-content-center align-items-center p-3"
+                key={index}
               >
-                <span
-                  style={{
-                    color: "var(--highlight-color)",
-                  }}
-                >
-                  ●
-                </span>{" "}
-                Other Noteworthy Projects
-              </h6>
-
-              <div>
-                {others.map((element2, index2) => {
-                  return (
-                    <div key={index2}>
-                      <OtherProjects
-                        title={element2.title}
-                        techs={element2.technologies}
-                        git={element2.git}
-                        demo={element2.demo}
-                      />
-                    </div>
-                  );
-                })}
+                <FeaturedProjects
+                  title={element.title}
+                  subHeading={element.subHeading}
+                  description={element.description}
+                  techs={element.technologies}
+                  imageLink={element.imgLink}
+                  git={element.git}
+                  demo={element.demo}
+                />
               </div>
-            </StyledProjects>
-          </Reveal>
-        </section>
-{/* <section>
-  <Profile/>
-</section> */}
-        <section id="home-section3">
-          <GetInTouch />
-        </section>
-        <MarqueeComp />
-      </main>
-    </>
+            );
+          })}
+  
+      </div>
+      <div>
+        <p
+          className="text-center mb-5 section-head"
+          style={{ marginTop: "100px" }}
+        >
+          Other{headSvg}
+          <i style={{ fontWeight: "700" }}>Projects</i>
+        </p>
+        {others.map((element2, index2) => {
+          return (
+            <div key={index2}>
+              <OtherProjects
+                title={element2.title}
+                techs={element2.technologies}
+                git={element2.git}
+                demo={element2.demo}
+              />
+            </div>
+          );
+        })}
+      </div>
+    </StyledProjects>
   );
 }
