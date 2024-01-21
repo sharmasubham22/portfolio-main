@@ -1,14 +1,14 @@
 [
   {
     "id": 1,
-    "name": "Dalhousie University, Halifax, CA",
-    "course": "M.S. in Applied Computer Science",
-    "duration": "2022-2023"
+    "name": "Dalhousie University, CA",
+    "course": "Masters in Applied Computer Science",
+    "duration": "2022 - 2023"
   },
   {
     "id": 2,
-    "name": "Christ University, Bangalore, IN",
+    "name": "Christ University, IN",
     "course": "Bachelors in Computer Science",
-    "duration": "2015-2019"
+    "duration": "2015 - 2019"
   }
 ]

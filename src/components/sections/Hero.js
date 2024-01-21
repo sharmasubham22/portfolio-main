@@ -1,13 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 // import { motion, useAnimation, useInView } from "framer-motion";
-import { arrow, rotateText } from "../../images/assets";
+import { heroSvg, rotateText } from "../../images/assets";
 import Reveal from "../Motion";
 
 export default function Hero() {
   const StyledHero = styled.div`
     .name-text {
-      font-size: clamp(40px, 11vw, 150px);
+      font-size: clamp(80px, 10vw, 200px);
       font-family: var(--heavy-font);
       font-weight: 900;
       text-transform: uppercase;
@@ -15,46 +15,46 @@ export default function Hero() {
       line-height: 0.4;
     }
 
+    @media (max-width: 656px) {
+      .name-text{
+        line-height: 0.9;
+      }
+    }
+
     .hero-text {
       background: linear-gradient(
         to bottom,
-        var(--highlight-color) 0%,
+        var(--content-color) 0%,
         transparent 90%,
         transparent 100%
       );
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      opacity: 0.6;
       line-height: 1;
       user-select: none;
+      font-size: clamp(60px, 10vw, 150px);
     }
 
     .hero-text2 {
       background: linear-gradient(
         to top,
-        var(--highlight-color) 0%,
+        var(--content-color) 0%,
         transparent 90%,
         transparent 100%
       );
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      opacity: 0.6;
       line-height: 1;
       user-select: none;
+      font-size: clamp(60px, 10vw, 150px);
     }
 
     p {
       font-family: var(--general-font);
       text-align: center;
       font-size: clamp(18px, 2vw, 30px);
-      color: var(--content-color);
-      font-weight:200;
-    }
-
-    @media (max-width: 1078px) {
-      p {
-        width: 100%;
-      }
+      color: var(--text-color2);
+      font-weight: 400;
     }
   `;
 
@@ -68,15 +68,14 @@ export default function Hero() {
     .scroll {
       text-align: end;
       text-decoration: none;
-      color: var(--content-color);
-      position: absolute;
+      color: var(--text-color);
+      // position: absolute;
       // background: var(--card-color);
-      bottom: 30px;
-      right: 35px;
-      writing-mode: vertical-rl;
-      font-size: clamp(15px, 2vw, 20px);
+      // bottom: 30px;
+      // right: 35px;
       user-select: none;
       font-weight: 200;
+      transition: all ease 0.4s;
     }
 
     .circle {
@@ -89,59 +88,57 @@ export default function Hero() {
 
     .fa-solid {
       position: absolute;
-      color: var(--card-color);
-      font-size: 10px;
-      z-index: 999;
-      border: 1px solid var(--highlight-color);
-      border-radius: 50%;
-      padding: 15px 15px;
-      width: 80px;
-      height: 80px;
+      transition: all ease 0.4s;
     }
 
     .svg {
       width: 140px;
       height: 140px;
+      opacity: 0;
+      transition: all ease 0.4s;
     }
 
-    @media (max-width: 684px) {
+    .scroll:hover {
       .fa-solid {
-        padding: 10px;
-        width: 50px;
-        height: 50px;
+        transform: scale(0.7);
       }
 
       .svg {
-        width: 100px;
-        height: 100px;
+        opacity: 1;
       }
     }
 
-    @media (min-width: 684px) and (max-width: 1078px) {
-      .scroll {
-        bottom: 35px;
-        right: 30px;
-      }
-    }
     @media (max-width: 684px) {
-      .scroll {
-        bottom: 5px;
-        right: 30px;
+      // display: none;
+      .fa-solid {
+        transform: scale(1);
+        margin-top:50px;
+      }
+
+      .svg {
+        display: none;
       }
     }
+
+    // @media (min-width: 684px) and (max-width: 1078px) {
+    //   .scroll {
+    //     bottom: 35px;
+    //     right: 30px;
+    //   }
+    // }
   `;
 
   const one = (
-    <p className="name-text text-center hero-text">Hey, I'm Subham</p>
+    <p className="name-text text-center hero-text">Software</p>
   );
   const two = <p className="name-text text-center">Hey, I'm Subham</p>;
   const three = (
-    <p className="name-text text-center hero-text2">Hey, I'm Subham</p>
+    <p className="name-text text-center hero-text2">Developer</p>
   );
   const four = (
     <p>
-      I am a <span style={{fontWeight:"500"}}>Software Developer</span> and I love to design, develop &
-      deploy!
+      {/* I am a <span style={{fontWeight:"500"}}>Software Developer</span> and I love to  */}
+      I Design, Develop & Deploy!
     </p>
   );
 
@@ -159,7 +156,7 @@ export default function Hero() {
       <Scroll>
         <div className="scroll">
           <div className="circle">
-            <div className="fa-solid">{arrow}</div>
+            <div className="fa-solid">{heroSvg}</div>
             <div className="svg">{rotateText}</div>
           </div>
         </div>

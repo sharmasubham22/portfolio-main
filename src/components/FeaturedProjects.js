@@ -5,115 +5,168 @@ import styled from "styled-components";
 export default function FeaturedProjects(props) {
   let { title, imageLink, techs, git, demo } = props;
 
+  const techItems = techs.join(" • ");
+
   const StyledDiv = styled.div`
     font-family: var(--general-font);
-    margin-bottom: 100px;
+    overflow: hidden;
 
-    p {
-      color: var(--content-color);
-      margin-bottom: 5%;
-      font-size: clamp(18px, 2vw, 30px);
+    .wrapper {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      background-color: var(--img-mask);
+      border: 0.3px solid var(--border-color);
+      transition: ease 0.3s;
+
+      .img2 {
+        position: relative;
+        mix-blend-mode: multiply;
+        filter: grayscale(100%) contrast(1);
+        width: 100%;
+        object-fit: contain;
+        transition: ease 0.7s;
+      }
+    }
+
+    &:hover {
+      .wrapper .img2 {
+        filter: grayscale(0);
+        mix-blend-mode: normal;
+        transform: scale(1.05);
+      }
+
+      .tech-skills {
+        opacity: 1;
+      }
+    }
+
+    .detail-section {
+      margin-top: 8px;
+      padding: 0px 3% 0% 3%;
+      color: var(--text-color);
+      position: absolute;
+      width: 100%;
+      bottom: 0px;
+      left: 0px;
+    }
+
+    .detail-section .project-link {
+      color: var(--text-color);
     }
 
     h3 {
-      color: var(--text-color);
       // text-transform: uppercase;
-      font-weight: 700;
       font-family: var(--heavy-font);
-      font-size: clamp(30px, 4vw, 47px);
+      font-size: clamp(30px, 2vw, 47px);
+      font-weight: 700;
     }
 
-    .img-div {
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      margin: 0 auto;
-      transition: 0.4s all ease-in-out;
+    .sub-heading {
+      font-size: clamp(18px, 2vw, 24px);
+      font-family: var(--heavy-font);
+      margin-bottom: 3%;
+      font-weight: 500;
     }
 
-    .img-div img {
-      width: 100%;
-      height: auto;
-      transition: 0.4s all ease-in-out;
-      shape-rendering: crispEdges;
+    .links {
+      display: flex;
+      align-content: end;
     }
 
-    .img-div:hover img {
-      transform: scale(1.03);
-    }
-    .img-div:hover {
-      border-radius: 20px;
+    .project-item {
+      position: relative;
     }
 
     .tech-skills {
-      color: var(--highlight-color);
-      text-transform: uppercase;
-      margin-bottom: 20px;
-    }
-
-    .tech-items {
-      font-size: clamp(12px, 2vw, 20px);
-      margin: 10px 0px 20px 20px;
-      border: 1px solid var(--highlight-color);
-      padding: 5px 10px;
-      border-radius: 20px;
-      font-weight:400;
+      opacity: 0.5;
+      font-size: clamp(16px, 2vw, 20px);
+      font-family: var(--heavy-font);
+      font-weight: 400;
     }
 
     .project-link {
       text-decoration: none;
-      color: var(--text-color);
       font-size: clamp(22px, 2vw, 28px);
       padding: 7px 10px;
-      border-radius: 50%;
       transition: 0.2s;
     }
 
     .project-link:hover {
-      background-color: var(--card-color);
       color: var(--highlight-color);
+    }
+
+    @media (max-width: 991px) {
+      padding: 0px;
+      background-color: transparent;
+      border: none;
+
+      .wrapper {
+        border-radius: 1vh;
+
+        &:hover {
+          border-radius: 1vh;
+
+          .img2 {
+            transform: scale(1);
+          }
+        }
+      }
+      .wrapper .img2 {
+        filter: none;
+        mix-blend-mode: normal;
+      }
+
+      .detail-section {
+        padding: 0;
+        position: relative;
+      }
     }
   `;
 
+  const navigate = (url) => {
+    window.open(url, "_blank");
+  };
+
   return (
-    <div>
+    <>
       <StyledDiv>
-        <Link to={demo} target="_blank">
-          <div className="img-div">
-            <img src={imageLink} alt="projectImg" />
+        <Link
+          to={demo}
+          className="project-item"
+          target="_blank"
+          style={{ textDecoration: "none" }}
+        >
+          <div className="wrapper">
+            <img src={imageLink} className="img2" alt="projectImg" />
+          </div>
+          <div className="detail-section d-flex justify-content-between align-items-center">
+            <div>
+              <h3>{title}</h3>
+              {/* <p className="sub-heading">{subHeading}</p> */}
+              <p className="tech-skills">
+                <i>{techItems}</i>
+              </p>
+            </div>
+            <div className="links">
+              <div
+                className="project-link mx-4"
+                onClick={() => navigate(git)}
+                target="_blank"
+              >
+                <i className="ph ph-github-logo"></i>
+              </div>
+              <div
+                className="project-link"
+                onClick={() => navigate(demo)}
+                target="_blank"
+              >
+                <i className="ph ph-arrow-square-out"></i>
+              </div>
+            </div>
           </div>
         </Link>
-
-        <div className="d-flex bd-highlight fs-2 mt-4 mb-2">
-          <div className="flex-grow-1 bd-highlight">
-            <h3>{title}</h3>
-          </div>
-          <div className="bd-highlight">
-            <Link className="project-link mx-4" to={git} target="_blank">
-              <i className="ph ph-github-logo"></i>
-            </Link>
-          </div>
-          <div className="bd-highlight">
-            <Link className="project-link" to={demo} target="_blank">
-              <i className="ph ph-arrow-square-out"></i>
-            </Link>
-          </div>
-        </div>
-        <div className="tech-skills">
-          {techs.map((techKey, techIndex) => {
-            return (
-              <h6
-                className="tech-items"
-                style={{ display: "inline", margin: "10px 10px 10px 0" }}
-                key={techIndex}
-              >
-                {techKey}
-              </h6>
-            );
-          })}
-        </div>
-        {/* <p>{description}</p> */}
       </StyledDiv>
-    </div>
+    </>
   );
 }

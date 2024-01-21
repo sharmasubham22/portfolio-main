@@ -1,23 +1,29 @@
-import image1 from '../images/218shots_so.png';
-import image2 from '../images/336shots_so.png';
+import image1 from '../images/2shots_so.png';
+import image2 from '../images/246shots_so.png';
 
 const featured = [
-    {
-    "title": "Stories - a notebook app",
-    "description": "A notebook app created with M.E.R.N. stack technologies. Users can perform actions to create a new account, create notes, save notes, tag, edit note, and delete note. All user data will be stored securely in MongoDB database. ",
-    "technologies": ["Node.js", "Express", "React", "MongoDB"],
-    "imgLink": image1,
-    "git": "https://github.com/sharmasubham22/notebook.git",
-    "demo": "https://mystories-app.netlify.app/"
+  {
+    title: "Stories",
+    subHeading: "A Notebook App",
+    description:
+      "A notebook app created with M.E.R.N. stack technologies. Users can perform actions to create a new account, create notes, save notes, tag, edit note, and delete note. All user data will be stored securely in MongoDB database. ",
+    technologies: ["Node.js", "Express", "React", "MongoDB"],
+    imgLink: image1,
+    git: "https://github.com/sharmasubham22/notebook.git",
+    demo: "https://mystories-app.netlify.app/",
+    color: "#a89ee2",
   },
   {
-    "title": "Personal Portfolio",
-    "description": "A modern designed portfolio which showcases my work experiences, my projects, skills I have and much more. It highlight my capabilities which fulfills the requirement of the current trends in the industry. ",
-    "technologies": ["React", "styled-components", "bootstrap"],
-    "imgLink": image2,
-    "git": "https://github.com/sharmasubham22/portfolio-main.git",
-    "demo": "/"
-  }
+    title: "Portfolio",
+    subHeading: "My Work Portfolio",
+    description:
+      "A modern designed portfolio which showcases my work experiences, my projects, skills I have and much more. It highlight my capabilities which fulfills the requirement of the current trends in the industry. ",
+    technologies: ["React", "Styled-Components", "Bootstrap"],
+    imgLink: image2,
+    git: "https://github.com/sharmasubham22/portfolio-main.git",
+    demo: "/",
+    color: "#8DADE2",
+  },
 ];
 
 const others = [

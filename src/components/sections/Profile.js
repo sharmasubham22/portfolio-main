@@ -8,6 +8,8 @@ import profile from '../../images/ss2.png'
 import Experience from "./Experience";
 import Skills from "./Skills";
 import Education from "./Education";
+import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
+import { iconData } from "../../data/icons";
 
 export default function Profile() {
   const StyledText = styled.section`
@@ -29,14 +31,48 @@ export default function Profile() {
     .profile-section {
       background: var(--card-color);
       padding: 30px;
-      border-radius: 10px;
+      border-radius: 2vh;
+      border: 0.3px solid var(--border-color);
     }
 
-    h2 {
+    h3 {
       font-family: var(--general-font);
       color: var(--text-color);
       font-size: clamp(22px, 2vw, 30px);
       font-weight: 400;
+    }
+
+    h2 {
+      font-family: var(--heavy-font);
+      color: var(--text-color);
+      font-size: clamp(16px, 2vw, 22px);
+      font-weight: 700;
+      overflow: hidden;
+    }
+
+    .fa-brands {
+      color: var(--text-color);
+      font-size: 20px;
+      margin-right: 20px;
+      transition: 0.2s;
+
+      &:hover {
+        color: var(--highlight-color);
+      }
+    }
+
+    .res-btn {
+      text-decoration: none;
+      color: var(--text-color);
+      padding: 5px 15px;
+      background: var(--img-mask);
+      border-radius: 50px;
+      font-family: var(--general-font);
+      transition:0.2s;
+
+      &:hover {
+        background: var(--border-color);
+      }
     }
 
     .fa-solid {
@@ -55,87 +91,134 @@ export default function Profile() {
       font-family: var(--general-font);
       font-size: clamp(15px, 2vw, 20px);
       color: var(--content-color);
-      font-weight: 200;
+      font-weight: 400;
     }
-
-    ul.skills-list {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(140px, 200px));
-      grid-gap: 0 10px;
-      padding: 0;
-      margin: 20px 0 0 0;
-      overflow: hidden;
-      list-style: none;
-
-      li {
-        position: relative;
-        margin-bottom: 10px;
-        // padding-left: 20px;
-        font-size: clamp(15px, 2vw, 18px);
-
-        &:before {
-          // content: "◇";
-          position: absolute;
-          left: 0;
-          font-size: clamp(15px, 2vw, 18px);
-          color: var(--highlight-color);
-          line-height: 22px;
-        }
-      }
-    }
-  `;
-
-  const StyledPic = styled.div`
-    position: sticky;
-    top: 146px;
 
     .wrapper {
+      display: block;
       position: relative;
       width: 100%;
-      height: 100%;
-      overflow: hidden;
-      background-color: var(--highlight-color);
-      margin: auto;
-      border-radius:10px;
-      transition: 0.3s all ease-in-out;
-      display: grid;
-      grid-template: 1fr / 1fr;
-      place-items: center;
-    }
-
-    .wrapper img {
-      width: 100%;
-
-      transition: 0.3s ease;
-      object-fit: cover;
-      transition: 0.3s all ease-in-out;
-    }
-
-    .wrapper > * {
-      grid-column: 1 / 1;
-      grid-row: 1 / 1;
-    }
-
-    @media (max-width: 766px) {
-      .wrapper {
-        width: 100%;     
+      border-radius: 2vh;
       }
-      .wrapper img {
-        height: 100%;
+
+      .img {
+        position: relative;
+        border-radius: 2vh;
+        width: 100%;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+        // filter: grayscale(100%) contrast(1);
+        border: 0.3px solid var(--border-color);
       }
     }
+
+    // .img {
+    //   width: 100%;
+    //   aspect-ratio: 1/1;
+    //   object-fit: cover;
+    //   border-radius: 10px;
+    //   border: 0.3px solid var(--border-color);
+    // }
   `;
 
-  // const skills = ["React.js", "Express.js", "Node.js", "JavaScript", "SQL"];
-
   return (
-    <div className="container" style={{ marginBottom: "5%" }}>
+    <div className="container-fluid" style={{ marginBottom: "5%" }}>
       <Reveal>
         <StyledText>
-          <div className="row row-cols-1 row-cols-md-1 row-cols-lg-2 mt-5">
-            <div className="col-xl-5 p-pic">
-              <StyledPic>
-                <div className="wrapper">
+          <div className="p-md-5 mt-5">
+            <ResponsiveMasonry
+              columnsCountBreakPoints={{ 350: 1, 810: 2, 1280: 3 }}
+            >
+              <Masonry gutter="1.5rem">
+                <div className="card-section">
+                  <div className="profile-section">
+                    <h3>Get to know me better!</h3>
+                    <p className="subtext">
+                      Hello! I am Subham, and I’m a Software Developer who likes
+                      to build frontend and backend applications. A master of
+                      science graduate from{" "}
+                      <Link
+                        className="link-design"
+                        to="https://www.dal.ca/"
+                        target="_blank"
+                        style={{ fontSize: "clamp(15px, 2vw, 20px)" }}
+                      >
+                        Dalhousie University
+                      </Link>
+                      <i className="ph ph-arrow-up-right"></i>, Halifax (CA).
+                    </p>
+                    <p className="subtext">
+                      I’ve had the privilege of working as an IT Developer at{" "}
+                      <Link
+                        className="link-design"
+                        to="https://www.canada.ca/en/revenue-agency.html"
+                        target="_blank"
+                        style={{ fontSize: "clamp(15px, 2vw, 20px)" }}
+                      >
+                        Canada Revenue Agency
+                      </Link>
+                      <i className="ph ph-arrow-up-right"></i> (CRA). And, I
+                      have experience working at{" "}
+                      <Link
+                        className="link-design"
+                        to="https://www.townscript.com/"
+                        target="_blank"
+                        style={{ fontSize: "clamp(15px, 2vw, 20px)" }}
+                      >
+                        Townscript
+                      </Link>
+                      <i className="ph ph-arrow-up-right"></i> (India) and a web
+                      design internship at
+                      <Link
+                        className="link-design"
+                        to="https://skillsanta.com/"
+                        target="_blank"
+                        style={{ fontSize: "clamp(15px, 2vw, 20px)" }}
+                      >
+                        SkillSanta
+                      </Link>
+                      <i className="ph ph-arrow-up-right"></i> (India). Eager
+                      for creating modern websites and have a strong
+                      understanding of UI/UX development.
+                    </p>
+                    <div className="d-flex justify-content-between mt-4">
+                      <div className="d-flex align-items-center">
+                        <Link
+                          to="https://www.instagram.com/subh.sharma22/"
+                          target="_blank"
+                        >
+                          <i className="fa-brands fa-instagram"></i>
+                        </Link>
+                        <Link
+                          to="https://www.facebook.com/subham.sharma.5209/"
+                          target="_blank"
+                        >
+                          <i className="fa-brands fa-facebook-f"></i>
+                        </Link>
+                        <Link
+                          to="https://twitter.com/subh_sharma22"
+                          target="_blank"
+                        >
+                          <i className="fa-brands fa-x-twitter"></i>
+                        </Link>
+                        <Link
+                          to="https://www.linkedin.com/in/subham-sharma-137985128/"
+                          target="_blank"
+                        >
+                          <i className="fa-brands fa-linkedin-in"></i>
+                        </Link>
+                      </div>
+                      <Link
+                        to="https://drive.google.com/uc?export=view&id=1PrCF0G_hTFWh86LmyxAdFL7D2fj58aip"
+                        target="_blank"
+                        className="res-btn"
+                      >
+                        <i className="ph ph-download-simple"></i> Resume
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+                <div className="card-section p-pic wrapper">
                   <img
                     className="img"
                     src={profile}
@@ -143,102 +226,49 @@ export default function Profile() {
                     alt="Headshot"
                   />
                 </div>
-              </StyledPic>
-            </div>
-            <div className="col-xl-7 profile-text">
-              <div className="profile-section about">
-                <h2>Get to know me better!</h2>
-                <p className="subtext">
-                  Hello! I am Subham, and I’m a Software Developer who likes to
-                  build frontend and backend applications. A master of science
-                  graduate from{" "}
-                  <Link
-                    className="link-design"
-                    to="https://www.dal.ca/"
-                    target="_blank"
-                    style={{ fontSize: "clamp(15px, 2vw, 20px)" }}
-                  >
-                    Dalhousie University
-                  </Link>
-                  , Halifax (CA).
-                </p>
-                <p className="subtext">
-                  I’ve had the privilege of working as an IT Developer at{" "}
-                  <Link
-                    className="link-design"
-                    to="https://www.canada.ca/en/revenue-agency.html"
-                    target="_blank"
-                    style={{ fontSize: "clamp(15px, 2vw, 20px)" }}
-                  >
-                    Canada Revenue Agency{" "}
-                  </Link>{" "}
-                  (CRA). And, I have experience working at{" "}
-                  <Link
-                    className="link-design"
-                    to="https://www.townscript.com/"
-                    target="_blank"
-                    style={{ fontSize: "clamp(15px, 2vw, 20px)" }}
-                  >
-                    Townscript
-                  </Link>{" "}
-                  (India) and a web design internship at{" "}
-                  <Link
-                    className="link-design"
-                    to="https://skillsanta.com/"
-                    target="_blank"
-                    style={{ fontSize: "clamp(15px, 2vw, 20px)" }}
-                  >
-                    SkillSanta
-                  </Link>{" "}
-                  (India). Eager for creating modern websites and have a strong
-                  understanding of UI/UX development.
-                </p>
-                {/* <p className="subtext">
-                  Here are some of the technologies I can work with.
-                </p>{" "}
-                <ul className="skills-list subtext">
-                  {skills &&
-                    skills.map((skill, i) => (
-                      <li key={i}>
-                        <span style={{ color: "var(--highlight-color)" }}>
-                          ▸{" "}
-                        </span>
-                        {skill}
-                      </li>
-                    ))}
-                </ul> */}
-              </div>
-              <div className="profile-section mt-4">
-                <h2>
-                  <i
-                    className="ph ph-graduation-cap"
-                    style={{ color: "var(--highlight-color)" }}
-                  ></i>{" "}
-                  Education
-                </h2>
-                <Education />
-              </div>
-              <div className="profile-section mt-4">
-                <h2>
-                  <i
-                    className="ph ph-globe"
-                    style={{ color: "var(--highlight-color)" }}
-                  ></i>{" "}
-                  Work Experience
-                </h2>
-                <Experience />
-              </div>
-              <div className="profile-section mt-4 ">
-                <h2>
-                  <i
-                    className="ph ph-stack-simple"
-                    style={{ color: "var(--highlight-color)" }}
-                  ></i>{" "}
-                  Skills and Toolkits
-                </h2>
-                <Skills />
-              </div>
-            </div>
+                <div className="card-section">
+                  <div className="profile-section">
+                    <h2>Skills</h2>
+                    <Skills />
+                  </div>
+                </div>
+                <div className="card-section profile-text">
+                  <div className="profile-section">
+                    <h2>
+                      <span>Education</span>
+                    </h2>
+                    <Education />
+                  </div>
+                </div>
+                <div className="card-section">
+                  <div className="profile-section">
+                    <h2>Work Experience</h2>
+                    <Experience />
+                  </div>
+                </div>
+                <div className="card-section">
+                  <div className="profile-section">
+                    <h2>Tool Stack</h2>
+                    <div className="d-flex flex-wrap  justify-content-center align-items-center">
+                      {iconData.map((element, index) => {
+                        return (
+                          <div
+                            key={index}
+                            className="m-1"
+                            style={{
+                              backgroundColor: "var(--background-color)",
+                              borderRadius: "10px",
+                            }}
+                          >
+                            {element.icon}
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+                </div>
+              </Masonry>
+            </ResponsiveMasonry>
           </div>
         </StyledText>
       </Reveal>

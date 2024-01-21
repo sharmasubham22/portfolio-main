@@ -6,11 +6,11 @@ export default function BioMarquee() {
   const StyledMarquee = styled.section`
     p {
       margin: 10px 30px;
-      color: var(--text-color);
+      color: var(--content-color);
       font-family: var(--heavy-font);
-      font-size: clamp(40px, 8vw, 102px);
+      font-size: clamp(30px, 8vw, 102px);
       text-transform: uppercase;
-      font-weight: 700;
+      font-weight: 400;
     }
 
     .dot {
@@ -24,13 +24,13 @@ export default function BioMarquee() {
     .marquee {
       border-top: 1px solid var(--border-color);
       border-bottom: 1px solid var(--border-color);
-      padding: 5px 0px;
+      // padding: 5px 0px;
     }
   `;
   return (
     <div className="mt-3">
       <StyledMarquee>
-        <Marquee className="marquee" autoFill={true} speed={130}>
+        <Marquee className="marquee" autoFill={true} speed={130} gradient={true} gradientColor='var(--background-color)'>
           <p>Software Developer</p>
           <span className="dot"></span>
           <p>Front-End</p>
