@@ -552,6 +552,12 @@ opacity:0;
 }
 }
 
+@media (max-width:600px){
+  .elem:hover{
+    padding: 0 2vw;
+  }
+}
+
 .elem:hover .overlay{
   top:0;
 }
