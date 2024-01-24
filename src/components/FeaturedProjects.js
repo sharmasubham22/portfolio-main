@@ -10,30 +10,51 @@ export default function FeaturedProjects(props) {
   const StyledDiv = styled.div`
     font-family: var(--general-font);
     overflow: hidden;
+    border: 0.3px solid var(--border-color);
+    border-radius: 2vh;
 
     .wrapper {
       position: relative;
       width: 100%;
       overflow: hidden;
       background-color: var(--img-mask);
-      border: 0.3px solid var(--border-color);
-      transition: ease 0.3s;
+      transition: 0.7s ease;
 
-      .img2 {
+      img {
+        width: 100%;
+        height: auto;
+        display: block;
+        transition: opacity 0.5s ease;
+      }
+
+      .original-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: 0.7s ease;
+      }
+      .filter-img {
         position: relative;
         mix-blend-mode: multiply;
         filter: grayscale(100%) contrast(1);
         width: 100%;
         object-fit: contain;
-        transition: ease 0.7s;
+        transition: 0.7 s ease;
       }
     }
 
     &:hover {
-      .wrapper .img2 {
-        filter: grayscale(0);
-        mix-blend-mode: normal;
+      .wrapper {
         transform: scale(1.05);
+      }
+
+      .wrapper .filter-img {
+        opacity: 0;
+      }
+
+      .wrapper .original-img {
+        opacity: 1;
       }
 
       .tech-skills {
@@ -44,7 +65,7 @@ export default function FeaturedProjects(props) {
     .detail-section {
       margin-top: 8px;
       padding: 0px 3% 0% 3%;
-      color: var(--text-color);
+      color: white;
       position: absolute;
       width: 100%;
       bottom: 0px;
@@ -52,7 +73,7 @@ export default function FeaturedProjects(props) {
     }
 
     .detail-section .project-link {
-      color: var(--text-color);
+      color: white;
     }
 
     h3 {
@@ -100,19 +121,30 @@ export default function FeaturedProjects(props) {
       padding: 0px;
       background-color: transparent;
       border: none;
+      border-radius: 0;
+
+      &:hover {
+        .wrapper {
+          transform: none;
+        }
+
+        .wrapper .filter-img {
+          opacity: 1;
+        }
+
+        .wrapper .original-img {
+          opacity: 1;
+        }
+      }
+
+      .tech-skills{
+        opacity:1;
+      }
 
       .wrapper {
         border-radius: 1vh;
-
-        &:hover {
-          border-radius: 1vh;
-
-          .img2 {
-            transform: scale(1);
-          }
-        }
       }
-      .wrapper .img2 {
+      .wrapper .filter-img {
         filter: none;
         mix-blend-mode: normal;
       }
@@ -138,7 +170,8 @@ export default function FeaturedProjects(props) {
           style={{ textDecoration: "none" }}
         >
           <div className="wrapper">
-            <img src={imageLink} className="img2" alt="projectImg" />
+            <img src={imageLink} className="filter-img" alt="projectImg" />
+            <img src={imageLink} className="original-img" alt="projectImg" />
           </div>
           <div className="detail-section d-flex justify-content-between align-items-center">
             <div>
