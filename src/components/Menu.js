@@ -11,116 +11,36 @@ export default function Menu(props) {
       navRef.current.classList.toggle("responsive_nav");
     };
 
-    // const handleCloseClick = ()=>{
-    //   refClose.current.click();
-    // }
+    const handleCloseClick = ()=>{
+      refClose.current.click();
+    }
 
-    // let location = useLocation();
 
   const StyledBtn = styled.a`
     padding: 10px 20px;
     border: 1px solid var(--border-color);
     border-radius: 50px;
-    font-weight: 200;
-    color: var(--text-color);
+    font-weight: 500;
+    background-color: var(--text-color);
+    color: var(--background-color);
     position: relative;
     overflow: hidden;
     font-size: clamp(24px, 3vw, 28px);
     font-family: var(--general-font);
-    text-decoration:none;
-
-    &:after {
-      content: "";
-      position: absolute;
-      height: 100%;
-      width: 100%;
-      background-color: var(--text-color2);
-      left: 0;
-      bottom: -100%;
-      border-radius: 50%;
-      transition: all ease 0.4s;
-    }
-
-    &:hover::after {
-      bottom: 0;
-      border-radius: 0%;
-    }
-
-    span {
-      text-decoration: none;
-      color: var(--text-color);
-      z-index: 2;
-      position: relative;
-    }
-
-    &:hover span {
-      color: var(--background-color);
-    }
+    text-decoration: none;
   `;
   return (
     <>
       <div
-        className="container-fluid sticky-top menu"
-        // style={{
-        //   borderBottom: "1px solid",
-        //   borderColor: "var(--border-color)",
-        // }}
+        className="container-fluid sticky-top menu-bar"
       >
         <div className="d-flex bd-highlight">
-          <div className="p-4 flex-fill bd-highlight menu-section">
-            <Link className="logo fs-2" to="/">
+          <div className="p-3 flex-fill bd-highlight menu-section">
+            <Link className="logo" to="/">
               {logoSvg}
             </Link>
           </div>
           <div className="menu-nav" ref={navRef}>
-            {/* <Link
-              className={`mx-4 nav-link ${
-                location.pathname === "/" ? "active" : ""
-              }`}
-              to="/"
-              onClick={handleCloseClick}
-            >
-              <span style={{ color: "var(--highlight-color)"}}>01. </span>Work
-            </Link>
-            <Link
-              className={`mx-4 nav-link ${
-                location.pathname === "/about" ? "active" : ""
-              }`}
-              type="button"
-              to="/about"
-              onClick={handleCloseClick}
-            >
-              <span style={{ color: "var(--highlight-color)" }}>02. </span>About
-            </Link> */}
-
-            <div>
-              <Link
-                to="https://www.linkedin.com/in/subham-sharma-137985128/"
-                target="_blank"
-                className="link-design mx-4 mt-3 fs-2"
-              >
-                <i className="ph ph-linkedin-logo fs-4 brand-icons"></i>
-                <span className="mx-2">LinkedIn</span>
-              </Link>
-              <br />
-              <Link
-                to="https://github.com/sharmasubham22"
-                target="_blank"
-                className="link-design mx-4 mt-4 fs-2"
-              >
-                <i className="ph ph-github-logo fs-4 brand-icons"></i>
-                <span className="mx-2">Github</span>
-              </Link>
-            </div>
-            <StyledBtn
-              className="res-btn my-2"
-              href="https://drive.google.com/uc?export=view&id=1PrCF0G_hTFWh86LmyxAdFL7D2fj58aip"
-              target="_blank"
-            >
-              <span>
-                Resume <i className="ph ph-download-simple"></i>
-              </span>
-            </StyledBtn>
             <div className="form-check form-switch">
               <label
                 htmlFor="flexSwitchCheckDefault"
@@ -144,6 +64,62 @@ export default function Menu(props) {
                 onClick={props.toggle}
                 style={{ display: "none" }}
               />
+            </div>
+            <a
+              className={`mx-4 menu-link`}
+              href="/#home"
+              onClick={handleCloseClick}
+            >
+              <span style={{ color: "var(--highlight-color)" }}>01. </span>Home
+            </a>
+            <a
+              className={`mx-4 menu-link`}
+              href="/#work"
+              onClick={handleCloseClick}
+            >
+              <span style={{ color: "var(--highlight-color)" }}>02. </span>Work
+            </a>
+            <a
+              className={`mx-4 menu-link`}
+              href="/#about"
+              onClick={handleCloseClick}
+            >
+              <span style={{ color: "var(--highlight-color)" }}>03. </span>About
+            </a>
+            <a
+              className={`mx-4 menu-link`}
+              href="/#contact"
+              onClick={handleCloseClick}
+            >
+              <span style={{ color: "var(--highlight-color)" }}>04. </span>
+              Contact
+            </a>
+
+            <StyledBtn
+              className="res-btn my-2"
+              href="https://drive.google.com/uc?export=view&id=1PrCF0G_hTFWh86LmyxAdFL7D2fj58aip"
+              target="_blank"
+            >
+              <span>
+                <i className="ph-bold ph-download-simple"></i> Resume
+              </span>
+            </StyledBtn>
+            <div className="nav-social ">
+              <Link
+                to="https://www.linkedin.com/in/subham-sharma-137985128/"
+                target="_blank"
+                className="social-item fs-1"
+              >
+                <i className="fa-brands fa-linkedin-in"></i>
+              </Link>
+
+              <Link
+                to="https://github.com/sharmasubham22"
+                target="_blank"
+                className="social-item fs-1"
+              >
+                <i className="fa-brands fa-github"></i>
+              </Link>
             </div>
           </div>
 

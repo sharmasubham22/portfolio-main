@@ -1,5 +1,5 @@
 import image1 from '../images/516shots_so.png';
-import image2 from '../images/89shots_so.png';
+import image2 from '../images/920shots_so.png';
 
 const featured = [
   {

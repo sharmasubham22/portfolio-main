@@ -11,7 +11,7 @@ export default function OtherProjects(props) {
     font-family: var(--general-font);
 
     .techs {
-      color: var(--content-color);
+      color: var(--text-color);
       font-size: clamp(18px, 2vw, 24px);
       font-family: var(--heavy-font);
       margin-bottom: 3%;
@@ -20,12 +20,13 @@ export default function OtherProjects(props) {
     }
     .project-link {
       text-decoration: none;
+      font-size: clamp(18px, 2vw, 22px);
       color: var(--text-color);
       transition: 0.3s;
     }
 
     .project-link:hover {
-      color: var(--highlight-color);
+      transform: scale(1.2);
     }
   `;
 
@@ -35,7 +36,7 @@ export default function OtherProjects(props) {
 
   return (
     <>
-      <Link to={git} target="_blank" style={{textDecoration:"none"}}>
+      <Link to={git} target="_blank" style={{ textDecoration: "none" }}>
         <StyledCard className="elem">
           <div className="overlay"></div>
           <div className="w-100">
@@ -48,13 +49,13 @@ export default function OtherProjects(props) {
                   <i>{techItem}</i>
                 </p>
               </div>
-              <div className="d-flex align-items-center fs-2">
+              <div className="d-flex align-items-center">
                 <div
                   className="project-link"
                   onClick={() => navigate(git)}
                   target="_blank"
                 >
-                  <i className="ph ph-github-logo"></i>
+                  <i class="fa-solid fa-code"></i>
                 </div>
 
                 {!demo ? (
@@ -68,7 +69,7 @@ export default function OtherProjects(props) {
                       target="_blank"
                       style={{ marginLeft: "35px" }}
                     >
-                      <i className="ph ph-arrow-square-out"></i>
+                      <i class="fa-solid fa-arrow-up-right-from-square"></i>
                     </div>
                   </div>
                 )}

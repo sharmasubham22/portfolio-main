@@ -5,19 +5,18 @@ import { motion } from "framer-motion";
 import { logoSvg } from "../images/assets";
 
 export default function Nav(props) {
-  // let location = useLocation();
 
   const StyledBtn = styled.div`
     .res-btn {
       ${({ theme }) => theme.mixins.resumeBtn};
-      text-decoration:none;
-      cursor:pointer;
+      text-decoration: none;
+      cursor: pointer;
     }
   `;
 
   return (
     <motion.div
-      style={{ position: "sticky", top: "0", zIndex: 1000 }}
+      style={{ position: "fixed", top: "0", width: "100%", zIndex: 3 }}
       variants={{
         hidden: { opacity: 0, y: -50 },
         visible: { opacity: 1, y: 0 },
@@ -39,56 +38,44 @@ export default function Nav(props) {
               {logoSvg}
             </Link>
           </div>
-          {/* <div
+          <div
             className="p-4 bd-highlight nav-section d-flex justify-content-center"
             style={{
               textTransform: "uppercase",
             }}
           >
-            <Link
-              className={`mx-4 nav-link ${
-                location.pathname === "/" ? "active" : ""
-              }`}
-              to="/"
-            >
+            {/* <a className={`nav-link`} href="/#home">
+              <span style={{ color: "var(--highlight-color)" }}>01. </span>Home
+            </a> */}
+            <a className={`nav-link`} href="/#work">
               <span style={{ color: "var(--highlight-color)" }}>01. </span>Work
-            </Link>
-            <Link
-              className={`mx-4 nav-link ${
-                location.pathname === "/about" ? "active" : ""
-              }`}
-              type="button"
-              to="/about"
-            >
+            </a>
+            <a className={`nav-link`} href="/#about">
               <span style={{ color: "var(--highlight-color)" }}>02. </span>About
-            </Link>
-          </div> */}
-          <div className="bd-highlight nav-section d-flex align-items-center mx-4">
-            <Link
-              to="https://www.linkedin.com/in/subham-sharma-137985128/"
-              target="_blank"
-              className="link-design mx-4"
-              style={{
-                textDecoration: "none",
-                fontSize: "clamp(15px, 2vw, 20px)",
-              }}
-            >
-              LinkedIn
-            </Link>
+            </a>
+            <a className={`nav-link`} href="/#contact">
+              <span style={{ color: "var(--highlight-color)" }}>03. </span>
+              Contact
+            </a>
+          </div>
+          <div className=" p-4 bd-highlight nav-section">
+            <div className="nav-social">
+              <Link
+                to="https://www.linkedin.com/in/subham-sharma-137985128/"
+                target="_blank"
+                className="social-item"
+              >
+                <i className="fa-brands fa-linkedin-in"></i>
+              </Link>
 
-            <Link
-              to="https://github.com/sharmasubham22"
-              target="_blank"
-              className="link-design"
-              style={{
-                textDecoration: "none",
-                fontSize: "clamp(15px, 2vw, 20px)",
-              }}
-            >
-            
-                Github
-          
-            </Link>
+              <Link
+                to="https://github.com/sharmasubham22"
+                target="_blank"
+                className="social-item"
+              >
+                <i className="fa-brands fa-github"></i>
+              </Link>
+            </div>
           </div>
           <div className="d-flex p-4 bd-highlight">
             <StyledBtn>
@@ -99,7 +86,7 @@ export default function Nav(props) {
                 target="_blank"
               >
                 <span>
-                  <i className="ph ph-download-simple"></i> Resume
+                  <i className="ph-bold ph-download-simple"></i> Resume
                 </span>
               </Link>
             </StyledBtn>

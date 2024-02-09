@@ -1,11 +1,9 @@
 import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
-import Footer from './components/Footer';
 import GlobalStyle from './Styles/GlobalStyle';
 import theme from './Styles/theme';
 import { ThemeProvider } from 'styled-components';
 import Nav from './components/Nav';
 import Menu from './components/Menu';
-import ScrollTop from './components/ScrollTop';
 import Error from "./components/Error";
 import { useState } from "react";
 import Loader from "./components/Loader";
@@ -34,14 +32,13 @@ function App() {
         <Router>
           <Loader/>
           {/* <Cursor/> */}
-          <ScrollTop />
           <Nav toggle={toggleMode} mode={mode} />
           <Menu toggle={toggleMode} mode={mode} />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/*" element={<Error />} />
           </Routes>
-          <Footer />
+         
         </Router>
       </ThemeProvider>
     </>
