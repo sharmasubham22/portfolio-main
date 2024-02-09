@@ -64,7 +64,7 @@ export default function FeaturedProjects(props) {
 
     .detail-section {
       margin-top: 8px;
-      padding: 0px 3% 0% 3%;
+      padding: 30px 30px 10px 30px;
       color: white;
       position: absolute;
       width: 100%;
@@ -76,10 +76,10 @@ export default function FeaturedProjects(props) {
       color: white;
     }
 
-    h3 {
+    h1 {
       // text-transform: uppercase;
       font-family: var(--heavy-font);
-      font-size: clamp(30px, 2vw, 47px);
+      font-size: clamp(30px, 4vw, 47px);
       font-weight: 700;
     }
 
@@ -100,21 +100,20 @@ export default function FeaturedProjects(props) {
     }
 
     .tech-skills {
-      opacity: 0.5;
-      font-size: clamp(16px, 2vw, 20px);
+      font-size: clamp(18px, 2vw, 24px);
       font-family: var(--heavy-font);
       font-weight: 400;
     }
 
     .project-link {
       text-decoration: none;
-      font-size: clamp(22px, 2vw, 28px);
+      font-size: clamp(18px, 2vw, 22px);
       padding: 7px 10px;
-      transition: 0.2s;
+      transition: 0.3s;
     }
 
     .project-link:hover {
-      color: var(--highlight-color);
+      transform:scale(1.2);
     }
 
     @media (max-width: 991px) {
@@ -137,10 +136,6 @@ export default function FeaturedProjects(props) {
         }
       }
 
-      .tech-skills{
-        opacity:1;
-      }
-
       .wrapper {
         border-radius: 1vh;
       }
@@ -152,6 +147,11 @@ export default function FeaturedProjects(props) {
       .detail-section {
         padding: 0;
         position: relative;
+        color: var(--text-color);
+      }
+
+      .detail-section .project-link {
+        color: var(--text-color);
       }
     }
   `;
@@ -175,7 +175,7 @@ export default function FeaturedProjects(props) {
           </div>
           <div className="detail-section d-flex justify-content-between align-items-center">
             <div>
-              <h3>{title}</h3>
+              <h1>{title}</h1>
               {/* <p className="sub-heading">{subHeading}</p> */}
               <p className="tech-skills">
                 <i>{techItems}</i>
@@ -187,14 +187,14 @@ export default function FeaturedProjects(props) {
                 onClick={() => navigate(git)}
                 target="_blank"
               >
-                <i className="ph ph-github-logo"></i>
+                <i class="fa-solid fa-code"></i>
               </div>
               <div
                 className="project-link"
                 onClick={() => navigate(demo)}
                 target="_blank"
               >
-                <i className="ph ph-arrow-square-out"></i>
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
               </div>
             </div>
           </div>

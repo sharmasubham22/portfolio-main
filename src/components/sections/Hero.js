@@ -1,81 +1,118 @@
 import React from "react";
 import styled from "styled-components";
-// import { motion, useAnimation, useInView } from "framer-motion";
-import { heroSvg, rotateText } from "../../images/assets";
-import Reveal from "../Motion";
+// import { motion } from "framer-motion";
+import { handSvg, heroSvg, rotateText } from "../../images/assets";
+import BioMarquee from "../BioMarquee";
 
 export default function Hero() {
   const StyledHero = styled.div`
-    .name-text {
-      font-size: clamp(80px, 10vw, 200px);
-      font-family: var(--heavy-font);
-      font-weight: 900;
-      text-transform: uppercase;
-      color: var(--text-color);
-      line-height: 0.4;
-    }
+    margin-top: 20px;
 
-    @media (max-width: 656px) {
-      .name-text{
-        line-height: 0.9;
+    .item-1 {
+      padding: 15% 5%;
+      border: 0.3px solid var(--border-color);
+      border-radius: 2vh;
+      // background: var(--card-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .name-text {
+      font-size: clamp(4.5rem, 9vw, 10rem);
+      font-family: var(--heavy-font);
+      font-weight: 700;
+      text-transform: uppercase;
+      text-align: center;
+      // letter-spacing:2.5px;
+      color: transparent;
+      -webkit-text-stroke: 2px var(--text-color);
+      line-height: 1;
+      z-index: 2;
+
+      span {
+        font-weight: 800;
+        color: var(--text-color);
+        -webkit-text-stroke: 0px var(--highlight-color);
       }
     }
 
+    .ball {
+      position: absolute;
+      z-index: 1;
+      display: block;
+      width: clamp(15rem, 30vw, 25rem);
+      height: clamp(15rem, 30vw, 25rem);
+      border-radius: 50%;
+      background-image: linear-gradient(var(--card-color), transparent);
+    }
+
+    // .ball {
+    //   position: absolute;
+    //   // z-index: 1;
+    //   display: block;
+    //   width: clamp(200px, 60vw, 500px);
+    //   height: clamp(200px, 40vw, 400px);
+    //   // border-radius: 50%;
+    //   border-top-left-radius: 50%;
+    //   border-bottom-left-radius: 50%;
+
+    //   filter: blur(20px);
+    //   right: -10%;
+    //   bottom: -35%;
+    //   // background-image: linear-gradient(var(--highlight-color), transparent);
+    //   background: var(--highlight-color);
+    // }
+
+    .hero-content {
+      border: 0.3px solid var(--border-color);
+      border-radius: 2vh;
+      padding: 5% 5% 1% 5%;
+    }
+
     .hero-text {
-      background: linear-gradient(
-        to bottom,
-        var(--content-color) 0%,
-        transparent 90%,
-        transparent 100%
-      );
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      line-height: 1;
-      user-select: none;
-      font-size: clamp(60px, 10vw, 150px);
+      color: var(--content-color);
+      font-family: var(--heavy-font);
+      font-size: clamp(1.4rem, 2.3vw, 2.8rem);
+      // line-height:1;
     }
 
-    .hero-text2 {
-      background: linear-gradient(
-        to top,
-        var(--content-color) 0%,
-        transparent 90%,
-        transparent 100%
-      );
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      line-height: 1;
-      user-select: none;
-      font-size: clamp(60px, 10vw, 150px);
+    .light-section {
+      font-family: var(--heavy-font);
+      // text-align: center;
+      font-size: clamp(20px, 4vw, 46px);
+      color: var(--text-color);
+      font-weight: 700;
+      text-transform: uppercase;
     }
 
-    p {
-      font-family: var(--general-font);
-      text-align: center;
-      font-size: clamp(18px, 2vw, 30px);
-      color: var(--text-color2);
-      font-weight: 400;
-    }
-  `;
-
-  const Scroll = styled.div`
-    .container {
-      width: 100px;
-      height: 100px;
-      position: relative;
+    .item-2 {
+      border-radius: 2vh;
+      border: 0.3px solid var(--border-color);
+      padding: 10% 5% 5% 10%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      // background:var(--highlight-color);
     }
 
     .scroll {
-      text-align: end;
-      text-decoration: none;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       color: var(--text-color);
       // position: absolute;
       // background: var(--card-color);
       // bottom: 30px;
       // right: 35px;
       user-select: none;
-      font-weight: 200;
+      font-weight: 700;
       transition: all ease 0.4s;
+      border: 0.3px solid var(--border-color);
+      border-radius: 2vh;
+      background: var(--text-color2);
     }
 
     .circle {
@@ -92,75 +129,78 @@ export default function Hero() {
     }
 
     .svg {
-      width: 140px;
-      height: 140px;
-      opacity: 0;
+      width: 240px;
+      height: 240px;
+      opacity: 1;
       transition: all ease 0.4s;
     }
 
-    .scroll:hover {
-      .fa-solid {
-        transform: scale(0.7);
-      }
-
-      .svg {
-        opacity: 1;
-      }
-    }
-
-    @media (max-width: 684px) {
-      // display: none;
-      .fa-solid {
-        transform: scale(1);
-        margin-top:50px;
-      }
-
-      .svg {
+    @media (max-width: 767px) {
+      .scroll {
         display: none;
       }
     }
 
-    // @media (min-width: 684px) and (max-width: 1078px) {
-    //   .scroll {
-    //     bottom: 35px;
-    //     right: 30px;
-    //   }
-    // }
+    @media (min-width: 991px) {
+      .first-row {
+        padding: 0 2vw;
+      }
+      .hero-content,
+      .second-row {
+        height: 50%;
+      }
+    }
   `;
-
-  const one = (
-    <p className="name-text text-center hero-text">Software</p>
-  );
-  const two = <p className="name-text text-center">Hey, I'm Subham</p>;
-  const three = (
-    <p className="name-text text-center hero-text2">Developer</p>
-  );
-  const four = (
-    <p>
-      {/* I am a <span style={{fontWeight:"500"}}>Software Developer</span> and I love to  */}
-      I Design, Develop & Deploy!
-    </p>
-  );
-
-  const items = [one, two, three, four];
 
   return (
     <div className="container-fluid">
-      <Reveal>
-        <StyledHero>
-          {items.map((item, index) => (
-            <div key={index}>{item}</div>
-          ))}
-        </StyledHero>
-      </Reveal>
-      <Scroll>
-        <div className="scroll">
-          <div className="circle">
-            <div className="fa-solid">{heroSvg}</div>
-            <div className="svg">{rotateText}</div>
+      <StyledHero>
+        <div className="row row-cols-1 row-cols-lg-2 g-4 first-row">
+          <div className="col h-100">
+            <div className="item-1">
+              <p className="name-text mt-5">
+                Hey, I am <br />
+                <span>Subham</span>
+              </p>
+              <div class="ball"></div>
+            </div>
+            <div>
+              <BioMarquee />
+            </div>
+          </div>
+          <div className="col">
+            <div className="row row-cols-1 row-cols-md-2 g-4 second-row">
+              <div className="col">
+                <div className="item-2">
+                  <p className="light-section">
+                    Design
+                    <br /> Develop
+                    <br /> Deploy
+                  </p>
+                </div>
+              </div>
+              <div className="col">
+                <div className="scroll">
+                  <div className="circle">
+                    <div className="fa-solid">{heroSvg}</div>
+                    <div className="svg">{rotateText}</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="mt-md-4 hero-content d-flex align-items-start flex-column">
+              <div className="mb-auto">{handSvg}</div>
+              <p className="hero-text ">
+                I design and develop immersive
+                <br />
+                <span style={{ color: "var(--text-color)" }}>
+                  Digital Experiences.
+                </span>
+              </p>
+            </div>
           </div>
         </div>
-      </Scroll>
+      </StyledHero>
     </div>
   );
 }

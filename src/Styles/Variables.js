@@ -5,26 +5,27 @@ const Variables = css`
     --background-color: #0e0e0e;
     --border-color: rgb(255, 255, 255, 0.1);
     --card-color: #181818;
-    --overlay: #262626;
+    --overlay: #ff1a6a;
     --img-mask: #262626;
     --highlight-color: #ff1a6a;
-    --text-color: #edf6f9;
-    --text-color2: #ccc5b9;
-    --content-color: #636363;
+    --social-btn: rgba(255, 26, 106, 0.3);
+    --text-color: #fbfbfb;
+    --content-color: rgba(251, 251, 251, 0.5);
     --opacity: 0.5;
     --general-font: Bai Jamjuree;
     --heavy-font: cabinet grotesk, Sans-serif;
+    --hero-font: New Title, serif;
   }
 
   [data-theme="dark"] {
     --background-color: #e1e1da;
     --border-color: rgb(5, 10, 24, 0.2);
     --card-color: #d5d3c8;
-    --overlay: #ff9831;
+    --overlay: #ff9832;
     --img-mask: #c0beb0;
     --highlight-color: #fe330a;
+    --social-btn: rgba(254, 51, 10, 0.3);
     --text-color: #2a2b25;
-    --text-color2: #0e0e0e;
     --opacity: 0.5;
     --content-color: #676e72;
   }

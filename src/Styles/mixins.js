@@ -18,7 +18,7 @@ const mixins = {
       position: absolute;
       height: 100%;
       width: 100%;
-      background-color: var(--text-color2);
+      background-color: var(--text-color);
       left: 0;
       bottom: -100%;
       border-radius: 50%;
@@ -50,7 +50,7 @@ const mixins = {
     padding: 7px 20px;
     border: 1px solid var(--border-color);
     border-radius: 50px;
-    font-weight: 200;
+    font-weight: 400;
     color: var(--text-color);
     position: relative;
     overflow: hidden;
@@ -62,7 +62,7 @@ const mixins = {
       position: absolute;
       height: 100%;
       width: 100%;
-      background-color: var(--text-color2);
+      background-color: var(--text-color);
       left: 0;
       bottom: -100%;
       border-radius: 50%;
