@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export default function OtherProjects(props) {
-  let { title, techs, git, demo } = props;
+  let { title, techs, git} = props;
 
   const techItem = techs.join(" • ");
 
@@ -28,11 +28,15 @@ export default function OtherProjects(props) {
     .project-link:hover {
       transform: scale(1.2);
     }
+
+    h2 .ph{
+      color: var(--text-color);
+    }
   `;
 
-  const navigate = (url) => {
-   window.open(url, "_blank");
-  };
+  // const navigate = (url) => {
+  //  window.open(url, "_blank");
+  // };
 
   return (
     <>
@@ -42,15 +46,13 @@ export default function OtherProjects(props) {
           <div className="w-100">
             <div className="d-flex justify-content-between">
               <div style={{ padding: "1.5vw 0" }}>
-                <h2 className="title">
-                  {title} <i className="ph ph-arrow-up-right"></i>
-                </h2>
+                <h2 className="title">{title}</h2>
                 <p className="techs">
                   <i>{techItem}</i>
                 </p>
               </div>
               <div className="d-flex align-items-center">
-                <div
+                {/* <div
                   className="project-link"
                   onClick={() => navigate(git)}
                   target="_blank"
@@ -72,7 +74,10 @@ export default function OtherProjects(props) {
                       <i class="fa-solid fa-arrow-up-right-from-square"></i>
                     </div>
                   </div>
-                )}
+                )} */}
+                <h2>
+                  <i className="ph ph-arrow-right"></i>
+                </h2>
               </div>
             </div>
           </div>

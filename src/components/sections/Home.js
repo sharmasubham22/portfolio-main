@@ -10,11 +10,27 @@ export default function Home() {
   return (
     <>
       <main>
-        <section id="home"
-          className="d-flex section justify-content-center align-items-center" >
+        <section
+          id="home"
+          className="d-flex section justify-content-center align-items-center"
+        >
           <Hero />
+          <div className="hero-gradient"></div>
         </section>
-        <section id="work" className="section" style={{ marginTop: "100px" }}>
+        <section id="work" className="section" style={{ marginTop: "100px"}}>
+          <p className="text-center section-head">
+            My{headSvg}
+            <i style={{ fontWeight: "700" }}>Work</i>
+          </p>
+          <header style={{marginBottom:"7%"}}>
+            <div>
+              <p>Projects</p>
+              <span className="spacer"></span>
+              <p>Web Applications</p>
+              <span className="spacer"></span>
+              <p>Experimentals</p>
+            </div>
+          </header>
           <Projects />
         </section>
         <section id="about" className="section" style={{ marginTop: "100px" }}>
@@ -22,7 +38,7 @@ export default function Home() {
             About{headSvg}
             <i style={{ fontWeight: "700" }}>Me</i>
           </p>
-          <header className="mb-4">
+          <header style={{ marginBottom: "7%" }}>
             <div>
               <p>Detail-Oriented</p>
               <span className="spacer"></span>
@@ -42,7 +58,7 @@ export default function Home() {
             Contact{headSvg}
             <i style={{ fontWeight: "700" }}>Me</i>
           </p>
-          <header className="mb-5">
+          <header style={{ marginBottom: "7%" }}>
             <div>
               <p>Just say Hi</p>
               <span className="spacer"></span>

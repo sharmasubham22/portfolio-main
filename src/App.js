@@ -30,7 +30,7 @@ function App() {
       <ThemeProvider theme={theme}>
         <GlobalStyle />
         <Router>
-          <Loader/>
+          <Loader />
           {/* <Cursor/> */}
           <Nav toggle={toggleMode} mode={mode} />
           <Menu toggle={toggleMode} mode={mode} />
@@ -38,7 +38,6 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/*" element={<Error />} />
           </Routes>
-         
         </Router>
       </ThemeProvider>
     </>

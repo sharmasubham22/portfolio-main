@@ -1,5 +1,5 @@
-import image1 from '../images/516shots_so.png';
-import image2 from '../images/920shots_so.png';
+import image1 from '../images/300shots_so.png';
+import image2 from '../images/149shots_so.png';
 
 const featured = [
   {
@@ -11,19 +11,30 @@ const featured = [
     imgLink: image1,
     git: "https://github.com/sharmasubham22/notebook.git",
     demo: "https://mystories-app.netlify.app/",
-    color: "#a89ee2",
+    color: "#1982C4",
   },
   {
     title: "Portfolio",
-    subHeading: "My Work Portfolio",
+    subHeading: "Personal Portfolio",
     description:
       "A modern designed portfolio which showcases my work experiences, my projects, skills I have and much more. It highlight my capabilities which fulfills the requirement of the current trends in the industry. ",
     technologies: ["React", "Styled-Components", "Bootstrap"],
     imgLink: image2,
     git: "https://github.com/sharmasubham22/portfolio-main.git",
     demo: "/",
-    color: "#8DADE2",
+    color: "#2A9640",
   },
+  // {
+  //   title: "Portfolio",
+  //   subHeading: "My Work Portfolio",
+  //   description:
+  //     "A modern designed portfolio which showcases my work experiences, my projects, skills I have and much more. It highlight my capabilities which fulfills the requirement of the current trends in the industry. ",
+  //   technologies: ["React", "Styled-Components", "Bootstrap"],
+  //   imgLink: image2,
+  //   git: "https://github.com/sharmasubham22/portfolio-main.git",
+  //   demo: "/",
+  //   color: "#3d64a6",
+  // },
 ];
 
 const others = [
