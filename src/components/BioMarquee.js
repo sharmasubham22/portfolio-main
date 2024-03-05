@@ -7,7 +7,7 @@ export default function BioMarquee() {
     p {
       margin: 10px 30px;
       color: var(--text-color);
-      font-family: var(--heavy-font);
+      font-family: var(--general-font);
       font-size: clamp(30px, 5vw, 42px);
       text-transform: uppercase;
       font-weight: 700;
@@ -22,16 +22,19 @@ export default function BioMarquee() {
     }
 
     .marquee {
-      border: 0.3px solid var(--border-color);
-      border-radius: 2vh;
+      // border: 0.3px solid var(--border-color);
+      // border-radius: var(--border-radius);
+      // background: var(--card-color);
       // width:fit-content;
       // padding: 5px 0px;
     }
   `;
   return (
-    <div className="mt-4">
+    <div className="mt-2">
       <StyledMarquee>
-        <Marquee className="marquee" autoFill={true} gradient={true} gradientColor='var(--background-color)'>
+        <Marquee className="marquee" autoFill={true} 
+        gradient={true} gradientColor='var(--background-color)'
+        >
           <p>Software Developer</p>
           <span className="dot"></span>
           <p>Front-End</p>

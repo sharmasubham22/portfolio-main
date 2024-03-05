@@ -1,12 +1,12 @@
 import React from "react";
 import styled from "styled-components";
-import { footerSvg } from "../images/assets";
+import { logoSvg } from "../images/assets";
 
 export default function Footer() {
   const Footer = styled.div`
     font-family: var(--heavy-font);
     border-top: 1px solid var(--border-color);
-    padding: 2vw 2vw 0 2vw;
+    padding: 2vw 0;
     width: 100%;
 
     .item1 {
@@ -48,6 +48,25 @@ export default function Footer() {
       z-index: 1;
     }
 
+    .footer-nav {
+      font-size: var(--content-font);
+      font-weight: 400;
+      color: var(--text-color);
+      text-decoration: none;
+      font-family: var(--general-font);
+
+      .ph {
+        opacity: 0;
+        transition: 0.3s ease;
+      }
+
+      &:hover {
+        .ph {
+          opacity: 1;
+        }
+      }
+    }
+
     @media (max-width: 870px) {
       .item1 {
         display: inline-block;
@@ -67,67 +86,70 @@ export default function Footer() {
   return (
     <>
       <Footer>
-        <div className="d-flex justify-content-between">
-          <div className="mt-4">{footerSvg}</div>
-          <a href="/#home" className="mt-4 top-arrow">
-            <i class="ph-bold ph-arrow-up"></i>
-          </a>
-        </div>
-        <div className="d-lg-flex justify-content-lg-between">
-          <div>
-            <div className="mt-4">
-              <a href="/#work" className="link-design">
-                Work
-              </a>
-              <br />
-              <a href="/#about" className="link-design">
-                About
-              </a>
-              <br />
-              <a href="/#work" className="link-design">
-                Contact
-              </a>
+        <div className="container">
+          <div className="d-md-flex justify-content-md-between">
+            <div className="mb-4">{logoSvg}</div>
+            <div>
+              <div>
+                <p
+                  style={{
+                    textTransform: "uppercase",
+                    color: "var(--content-color)",
+                    fontFamily: "var(--general-font)",
+                    fontSize: "12px",
+                  }}
+                >
+                  Main
+                </p>
+                <a href="/#work" className="footer-nav">
+                  Work <i className="ph ph-arrow-up-right"></i>
+                </a>
+                <br />
+                <a href="/#about" className="footer-nav">
+                  About <i className="ph ph-arrow-up-right"></i>
+                </a>
+                <br />
+                <a href="/#contact" className="footer-nav">
+                  Contact <i className="ph ph-arrow-up-right"></i>
+                </a>
+              </div>
             </div>
-            <p
-              className="mt-4 text-start"
-              style={{
-                color: "var(--text-color)",
-                fontSize: "clamp(15px, 2vw, 20px)",
-                fontWeight: "200",
-              }}
-            >
-              Designed and Developed with{" "}
-              <i
-                className="fa-solid fa-heart"
-                style={{ color: "var(--highlight-color)" }}
-              ></i>
-            </p>
           </div>
-          <div className="item1 mt-4">
-            <p
-              
-              style={{
-                color: "var(--text-color)",
-                fontSize: "clamp(15px, 5vw, 60px)",
-                fontWeight: "400",
-                lineHeight: "1",
-                textTransform: "uppercase",
-              }}
-            >
-              &#169;2024
-              <span
-                style={{
-                  color: "var(--highlight-color)",
-                }}
-              >
-                {" "}
-                •{" "}
-              </span>
-              <span style={{ fontWeight: "700" }}>
-                <i>Subham Sharma</i>
-              </span>
-            </p>
-          </div>
+      
+            <div className="item1 mt-4">
+              <div>
+                <p
+                  style={{
+                    color: "var(--text-color)",
+                    fontSize: "var(--content-font)",
+                    fontWeight: "400",
+                  }}
+                >
+                  &#169; 2024 Subham Sharma. All Rights Reserved.
+                  {/* <span
+                  style={{
+                    color: "var(--highlight-color)",
+                  }}
+                >
+                  {" "}
+                  •{" "}
+                </span> */}
+                </p>
+                <p
+                  style={{
+                    color: "var(--content-color)",
+                    fontSize: "clamp(15px, 2vw, 16px)",
+                  }}
+                >
+                  Created with{" "}
+                  <i
+                    className="fa-solid fa-heart"
+                    style={{ color: "var(--highlight-color)" }}
+                  ></i> by yours truly.
+                </p>
+              </div>
+            </div>
+         
         </div>
       </Footer>
     </>

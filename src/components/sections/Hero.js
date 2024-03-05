@@ -1,41 +1,36 @@
 import React from "react";
 import styled from "styled-components";
 // import { motion } from "framer-motion";
-import { handSvg, heroSvg, rotateText } from "../../images/assets";
-import BioMarquee from "../BioMarquee";
+import { heroArrow, heroSvg, rotateText } from "../../images/assets";
+// import BioMarquee from "../BioMarquee";
 
 export default function Hero() {
   const StyledHero = styled.div`
     margin-top: 20px;
 
-    .item-1 {
-      padding: 15% 5%;
-      border: 0.3px solid var(--border-color);
-      border-radius: 2vh;
-      // background: var(--card-color);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      overflow: hidden;
-    }
     .name-text {
-      font-size: clamp(4.5rem, 9vw, 10rem);
+      font-size: clamp(4rem, 10.5vw, 15rem);
       font-family: var(--heavy-font);
-      font-weight: 700;
+      font-weight: 800;
       text-transform: uppercase;
-      text-align: center;
-      // letter-spacing:2.5px;
-      color: transparent;
-      -webkit-text-stroke: 2px var(--text-color);
+      color: var(--text-color);
       line-height: 1;
       z-index: 2;
+      // border: 1px solid var(--border-color);
+      // border-bottom: none;
+      // border-radius: var(--border-radius) var(--border-radius) 0 0;
+
 
       span {
-        font-weight: 800;
-        color: var(--text-color);
-        -webkit-text-stroke: 0px var(--highlight-color);
+        color: transparent;
+        -webkit-text-stroke: 3px var(--text-color);
       }
+    }
+
+    .svgLogo {
+      position: absolute;
+      z-index: 1;
+      right: 0%;
     }
 
     .ball {
@@ -45,56 +40,14 @@ export default function Hero() {
       width: clamp(15rem, 30vw, 25rem);
       height: clamp(15rem, 30vw, 25rem);
       border-radius: 50%;
-      background-image: linear-gradient(var(--card-color), transparent);
-    }
-
-    // .ball {
-    //   position: absolute;
-    //   // z-index: 1;
-    //   display: block;
-    //   width: clamp(200px, 60vw, 500px);
-    //   height: clamp(200px, 40vw, 400px);
-    //   // border-radius: 50%;
-    //   border-top-left-radius: 50%;
-    //   border-bottom-left-radius: 50%;
-
-    //   filter: blur(20px);
-    //   right: -10%;
-    //   bottom: -35%;
-    //   // background-image: linear-gradient(var(--highlight-color), transparent);
-    //   background: var(--highlight-color);
-    // }
-
-    .hero-content {
-      border: 0.3px solid var(--border-color);
-      border-radius: 2vh;
-      padding: 5% 5% 1% 5%;
+      background-image: linear-gradient(var(--background-color), transparent);
+      // filter:blur(20px)
     }
 
     .hero-text {
       color: var(--content-color);
-      font-family: var(--heavy-font);
-      font-size: clamp(1.4rem, 2.3vw, 2.8rem);
-      // line-height:1;
-    }
-
-    .light-section {
-      font-family: var(--heavy-font);
-      // text-align: center;
-      font-size: clamp(20px, 4vw, 46px);
-      color: var(--text-color);
-      font-weight: 700;
-      text-transform: uppercase;
-    }
-
-    .item-2 {
-      border-radius: 2vh;
-      border: 0.3px solid var(--border-color);
-      padding: 10% 5% 5% 10%;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      // background:var(--highlight-color);
+      font-family: var(--general-font);
+      font-size: clamp(1.3rem, 2.7vw, 3.4rem);
     }
 
     .scroll {
@@ -103,16 +56,9 @@ export default function Hero() {
       align-items: center;
       justify-content: center;
       color: var(--text-color);
-      // position: absolute;
-      // background: var(--card-color);
-      // bottom: 30px;
-      // right: 35px;
       user-select: none;
       font-weight: 700;
       transition: all ease 0.4s;
-      border: 0.3px solid var(--border-color);
-      border-radius: 2vh;
-      background: var(--text-color2);
     }
 
     .circle {
@@ -129,25 +75,57 @@ export default function Hero() {
     }
 
     .svg {
-      width: 240px;
-      height: 240px;
+      width: clamp(120px, 20vw, 260px);
+      height: clamp(120px, 20vw, 260px);
       opacity: 1;
       transition: all ease 0.4s;
     }
 
-    @media (max-width: 767px) {
-      .scroll {
-        display: none;
+    .role-text {
+      color: var(--content-color);
+      font-family: var(--general-font);
+      font-size: var(--content-font);
+      font-weight: 400;
+    }
+
+    .location-text {
+      color: var(--content-color);
+      font-family: var(--general-font);
+      font-size: var(--content-font);
+      font-weight: 400;
+
+      span {
+        color: var(--text-color);
+        font-weight: 500;
       }
     }
 
     @media (min-width: 991px) {
-      .first-row {
-        padding: 0 2vw;
-      }
-      .hero-content,
-      .second-row {
-        height: 50%;
+      padding: 0 2vw;
+    }
+
+    .bottomright-col {
+      border: 1px solid var(--border-color);
+      border-left: none;
+      background: var(--project-bg);
+    }
+
+    .bottomleft-col {
+      border: 1px solid var(--border-color);
+      background: var(--card-color);
+    }
+
+    .card-shiny {
+      position: absolute;
+      width: auto;
+      height: 100%;
+      // border-radius: 3.5vh;
+      z-index: 2;
+    }
+
+    @media (max-width: 767px) {
+      .bottomright-col {
+        display: none;
       }
     }
   `;
@@ -155,31 +133,59 @@ export default function Hero() {
   return (
     <div className="container-fluid">
       <StyledHero>
-        <div className="row row-cols-1 row-cols-lg-2 g-4 first-row">
-          <div className="col h-100">
-            <div className="item-1">
-              <p className="name-text mt-5">
-                Hey, I am <br />
-                <span>Subham</span>
-              </p>
-              <div class="ball"></div>
-            </div>
-            <div>
-              <BioMarquee />
+        <div className="row">
+          <div className="d-flex justify-content-center" >
+            <p className="name-text  p-5">
+              Hey, I am <br />
+              Subham
+            </p>
+            {/* <img className="card-shiny" src="https://www.iqbalzia.id/images/bri/shiny_animations_fast_delay.svg" alt="shiny"/> */}
+          </div>
+        </div>
+        <div className="row row-cols-1 row-cols-xl-2">
+          <div
+            className="col"
+            style={{ borderTop: "1px solid var(--border-color)" }}
+          >
+            <div className="d-flex align-items-center justify-content-xl-center p-4 h-100">
+              <div>
+                <p className="hero-text">
+                  I design and develop immersive{" "}
+                  <span
+                    style={{ color: "var(--text-color)", fontWeight: "700" }}
+                  >
+                    Digital Experiences {heroArrow}
+                  </span>
+                </p>
+                <p className="location-text">
+                  <span>
+                    <i class="ph-fill ph-map-pin"></i> Location <br />
+                  </span>{" "}
+                  Halifax, Nova Scotia
+                </p>
+              </div>
             </div>
           </div>
           <div className="col">
-            <div className="row row-cols-1 row-cols-md-2 g-4 second-row">
-              <div className="col">
-                <div className="item-2">
-                  <p className="light-section">
-                    Design
-                    <br /> Develop
-                    <br /> Deploy
-                  </p>
+            <div className="row row-cols-1 row-cols-md-2 g-4">
+              <div className="col bottomleft-col">
+                <div className="d-flex align-items-center h-100 p-4">
+                  <div>
+                    <h3 className="role-text">I am a</h3>
+                    <h3
+                      style={{
+                        color: "var(--text-color)",
+                        fontWeight: "700",
+                        fontSize: "clamp(1.3rem, 2.7vw, 3.4rem)",
+                      }}
+                    >
+                      Software Developer.
+                    </h3>
+                    {/* <h3 className="based-text">Based in Halifax, CAN</h3> */}
+                  </div>
                 </div>
               </div>
-              <div className="col">
+              <div className="col bottomright-col">
                 <div className="scroll">
                   <div className="circle">
                     <div className="fa-solid">{heroSvg}</div>
@@ -187,16 +193,6 @@ export default function Hero() {
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="mt-md-4 hero-content d-flex align-items-start flex-column">
-              <div className="mb-auto">{handSvg}</div>
-              <p className="hero-text ">
-                I design and develop immersive
-                <br />
-                <span style={{ color: "var(--text-color)" }}>
-                  Digital Experiences.
-                </span>
-              </p>
             </div>
           </div>
         </div>

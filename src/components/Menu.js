@@ -17,16 +17,7 @@ export default function Menu(props) {
 
 
   const StyledBtn = styled.a`
-    padding: 10px 20px;
-    border: 1px solid var(--border-color);
-    border-radius: 50px;
-    font-weight: 500;
-    background-color: var(--text-color);
-    color: var(--background-color);
-    position: relative;
-    overflow: hidden;
-    font-size: clamp(24px, 3vw, 28px);
-    font-family: var(--general-font);
+    ${({ theme }) => theme.mixins.resumeBtn};
     text-decoration: none;
   `;
   return (
@@ -108,7 +99,7 @@ export default function Menu(props) {
               <Link
                 to="https://www.linkedin.com/in/subham-sharma-137985128/"
                 target="_blank"
-                className="social-item fs-1"
+                className="social-item "
               >
                 <i className="fa-brands fa-linkedin-in"></i>
               </Link>
@@ -116,7 +107,7 @@ export default function Menu(props) {
               <Link
                 to="https://github.com/sharmasubham22"
                 target="_blank"
-                className="social-item fs-1"
+                className="social-item "
               >
                 <i className="fa-brands fa-github"></i>
               </Link>
@@ -132,7 +123,7 @@ export default function Menu(props) {
               onClick={showNavbar}
             >
               <div className="bar"></div>
-              <div className="bar"></div>
+              {/* <div className="bar"></div> */}
               <div className="bar"></div>
             </label>
           </div>

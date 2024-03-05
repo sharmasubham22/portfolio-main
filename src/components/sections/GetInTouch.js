@@ -27,14 +27,14 @@ export default function GetInTouch() {
 
     .form-input {
       width: 100%;
-      padding: 10px;
+      padding: 10px 10px 10px 0;
       background-color: transparent;
       outline: 0;
       border: 0;
-      border: 1px solid var(--border-color);
+      border-bottom: 1px solid var(--border-color);
       font-family: var(--heavy-font);
       color: var(--text-color);
-      font-size: clamp(15px, 2vw, 20px);
+      font-size: var(--content-font);
       font-weight: 400;
     }
 
@@ -48,13 +48,17 @@ export default function GetInTouch() {
       border-image: linear-gradient(
         to right,
         var(--highlight-color),
-        var(--highlight-color)
+        transparent
       );
       border-image-slice: 1;
     }
 
     .form-input::placeholder {
       color: var(--content-color);
+    }
+
+    .form-input:focus::placeholder {
+      color: var(--highlight-color);
     }
 
     .form-div {
@@ -107,7 +111,6 @@ export default function GetInTouch() {
 
   const SubmitButton = styled.button`
     ${({ theme }) => theme.mixins.button};
-
   `;
 
   return (
@@ -119,7 +122,7 @@ export default function GetInTouch() {
             style={{
               fontFamily: "var(--general-font)",
               color: "var(--content-color)",
-              fontSize: "clamp(15px, 2vw, 20px)",
+              fontSize: "var(--content-font)",
               fontWeight: "400",
             }}
           >
@@ -140,27 +143,20 @@ export default function GetInTouch() {
             </Link>
           </div>
         </div>
-        <div className="d-flex justify-content-center mt-4">
-          <Link to="https://www.instagram.com/subh.sharma22/" target="_blank">
-            <i className="fa-brands fa-instagram contact-social"></i>
-          </Link>
+        <div className="d-flex justify-content-center mt-4 nav-social">
           <Link
-            to="https://www.facebook.com/subham.sharma.5209/"
-            target="_blank"
-          >
-            <i className="fa-brands fa-facebook-f contact-social"></i>
-          </Link>
-          <Link to="https://twitter.com/subh_sharma22" target="_blank">
-            <i className="fa-brands fa-x-twitter contact-social"></i>
-          </Link>
-          <Link
+            className="social-item"
             to="https://www.linkedin.com/in/subham-sharma-137985128/"
             target="_blank"
           >
-            <i className="fa-brands fa-linkedin-in contact-social"></i>
+            <i className="fa-brands fa-linkedin-in "></i>
           </Link>
-          <Link to="https://github.com/sharmasubham22" target="_blank">
-            <i className="fa-brands fa-github contact-social"></i>
+          <Link
+            to="https://github.com/sharmasubham22"
+            className="social-item"
+            target="_blank"
+          >
+            <i className="fa-brands fa-github "></i>
           </Link>
         </div>
         <StyledDiv className="form-box text-white d-flex justify-content-center my-5">
@@ -204,7 +200,7 @@ export default function GetInTouch() {
             <div className="mt-3 d-flex justify-content-center ">
               <SubmitButton to="/" className="submit my-2">
                 <span>
-                  Send Message <i className="fa-solid fa-arrow-right"></i>
+                  Send Message <i class="fa-regular fa-paper-plane"></i>
                 </span>
               </SubmitButton>
             </div>

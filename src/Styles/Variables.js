@@ -2,30 +2,34 @@ import { css } from "styled-components";
 
 const Variables = css`
   :root {
-    --background-color: #0e0e0e;
-    --border-color: rgb(255, 255, 255, 0.1);
-    --card-color: #181818;
-    --overlay: #ff1a6a;
-    --img-mask: #262626;
-    --highlight-color: #ff1a6a;
-    --social-btn: rgba(255, 26, 106, 0.3);
-    --text-color: #fbfbfb;
+    --background-color: #0f0f0f;
+    --border-color: rgb(200, 200, 200, 0.1);
+    --card-color: #1a1a1a;
+    --img-mask: #364156;
+    --project-bg: #212121;
+    --highlight-color: #affc41;
+    --social-btn: rgba(175, 252, 65, 0.3);
+    --text-color: #fdfdfd;
     --content-color: rgba(251, 251, 251, 0.5);
+    --nav-bg: rgba(150, 150, 150, 0.1);
     --opacity: 0.5;
-    --general-font: Bai Jamjuree;
+    --general-font: Inter;
     --heavy-font: cabinet grotesk, Sans-serif;
-    --hero-font: New Title, serif;
+    --hero-font: northden;
+    --border-radius: 2.5vh;
+    --content-font: clamp(15px, 2vw, 18px);
   }
 
   [data-theme="dark"] {
     --background-color: #e1e1da;
     --border-color: rgb(5, 10, 24, 0.2);
     --card-color: #d5d3c8;
-    --overlay: #ff9832;
-    --img-mask: #c0beb0;
-    --highlight-color: #fe330a;
-    --social-btn: rgba(254, 51, 10, 0.3);
+    --img-mask: #f7f4df;
+    --project-bg: #e0dfd5;
+    --highlight-color: #f9603a;
+    --social-btn: rgba(249, 96, 58, 0.3);
     --text-color: #2a2b25;
+    --nav-bg: rgba(100, 100, 100, 0.1);
     --opacity: 0.5;
     --content-color: #676e72;
   }
