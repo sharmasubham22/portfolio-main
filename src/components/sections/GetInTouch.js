@@ -32,6 +32,13 @@ export default function GetInTouch() {
       outline: 0;
       border: 0;
       border-bottom: 1px solid var(--border-color);
+      border-width: 1px;
+      border-image: linear-gradient(
+        to right,
+        var(--border-color),
+        transparent
+      );
+      border-image-slice: 1;
       font-family: var(--heavy-font);
       color: var(--text-color);
       font-size: var(--content-font);
@@ -170,7 +177,7 @@ export default function GetInTouch() {
                   style={{ float: "left" }}
                   name="fullName"
                   id="name"
-                  placeholder="Full Name (required)"
+                  placeholder="Full Name *"
                   required
                 />
               </div>
@@ -182,7 +189,7 @@ export default function GetInTouch() {
                   style={{ float: "right" }}
                   name="email"
                   id="email"
-                  placeholder="Email Address (required)"
+                  placeholder="Email Address *"
                   required
                 />
               </div>
@@ -193,7 +200,7 @@ export default function GetInTouch() {
               id="message"
               name="message"
               rows="3"
-              placeholder="Your Message (required)"
+              placeholder="Your Message *"
               required
             ></textarea>
 
