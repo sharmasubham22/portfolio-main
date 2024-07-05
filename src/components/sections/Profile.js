@@ -198,6 +198,13 @@ const toolsIcons = iconData.map((element, index) => {
                     <div className="d-flex justify-content-between mt-4">
                       <div className="d-flex align-items-center profile-social">
                         <Link
+                          to="https://www.linkedin.com/in/subham-sharma-137985128/"
+                          className="social-item2"
+                          target="_blank"
+                        >
+                          <i className="fa-brands fa-linkedin-in"></i>
+                        </Link>
+                        <Link
                           to="https://www.instagram.com/subh.sharma22/"
                           className="social-item2"
                           target="_blank"
@@ -217,13 +224,6 @@ const toolsIcons = iconData.map((element, index) => {
                           target="_blank"
                         >
                           <i className="fa-brands fa-x-twitter"></i>
-                        </Link>
-                        <Link
-                          to="https://www.linkedin.com/in/subham-sharma-137985128/"
-                          className="social-item2"
-                          target="_blank"
-                        >
-                          <i className="fa-brands fa-linkedin-in"></i>
                         </Link>
                       </div>
                       <div className="d-flex align-items-center">
@@ -320,7 +320,6 @@ const toolsIcons = iconData.map((element, index) => {
 
                     <div className="d-flex flex-wrap justify-content-center align-items-center">
                       {toolsIcons}
-                   
                     </div>
                   </div>
                 </div>
