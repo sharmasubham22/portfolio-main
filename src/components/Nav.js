@@ -37,7 +37,7 @@ export default function Nav(props) {
         <div className="row">
           <div className=" col">
             <Link className="logo fs-3" to="/">
-              {logoSvg}
+              {logoSvg} 
             </Link>
           </div>
           <div className=" d-flex justify-content-center col">
