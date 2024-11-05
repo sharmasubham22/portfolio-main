@@ -22,12 +22,12 @@ export default function Projects() {
       }
 
       .featured {
-        border: 0.3px solid var(--border-color);
+        // border: 0.3px solid var(--border-color);
         border-radius: 3.3vh;
         padding: clamp(5px, 2vw, 10px);
         background: var(--card-color);
-        box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
-          rgba(0, 0, 0, 0.22) 0px 15px 12px;
+        // box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+        //   rgba(0, 0, 0, 0.22) 0px 15px 12px;
       }
 
       .left-item {

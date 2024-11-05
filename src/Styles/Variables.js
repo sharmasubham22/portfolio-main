@@ -11,7 +11,7 @@ const Variables = css`
     --social-btn: rgba(175, 252, 65, 0.3);
     --text-color: #fdfdfd;
     --content-color: rgba(251, 251, 251, 0.5);
-    --nav-bg: rgba(150, 150, 150, 0.1);
+    --nav-bg: rgba(100, 100, 100, 0.1);
     --opacity: 0.5;
     --general-font: Inter;
     --heavy-font: cabinet grotesk, Sans-serif;
@@ -21,15 +21,15 @@ const Variables = css`
   }
 
   [data-theme="dark"] {
-    --background-color: #e1e1da;
+    --background-color: #ffffff;
     --border-color: rgb(5, 10, 24, 0.2);
-    --card-color: #d5d3c8;
+    --card-color: #f6f6f6;
     --img-mask: #f7f4df;
-    --project-bg: #e0dfd5;
-    --highlight-color: #f9603a;
-    --social-btn: rgba(249, 96, 58, 0.3);
+    --project-bg: #e5e5e5;
+    --highlight-color: #85bc22;
+    --social-btn: rgba(133, 188, 34, 0.3);
     --text-color: #2a2b25;
-    --nav-bg: rgba(100, 100, 100, 0.1);
+    --nav-bg: rgba(200, 200, 200, 0.1);
     --opacity: 0.5;
     --content-color: #676e72;
   }

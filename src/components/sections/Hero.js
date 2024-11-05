@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 // import { motion } from "framer-motion";
-import { heroArrow, heroSvg, rotateText } from "../../images/assets";
+import {  heroSvg, rotateText } from "../../images/assets";
 // import BioMarquee from "../BioMarquee";
 
 export default function Hero() {
@@ -154,7 +154,7 @@ export default function Hero() {
                   <span
                     style={{ color: "var(--text-color)", fontWeight: "700" }}
                   >
-                    Digital Experiences {heroArrow}
+                    Digital Experiences {}
                   </span>
                 </p>
                 <p className="location-text">
@@ -179,7 +179,7 @@ export default function Hero() {
                         fontSize: "clamp(1.3rem, 2.7vw, 3.4rem)",
                       }}
                     >
-                      Software Developer.
+                      Software Developer
                     </h3>
                     {/* <h3 className="based-text">Based in Halifax, CAN</h3> */}
                   </div>

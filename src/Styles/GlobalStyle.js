@@ -166,13 +166,14 @@ opacity:0;
 
 .logo{
   text-decoration:none;
-  color: var(--text-color);
-  font-family:var(--general-font);
+  color: var(--highlight-color);
+  font-family:var(--heavy-font);
   user-select: none;
-  font-weight:200;
+  font-weight:900;
+  text-transform: uppercase;
 
   &:hover{
-    color: var(--text-color);
+    color: var(--highlight-color);
   }
 }
 
@@ -184,7 +185,7 @@ opacity:0;
   backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
   // width:fit-content;
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px;
+  // box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px;
 }
 
 .section{
