@@ -39,7 +39,7 @@ export default function Loader() {
             fontSize: "clamp(16px, 2vw, 24px)",
           }}
         >
-          Portfolio | 2024
+          Portfolio | 2025
         </p>
       </div>
     </div>
