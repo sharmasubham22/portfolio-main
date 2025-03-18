@@ -125,7 +125,7 @@ export default function Footer() {
                     fontWeight: "400",
                   }}
                 >
-                  &#169; 2024 Subham Sharma. All Rights Reserved.
+                  &#169; 2025 Subham Sharma. All Rights Reserved.
                   {/* <span
                   style={{
                     color: "var(--highlight-color)",
