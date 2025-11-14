@@ -65,7 +65,7 @@ export default function Nav(props) {
               <Link
                 type="button"
                 className="res-btn"
-                to="https://drive.google.com/uc?export=view&id=1s64EdfftiGdnrcT3kqtcGohFId32iJuZ/"
+                to="https://drive.google.com/uc?export=view&id=1s64EdfftiGdnrcT3kqtcGohFId32iJuZ"
                 target="_blank"
               >
                 <span>
