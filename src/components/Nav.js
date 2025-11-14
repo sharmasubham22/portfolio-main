@@ -37,7 +37,7 @@ export default function Nav(props) {
         <div className="row">
           <div className=" col">
             <Link className="logo fs-3" to="/">
-              {logoSvg} 
+              {logoSvg}
             </Link>
           </div>
           <div className=" d-flex justify-content-center col">
@@ -65,7 +65,7 @@ export default function Nav(props) {
               <Link
                 type="button"
                 className="res-btn"
-                to="https://drive.google.com/uc?export=view&id=1PrCF0G_hTFWh86LmyxAdFL7D2fj58aip"
+                to="https://drive.google.com/uc?export=view&id=1s64EdfftiGdnrcT3kqtcGohFId32iJuZ/"
                 target="_blank"
               >
                 <span>
