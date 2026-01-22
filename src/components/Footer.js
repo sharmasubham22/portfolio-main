@@ -3,6 +3,8 @@ import styled from "styled-components";
 import { logoSvg } from "../images/assets";
 
 export default function Footer() {
+  const today = new Date();
+  const year = today.getFullYear();
   const Footer = styled.div`
     font-family: var(--heavy-font);
     border-top: 1px solid var(--border-color);
@@ -125,7 +127,7 @@ export default function Footer() {
                     fontWeight: "400",
                   }}
                 >
-                  &#169; 2025 Subham Sharma. All Rights Reserved.
+                  &#169; {year} Subham Sharma. All Rights Reserved.
                   {/* <span
                   style={{
                     color: "var(--highlight-color)",
