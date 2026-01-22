@@ -6,7 +6,8 @@ export default function Loader() {
 
   const count = useMotionValue(0);
   const rounded = useTransform(count, Math.round);
-
+  const today = new Date();
+  const year = today.getFullYear();
   useEffect(() => {
     const animation = animate(count, 100, { duration: 3.5 });
 
@@ -39,7 +40,7 @@ export default function Loader() {
             fontSize: "clamp(16px, 2vw, 24px)",
           }}
         >
-          Portfolio | 2025
+          Portfolio | {year}
         </p>
       </div>
     </div>
