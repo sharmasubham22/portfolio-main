@@ -161,7 +161,7 @@ export default function Hero() {
                   <span>
                     <i class="ph-fill ph-map-pin"></i> Location <br />
                   </span>{" "}
-                  Halifax, Nova Scotia
+                  Bengaluru, India
                 </p>
               </div>
             </div>
