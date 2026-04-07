@@ -135,6 +135,9 @@ const toolsIcons = iconData.map((element, index) => {
                               background: "var(--project-bg)",
                             borderRadius: "20px",
                             border: "1px solid var(--border-color)",
+                            width: "56px",
+                            height: "56px",
+                            padding: "10px",
                           }}
                           data-tip={element.name}
                         >
@@ -195,8 +198,10 @@ const toolsIcons = iconData.map((element, index) => {
                       </Link>{" "}
                       (India).
                     </p>
+                    <p className="subtext">When I'm not coding, I love to travel with friends and family, watch movies or tv shows, cook a new dish. 
+                       </p>
                     <div className="d-flex justify-content-between mt-4">
-                      <div className="d-flex align-items-center profile-social">
+                      {/* <div className="d-flex align-items-center profile-social">
                         <Link
                           to="https://www.linkedin.com/in/subham-sharma-137985128/"
                           className="social-item2"
@@ -225,7 +230,7 @@ const toolsIcons = iconData.map((element, index) => {
                         >
                           <i className="fa-brands fa-x-twitter"></i>
                         </Link>
-                      </div>
+                      </div> */}
                       <div className="d-flex align-items-center">
                         <Link
                           to="https://drive.google.com/uc?export=view&id=1s64EdfftiGdnrcT3kqtcGohFId32iJuZ"

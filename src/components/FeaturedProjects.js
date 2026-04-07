@@ -19,14 +19,11 @@ export default function FeaturedProjects(props) {
       border: 0.3px solid var(--border-color);
       border-radius: var(--border-radius);
       // overflow: hidden;
-      height: clamp(270px, 60vw, 750px);
-      background: radial-gradient(circle, var(--project-bg), var(--project-bg));
+      height: auto;
+      background: var(--project-bg);
       transition: 0.5s ease;
 
       .screen-img {
-        position: absolute;
-        bottom: -25%;
-        right: 0;
         width: 100%;
         transition: 0.3s ease;
       }
@@ -120,7 +117,7 @@ export default function FeaturedProjects(props) {
 
       // .detail-section,
       .project-img {
-        background: radial-gradient(circle, ${color}, var(--project-bg));
+        background: ${color};
       }
     }
 
@@ -185,7 +182,7 @@ export default function FeaturedProjects(props) {
       }
 
       .project-img {
-        background: radial-gradient(circle, ${color}, var(--project-bg));
+        background: ${color});
       }
 
       .wrapper .filter-img {
@@ -248,7 +245,7 @@ export default function FeaturedProjects(props) {
             </div> */}
             <div className="project-img">
               <div className="d-flex justify-content-between">
-                <div style={{ padding: "25px" }}>
+                <div style={{ padding: "25px", paddingBottom: "0" }}>
                   <h1>{title}</h1>
                   <p className="tech-skills">
                     <i>{techItems}</i>

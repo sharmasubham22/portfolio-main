@@ -1,29 +1,40 @@
-import image1 from '../images/300shots_so.png';
-import image2 from '../images/149shots_so.png';
+import project1 from '../images/stackxchange.png';
+import project2 from '../images/stories.png';
 
 const featured = [
+  {
+    title: "StackXchange",
+    subHeading: "Resource sharing platform",
+    description:
+      "A notebook app created with M.E.R.N. stack technologies. Users can perform actions to create a new account, create notes, save notes, tag, edit note, and delete note. All user data will be stored securely in MongoDB database. ",
+    technologies: ["React", "Firebase"],
+    imgLink: project1,
+    git: "https://github.com/sharmasubham22/resource_sharing.git",
+    demo: "https://stackxchange.netlify.app/",
+    color: "#ff85b5",
+  },
   {
     title: "Stories",
     subHeading: "A Notebook App",
     description:
       "A notebook app created with M.E.R.N. stack technologies. Users can perform actions to create a new account, create notes, save notes, tag, edit note, and delete note. All user data will be stored securely in MongoDB database. ",
     technologies: ["Node.js", "Express", "React", "MongoDB"],
-    imgLink: image1,
+    imgLink: project2,
     git: "https://github.com/sharmasubham22/notebook.git",
     demo: "https://mystories-app.netlify.app/",
-    color: "#1982C4",
+    color: "#82cfff",
   },
-  {
-    title: "Portfolio",
-    subHeading: "Personal Portfolio",
-    description:
-      "A modern designed portfolio which showcases my work experiences, my projects, skills I have and much more. It highlight my capabilities which fulfills the requirement of the current trends in the industry. ",
-    technologies: ["React", "Styled-Components", "Bootstrap"],
-    imgLink: image2,
-    git: "https://github.com/sharmasubham22/portfolio-main.git",
-    demo: "/",
-    color: "#2A9640",
-  },
+  // {
+  //   title: "Portfolio",
+  //   subHeading: "Personal Portfolio",
+  //   description:
+  //     "A modern designed portfolio which showcases my work experiences, my projects, skills I have and much more. It highlight my capabilities which fulfills the requirement of the current trends in the industry. ",
+  //   technologies: ["React", "Styled-Components", "Bootstrap"],
+  //   imgLink: image2,
+  //   git: "https://github.com/sharmasubham22/portfolio-main.git",
+  //   demo: "/",
+  //   color: "#2A9640",
+  // },
   // {
   //   title: "Portfolio",
   //   subHeading: "My Work Portfolio",
@@ -39,20 +50,12 @@ const featured = [
 
 const others = [
   {
-    title: "Codepen-Clone",
+    title: "Personal Portfolio",
     description:
-      "A 'Codepen' clone which is useful and liberating online code editor for developers. It allows users to write code in the browser, and see the results of it as you build. Primary focus on front-end languages like HTML, CSS, JavaScript, ",
-    technologies: ["React", "Code-Mirror"],
-    git: "https://github.com/sharmasubham22/codepen-clone.git",
-    demo: "https://cp-clone.netlify.app/",
-  },
-  {
-    title: "News Guru",
-    description:
-      "News Guru is your source for daily news. You get all the breaking headlines at a glance based on the category you choose. Users get the news that are fetched from the news-API and displayed in a clean and informative structure. ",
-    technologies: ["React", "NewsAPI", "Bootstrap"],
-    git: "https://github.com/sharmasubham22/news_app",
-    demo: "",
+      "A modern designed portfolio which showcases my work experiences, my projects, skills I have and much more. It highlight my capabilities which fulfills the requirement of the current trends in the industry. ",
+    technologies: ["React", "Styled-Components", "Bootstrap"],
+    git: "https://github.com/sharmasubham22/portfolio-main.git",
+    demo: "subham-tech.netlify.app"
   },
   {
     title: "Halifax Foodie",
@@ -92,6 +95,22 @@ const others = [
       "Find the Labels is an image storage & analysis system which can store images, display them in a gallery and then detect the labels which can be found in an image selected by the user based on the confidence level they select.",
     technologies: ["AWS", "Cognito", "Rekognition", "Lambda"],
     git: "https://github.com/sharmasubham22/term-project/tree/main",
+    demo: "",
+  },
+  {
+    title: "Codepen-Clone",
+    description:
+      "A 'Codepen' clone which is useful and liberating online code editor for developers. It allows users to write code in the browser, and see the results of it as you build. Primary focus on front-end languages like HTML, CSS, JavaScript, ",
+    technologies: ["React", "Code-Mirror"],
+    git: "https://github.com/sharmasubham22/codepen-clone.git",
+    demo: "https://cp-clone.netlify.app/",
+  },
+  {
+    title: "News Guru",
+    description:
+      "News Guru is your source for daily news. You get all the breaking headlines at a glance based on the category you choose. Users get the news that are fetched from the news-API and displayed in a clean and informative structure. ",
+    technologies: ["React", "NewsAPI", "Bootstrap"],
+    git: "https://github.com/sharmasubham22/news_app",
     demo: "",
   },
   {
