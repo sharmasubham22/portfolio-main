@@ -233,7 +233,7 @@ const toolsIcons = iconData.map((element, index) => {
                       </div> */}
                       <div className="d-flex align-items-center">
                         <Link
-                          to="https://drive.google.com/uc?export=view&id=1s64EdfftiGdnrcT3kqtcGohFId32iJuZ"
+                          to="https://drive.google.com/file/d/1lX-QHF4PhCteO2-Jc5QwVBpmhsnoNNxg/preview"
                           target="_blank"
                           className="res-btn"
                         >
